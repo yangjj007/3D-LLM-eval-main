@@ -1,9 +1,6 @@
-from pathlib import Path
-
 from eval.adapters.base import MeshInput
-from PIL import Image
 
-from eval.adapters.text_to_3d_baselines import InstantMeshAdapter, SAR3DAdapter, TrellisAdapter
+from eval.adapters.text_to_3d_baselines import SAR3DAdapter, ThreeDTopiaXLAdapter, TrellisAdapter
 from eval.adapters.understanding_baselines import InstructBLIP13BAdapter, PointLLM13BAdapter
 
 
@@ -55,17 +52,18 @@ def test_sar3d_command_uses_official_text_json(tmp_path, monkeypatch):
     assert result.extra["caption"] == "a blue cup"
 
 
-def test_instantmesh_command_uses_proxy_image(tmp_path, monkeypatch):
-    repo = tmp_path / "InstantMesh"
+def test_3dtopia_text_command_uses_prompt_not_proxy_image(tmp_path, monkeypatch):
+    repo = tmp_path / "3DTopia-XL"
     repo.mkdir()
-    (repo / "run.py").write_text("", encoding="utf-8")
-    image = tmp_path / "proxy.png"
-    Image.new("RGB", (8, 8), "red").save(image)
+    (repo / "configs").mkdir()
+    (repo / "models" / "conditioner").mkdir(parents=True)
+    (repo / "configs" / "inference_dit_text.yml").write_text("", encoding="utf-8")
+    (repo / "models" / "conditioner" / "text.py").write_text("", encoding="utf-8")
     cfg = {
-        "model": {"baseline_repo_dir": str(repo), "default_input_image": str(image)},
-        "inference": {"work_dir": str(tmp_path / "work"), "diffusion_steps": 2},
+        "model": {"baseline_repo_dir": str(repo)},
+        "inference": {"work_dir": str(tmp_path / "work"), "ddim": 2},
     }
-    adapter = InstantMeshAdapter()
+    adapter = ThreeDTopiaXLAdapter()
     adapter.load(cfg, "cpu")
     captured = {}
 
@@ -76,9 +74,10 @@ def test_instantmesh_command_uses_proxy_image(tmp_path, monkeypatch):
     monkeypatch.setattr(adapter, "_find_first_output", lambda *args, **kwargs: None)
     adapter.generate_from_text(["a chair"], ["sample_1"], cfg)
     command = captured["command"]
-    assert command[:2] == [str(Path(command[0])), "run.py"] or command[1] == "run.py"
-    assert "--diffusion_steps" in command
-    assert any(str(part).endswith(".png") for part in command)
+    assert "--prompt" in command
+    assert "a chair" in command
+    assert "--output-dir" in command
+    assert not any(str(part).endswith((".png", ".jpg", ".webp")) for part in command)
 
 
 def test_pointllm_mock_caption_rows(tmp_path):

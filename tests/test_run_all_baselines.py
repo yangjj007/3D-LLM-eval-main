@@ -13,6 +13,7 @@ def test_run_all_baselines_dry_run_lists_bridge_and_direct_baselines():
     )
     assert proc.returncode == 0, proc.stderr + proc.stdout
     assert "trellis:enabled" in proc.stdout
-    assert "instantmesh:bridged" in proc.stdout
+    assert "3dtopia_xl:enabled" in proc.stdout
+    assert "instantmesh" not in proc.stdout
     assert "llava_13b:bridged" in proc.stdout
     assert "eval.runner" in proc.stdout

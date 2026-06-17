@@ -124,14 +124,14 @@ BASELINE_SPECS: Dict[str, BaselineSpec] = {
         task="generation",
         repo_url="https://github.com/3DTopia/3DTopia-XL.git",
         repo_dir_name="3DTopia-XL",
-        status="bridged",
-        entry_kind="image_conditioned_bridge",
-        entrypoint="inference.py",
+        status="enabled",
+        entry_kind="official_text_conditioner",
+        entrypoint="configs/inference_dit_text.yml + models/conditioner/text.py",
         config_path="eval/configs/tasks/baselines/3dtopia_xl_generation.yaml",
         output_patterns=("**/*.glb", "**/*.obj", "**/*.ply"),
         notes=(
-            "Bridge mode: official text config exists but inference.py still reads images; "
-            "adapter runs the official image-conditioned inference with configured proxy images."
+            "Uses the official text-conditioned config and TextConditioner; the helper fills in "
+            "the README-required text encoding step missing from inference.py."
         ),
     ),
     "lgm": BaselineSpec(
@@ -152,16 +152,14 @@ BASELINE_SPECS: Dict[str, BaselineSpec] = {
     ),
     "instantmesh": BaselineSpec(
         name="instantmesh",
-        adapter="instantmesh",
+        adapter=None,
         task="generation",
         repo_url="https://github.com/TencentARC/InstantMesh.git",
         repo_dir_name="InstantMesh",
-        status="bridged",
-        entry_kind="image_conditioned_bridge",
+        status="skipped",
+        entry_kind="different_task",
         entrypoint="run.py",
-        config_path="eval/configs/tasks/baselines/instantmesh_generation.yaml",
-        output_patterns=("**/*.obj", "**/*.glb", "**/*.ply"),
-        notes="Bridge mode: official model is image-to-3D, so adapter runs proxy images configured per sample.",
+        skip_reason="Official repository exposes image-to-3D only; no official direct text-to-3D inference code was found.",
     ),
     "instructblip_13b": BaselineSpec(
         name="instructblip_13b",

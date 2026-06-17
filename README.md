@@ -141,8 +141,7 @@ python -m eval.runner --config eval/configs/tasks/baselines/three_d_llm_understa
 Bridge-mode baselines are also runnable through the same runner:
 
 ```bash
-# Image-to-3D baselines need proxy images via model.input_image_dir/default_input_image/sample_image_map.
-python -m eval.runner --config eval/configs/tasks/baselines/instantmesh_generation.yaml --gpu_ids 0 --no_resume
+# 3DTopia-XL uses the official text-conditioned config and TextConditioner.
 python -m eval.runner --config eval/configs/tasks/baselines/3dtopia_xl_generation.yaml --gpu_ids 0 --no_resume
 
 # LGM's official text path is in app.py; the adapter calls its process() function without launching Gradio.
@@ -169,9 +168,10 @@ python -m eval.runner --config eval/configs/tasks/baselines/mock_pointllm_unders
 
 Bridge assumptions:
 
-- `InstantMesh` and `3DTopia-XL` are official image-conditioned pipelines here; configure proxy images for each text prompt.
+- `3DTopia-XL` ships `configs/inference_dit_text.yml` and `models/conditioner/text.py`, but upstream `inference.py` still reads images. The eval helper supplies the README-required text encoding step while using official model components.
 - `InstructBLIP-13B` and `LLaVA-13B` consume rendered 2D views of the input mesh.
 - `LGM` uses its official Gradio `process(input_image=None, prompt=...)` path through `eval.baselines.run_lgm_text`.
+- `InstantMesh` is not launched for text-to-3D because the official repository exposes image-to-3D only (`run.py configs/instant-mesh-large.yaml <image>`); no official direct text prompt inference entrypoint was found.
 
 ### 按指标挑选样本（ours vs baseline）
 

@@ -7,11 +7,12 @@ data:
 
 model:
   baseline_repo_dir: third_party/baselines/3DTopia-XL
-  # Bridge mode uses official image-conditioned inference.py with proxy images.
-  official_config: configs/inference_dit.yml
-  input_image_dir: eval_data/baseline_images
-  default_input_image: null
-  sample_image_map: {}
+  # Official text-conditioned config + TextConditioner. The eval helper supplies
+  # the README-required text encoding step missing from upstream inference.py.
+  official_config: configs/inference_dit_text.yml
+  checkpoint_path: ./pretrained/scaleup_text_ckpt_backup_fp16.pt
+  vae_checkpoint_path: ./pretrained/model_vae_fp16.pt
+  text_encoder_path: ./pretrained/open_clip_pytorch_model.bin
 
 inference:
   batch_size: 1
@@ -19,6 +20,7 @@ inference:
   seed: 42
   ddim: 25
   cfg: 6
+  mc_resolution: 256
   timeout_sec: null
 
 metrics:

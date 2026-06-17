@@ -11,7 +11,6 @@ def test_enabled_baselines_have_adapters_and_configs():
         "shape_e",
         "three_d_llm",
         "pointllm_13b",
-        "instantmesh",
         "3dtopia_xl",
         "lgm",
         "instructblip_13b",
@@ -27,10 +26,8 @@ def test_enabled_baselines_have_adapters_and_configs():
 def test_bridge_baselines_are_marked_and_registered():
     bridged = [spec for spec in BASELINE_SPECS.values() if spec.status == "bridged"]
     assert {spec.name for spec in bridged} == {
-        "instantmesh",
         "instructblip_13b",
         "llava_13b",
-        "3dtopia_xl",
         "lgm",
     }
     for spec in bridged:
@@ -39,7 +36,9 @@ def test_bridge_baselines_are_marked_and_registered():
 
 
 def test_skipped_baselines_are_documented_and_not_registered():
-    for spec in skipped_specs():
+    skipped = list(skipped_specs())
+    assert {spec.name for spec in skipped} >= {"instantmesh"}
+    for spec in skipped:
         assert spec.skip_reason
         assert spec.adapter is None or spec.adapter not in ADAPTER_REGISTRY
 

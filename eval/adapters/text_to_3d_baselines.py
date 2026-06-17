@@ -98,51 +98,6 @@ class GaussianCubeAdapter(OfficialCommandTextTo3DAdapter):
         return command
 
 
-class InstantMeshAdapter(OfficialCommandTextTo3DAdapter):
-    name = "instantmesh"
-    baseline_name = "instantmesh"
-    supported_tasks = frozenset({"generation"})
-    capabilities = {"batched_generation": False, "generation_produces_mesh": True}
-
-    def load(self, cfg: Dict[str, Any], device: Any) -> None:
-        super().load(cfg, device)
-        self._repo_file("run.py")
-
-    def _extra_context(self, prompt: str, sample_id: str, work_dir: Path, cfg: Dict[str, Any]) -> Dict[str, Any]:
-        input_dir = work_dir / "input_images"
-        input_image = self._copy_input_image(self._input_image_for_sample(sample_id, cfg), input_dir, sample_id)
-        return {
-            "input_image": str(input_image),
-            "official_config": str(self._model_cfg(cfg).get("official_config", "configs/instant-mesh-large.yaml")),
-            "diffusion_steps": str(self._infer_cfg(cfg).get("diffusion_steps", 75)),
-            "seed": str(self._infer_cfg(cfg).get("seed", 42)),
-            "view": str(self._infer_cfg(cfg).get("view", 6)),
-        }
-
-    def _default_command(self, cfg: Dict[str, Any], context: Dict[str, Any]) -> Sequence[str]:
-        command = [
-            "{python}",
-            "run.py",
-            "{official_config}",
-            "{input_image}",
-            "--output_path",
-            "{work_dir}",
-            "--diffusion_steps",
-            "{diffusion_steps}",
-            "--seed",
-            "{seed}",
-            "--view",
-            "{view}",
-        ]
-        if self._infer_cfg(cfg).get("no_rembg", False):
-            command.append("--no_rembg")
-        if self._infer_cfg(cfg).get("export_texmap", False):
-            command.append("--export_texmap")
-        if self._infer_cfg(cfg).get("save_video", False):
-            command.append("--save_video")
-        return command
-
-
 class ThreeDTopiaXLAdapter(OfficialCommandTextTo3DAdapter):
     name = "3dtopia_xl"
     baseline_name = "3dtopia_xl"
@@ -151,30 +106,51 @@ class ThreeDTopiaXLAdapter(OfficialCommandTextTo3DAdapter):
 
     def load(self, cfg: Dict[str, Any], device: Any) -> None:
         super().load(cfg, device)
-        self._repo_file("inference.py")
+        self._repo_file("configs/inference_dit_text.yml")
+        self._repo_file("models/conditioner/text.py")
 
     def _extra_context(self, prompt: str, sample_id: str, work_dir: Path, cfg: Dict[str, Any]) -> Dict[str, Any]:
-        input_dir = work_dir / "input_images"
-        self._copy_input_image(self._input_image_for_sample(sample_id, cfg), input_dir, sample_id)
+        helper = Path(__file__).resolve().parents[1] / "baselines" / "run_3dtopia_text.py"
+        model_cfg = self._model_cfg(cfg)
+        infer_cfg = self._infer_cfg(cfg)
         return {
-            "input_dir": str(input_dir),
-            "official_config": str(self._model_cfg(cfg).get("official_config", "configs/inference_dit.yml")),
-            "root_data_dir": str(work_dir),
-            "seed": str(self._infer_cfg(cfg).get("seed", 42)),
-            "ddim": str(self._infer_cfg(cfg).get("ddim", 25)),
-            "cfg_scale": str(self._infer_cfg(cfg).get("cfg", 6)),
+            "helper": str(helper),
+            "official_config": str(model_cfg.get("official_config", "configs/inference_dit_text.yml")),
+            "checkpoint_path": str(model_cfg.get("checkpoint_path", "./pretrained/scaleup_text_ckpt_backup_fp16.pt")),
+            "vae_checkpoint_path": str(model_cfg.get("vae_checkpoint_path", "./pretrained/model_vae_fp16.pt")),
+            "text_encoder_path": str(model_cfg.get("text_encoder_path", "./pretrained/open_clip_pytorch_model.bin")),
+            "seed": str(infer_cfg.get("seed", 42)),
+            "ddim": str(infer_cfg.get("ddim", 25)),
+            "cfg_scale": str(infer_cfg.get("cfg", 6)),
+            "mc_resolution": str(infer_cfg.get("mc_resolution", 256)),
         }
 
     def _default_command(self, cfg: Dict[str, Any], context: Dict[str, Any]) -> Sequence[str]:
         return [
             "{python}",
-            "inference.py",
+            "{helper}",
+            "--repo-dir",
+            "{repo_dir}",
+            "--config",
             "{official_config}",
-            "root_data_dir={root_data_dir}",
-            "inference.input_dir={input_dir}",
-            "inference.seed={seed}",
-            "inference.ddim={ddim}",
-            "inference.cfg={cfg_scale}",
+            "--prompt",
+            "{prompt}",
+            "--output-dir",
+            "{work_dir}",
+            "--checkpoint-path",
+            "{checkpoint_path}",
+            "--vae-checkpoint-path",
+            "{vae_checkpoint_path}",
+            "--text-encoder-path",
+            "{text_encoder_path}",
+            "--seed",
+            "{seed}",
+            "--ddim",
+            "{ddim}",
+            "--cfg",
+            "{cfg_scale}",
+            "--mc-resolution",
+            "{mc_resolution}",
         ]
 
 
