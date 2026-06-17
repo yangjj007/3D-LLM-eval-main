@@ -36,7 +36,7 @@ class BaselineSpec:
 
     @property
     def is_enabled(self) -> bool:
-        return self.status == "enabled" and self.adapter is not None
+        return self.status in {"enabled", "bridged"} and self.adapter is not None
 
 
 BASELINE_SPECS: Dict[str, BaselineSpec] = {
@@ -120,63 +120,72 @@ BASELINE_SPECS: Dict[str, BaselineSpec] = {
     ),
     "3dtopia_xl": BaselineSpec(
         name="3dtopia_xl",
-        adapter=None,
+        adapter="3dtopia_xl",
         task="generation",
         repo_url="https://github.com/3DTopia/3DTopia-XL.git",
         repo_dir_name="3DTopia-XL",
-        status="skipped",
-        entry_kind="not_direct",
+        status="bridged",
+        entry_kind="image_conditioned_bridge",
         entrypoint="inference.py",
-        skip_reason=(
-            "README says text-to-3D requires changing the image encoding process "
-            "to text encoding; no direct official text inference entrypoint is exposed."
+        config_path="eval/configs/tasks/baselines/3dtopia_xl_generation.yaml",
+        output_patterns=("**/*.glb", "**/*.obj", "**/*.ply"),
+        notes=(
+            "Bridge mode: official text config exists but inference.py still reads images; "
+            "adapter runs the official image-conditioned inference with configured proxy images."
         ),
     ),
     "lgm": BaselineSpec(
         name="lgm",
-        adapter=None,
+        adapter="lgm",
         task="generation",
         repo_url="https://github.com/3DTopia/LGM.git",
         repo_dir_name="LGM",
-        status="skipped",
-        entry_kind="gradio_only",
+        status="bridged",
+        entry_kind="gradio_function_bridge",
         entrypoint="app.py",
-        skip_reason=(
-            "Official text path is embedded in the Gradio app; the CLI infer.py is image-to-3D."
+        config_path="eval/configs/tasks/baselines/lgm_generation.yaml",
+        output_patterns=("**/*.ply", "**/*.glb", "**/*.obj"),
+        notes=(
+            "Bridge mode: executes the official app.py setup up to process() and calls "
+            "the official text-to-3D Gradio function without launching the UI."
         ),
     ),
     "instantmesh": BaselineSpec(
         name="instantmesh",
-        adapter=None,
+        adapter="instantmesh",
         task="generation",
         repo_url="https://github.com/TencentARC/InstantMesh.git",
         repo_dir_name="InstantMesh",
-        status="skipped",
-        entry_kind="different_task",
+        status="bridged",
+        entry_kind="image_conditioned_bridge",
         entrypoint="run.py",
-        skip_reason="Official inference is image-to-3D, not direct text-to-3D.",
+        config_path="eval/configs/tasks/baselines/instantmesh_generation.yaml",
+        output_patterns=("**/*.obj", "**/*.glb", "**/*.ply"),
+        notes="Bridge mode: official model is image-to-3D, so adapter runs proxy images configured per sample.",
     ),
     "instructblip_13b": BaselineSpec(
         name="instructblip_13b",
-        adapter=None,
+        adapter="instructblip_13b",
         task="understanding",
         repo_url="https://github.com/salesforce/LAVIS.git",
         repo_dir_name="LAVIS",
-        status="skipped",
-        entry_kind="different_modality",
+        status="bridged",
+        entry_kind="mesh_render_bridge",
         entrypoint="projects/instructblip",
-        skip_reason="Official InstructBLIP-13B inference consumes 2D images, not 3D objects.",
+        config_path="eval/configs/tasks/baselines/instructblip_13b_understanding.yaml",
+        notes="Bridge mode: renders 3D meshes to 2D views before calling official LAVIS InstructBLIP.",
     ),
     "llava_13b": BaselineSpec(
         name="llava_13b",
-        adapter=None,
+        adapter="llava_13b",
         task="understanding",
         repo_url="https://github.com/haotian-liu/LLaVA.git",
         repo_dir_name="LLaVA",
-        status="skipped",
-        entry_kind="different_modality",
+        status="bridged",
+        entry_kind="mesh_render_bridge",
         entrypoint="llava/eval/run_llava.py",
-        skip_reason="Official LLaVA-13B inference consumes 2D images, not 3D objects.",
+        config_path="eval/configs/tasks/baselines/llava_13b_understanding.yaml",
+        notes="Bridge mode: renders 3D meshes to 2D views before calling official LLaVA.",
     ),
 }
 

@@ -1,0 +1,29 @@
+adapter: lgm
+task: generation
+
+data:
+  data_path: eval_data/generation.json
+  max_samples: null
+
+model:
+  baseline_repo_dir: third_party/baselines/LGM
+  model_size: big
+  checkpoint_path: pretrained/model_fp16_fixrot.safetensors
+
+inference:
+  batch_size: 1
+  work_dir: eval_external_work
+  seed: 42
+  num_steps: 30
+  elevation: 0
+  negative_prompt: ugly, blurry, pixelated, low quality
+  timeout_sec: null
+
+metrics:
+  - fd_inception
+  - kd_inception
+  - clip_score
+
+reporting:
+  formats: [json, csv, latex]
+  output_dir: eval_results/baselines/lgm/generation

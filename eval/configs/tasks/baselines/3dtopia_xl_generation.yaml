@@ -1,0 +1,31 @@
+adapter: 3dtopia_xl
+task: generation
+
+data:
+  data_path: eval_data/generation.json
+  max_samples: null
+
+model:
+  baseline_repo_dir: third_party/baselines/3DTopia-XL
+  # Bridge mode uses official image-conditioned inference.py with proxy images.
+  official_config: configs/inference_dit.yml
+  input_image_dir: eval_data/baseline_images
+  default_input_image: null
+  sample_image_map: {}
+
+inference:
+  batch_size: 1
+  work_dir: eval_external_work
+  seed: 42
+  ddim: 25
+  cfg: 6
+  timeout_sec: null
+
+metrics:
+  - fd_inception
+  - kd_inception
+  - clip_score
+
+reporting:
+  formats: [json, csv, latex]
+  output_dir: eval_results/baselines/3dtopia_xl/generation

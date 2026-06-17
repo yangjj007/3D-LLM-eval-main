@@ -1,0 +1,38 @@
+adapter: llava_13b
+task: understanding
+
+data:
+  data_path: eval_data/understanding.json
+  default_prompt: Describe this 3D object.
+  max_samples: null
+
+model:
+  baseline_repo_dir: third_party/baselines/LLaVA
+  model_path: liuhaotian/llava-v1.5-13b
+  model_base: null
+  load_4bit: false
+  load_8bit: false
+  # Optional: provide pre-rendered views instead of rendering mesh at runtime.
+  input_image_dir: null
+  sample_image_map: {}
+
+inference:
+  batch_size: 1
+  nviews: 4
+  resolution: 336
+  work_dir: eval_external_work
+  temperature: 0.2
+  top_p: null
+  num_beams: 1
+  max_new_tokens: 512
+
+metrics:
+  - bleu
+  - rouge_l
+  - meteor
+  - sentence_bert
+  - simcse
+
+reporting:
+  formats: [json, csv, latex]
+  output_dir: eval_results/baselines/llava_13b/understanding

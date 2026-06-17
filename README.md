@@ -138,6 +138,28 @@ python -m eval.runner --config eval/configs/tasks/baselines/pointllm_13b_underst
 python -m eval.runner --config eval/configs/tasks/baselines/three_d_llm_understanding.yaml --gpu_ids 0 --no_resume
 ```
 
+Bridge-mode baselines are also runnable through the same runner:
+
+```bash
+# Image-to-3D baselines need proxy images via model.input_image_dir/default_input_image/sample_image_map.
+python -m eval.runner --config eval/configs/tasks/baselines/instantmesh_generation.yaml --gpu_ids 0 --no_resume
+python -m eval.runner --config eval/configs/tasks/baselines/3dtopia_xl_generation.yaml --gpu_ids 0 --no_resume
+
+# LGM's official text path is in app.py; the adapter calls its process() function without launching Gradio.
+python -m eval.runner --config eval/configs/tasks/baselines/lgm_generation.yaml --gpu_ids 0 --no_resume
+
+# 2D VLM baselines render mesh views first, then call official image inference.
+python -m eval.runner --config eval/configs/tasks/baselines/instructblip_13b_understanding.yaml --gpu_ids 0 --no_resume
+python -m eval.runner --config eval/configs/tasks/baselines/llava_13b_understanding.yaml --gpu_ids 0 --no_resume
+```
+
+To launch every registered baseline and automatically use all visible GPUs:
+
+```bash
+python -m eval.scripts.run_all_baselines --max_samples 10 --no_resume
+python -m eval.scripts.run_all_baselines --dry_run
+```
+
 For local smoke tests without large weights/CUDA, use the explicit mock configs:
 
 ```bash
@@ -145,12 +167,11 @@ python -m eval.runner --config eval/configs/tasks/baselines/mock_trellis_generat
 python -m eval.runner --config eval/configs/tasks/baselines/mock_pointllm_understanding.yaml --no_resume
 ```
 
-Strict-mode audited skips:
+Bridge assumptions:
 
-- `InstantMesh`: official inference is image-to-3D, not direct text-to-3D.
-- `InstructBLIP-13B` and `LLaVA-13B`: official inference consumes 2D images, not 3D objects.
-- `3DTopia-XL`: README requires changing image encoding to text encoding; no direct official text inference entrypoint is exposed.
-- `LGM`: text path is embedded in the Gradio app; CLI `infer.py` is image-to-3D.
+- `InstantMesh` and `3DTopia-XL` are official image-conditioned pipelines here; configure proxy images for each text prompt.
+- `InstructBLIP-13B` and `LLaVA-13B` consume rendered 2D views of the input mesh.
+- `LGM` uses its official Gradio `process(input_image=None, prompt=...)` path through `eval.baselines.run_lgm_text`.
 
 ### 按指标挑选样本（ours vs baseline）
 

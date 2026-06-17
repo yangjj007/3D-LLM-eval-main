@@ -11,6 +11,11 @@ def test_enabled_baselines_have_adapters_and_configs():
         "shape_e",
         "three_d_llm",
         "pointllm_13b",
+        "instantmesh",
+        "3dtopia_xl",
+        "lgm",
+        "instructblip_13b",
+        "llava_13b",
     }
     for spec in enabled:
         assert spec.repo_url.startswith("https://github.com/")
@@ -19,19 +24,25 @@ def test_enabled_baselines_have_adapters_and_configs():
         assert spec.adapter in ADAPTER_REGISTRY
 
 
-def test_skipped_baselines_are_documented_and_not_registered():
-    skipped = list(skipped_specs())
-    assert {spec.name for spec in skipped} >= {
+def test_bridge_baselines_are_marked_and_registered():
+    bridged = [spec for spec in BASELINE_SPECS.values() if spec.status == "bridged"]
+    assert {spec.name for spec in bridged} == {
         "instantmesh",
         "instructblip_13b",
         "llava_13b",
         "3dtopia_xl",
         "lgm",
     }
-    for spec in skipped:
+    for spec in bridged:
+        assert spec.notes
+        assert spec.adapter in ADAPTER_REGISTRY
+
+
+def test_skipped_baselines_are_documented_and_not_registered():
+    for spec in skipped_specs():
         assert spec.skip_reason
         assert spec.adapter is None or spec.adapter not in ADAPTER_REGISTRY
 
 
 def test_no_unknown_status_values():
-    assert {spec.status for spec in BASELINE_SPECS.values()} <= {"enabled", "skipped"}
+    assert {spec.status for spec in BASELINE_SPECS.values()} <= {"enabled", "bridged", "skipped"}

@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import shutil
 import shlex
 import subprocess
 import sys
@@ -155,6 +156,46 @@ class ExternalBaselineAdapter(ModelAdapter):
 
     def _safe_sample_id(self, sample_id: str) -> str:
         return re.sub(r"[^\w.\-]+", "_", str(sample_id))[:160] or "sample"
+
+    def _path_from_cfg_value(self, value: Any) -> Path:
+        path = Path(str(value))
+        if not path.is_absolute():
+            path = repo_root() / path
+        return path
+
+    def _input_image_for_sample(self, sample_id: str, cfg: Dict[str, Any]) -> Path:
+        model_cfg = self._model_cfg(cfg)
+        sample_map = model_cfg.get("sample_image_map") or {}
+        if sample_id in sample_map:
+            path = self._path_from_cfg_value(sample_map[sample_id])
+            if path.exists():
+                return path
+        image_dir = model_cfg.get("input_image_dir")
+        if image_dir:
+            base = self._path_from_cfg_value(image_dir)
+            for suffix in (".png", ".jpg", ".jpeg", ".webp"):
+                candidate = base / f"{self._safe_sample_id(sample_id)}{suffix}"
+                if candidate.exists():
+                    return candidate
+                candidate = base / f"{sample_id}{suffix}"
+                if candidate.exists():
+                    return candidate
+        default_image = model_cfg.get("default_input_image")
+        if default_image:
+            path = self._path_from_cfg_value(default_image)
+            if path.exists():
+                return path
+        raise ExternalBaselineError(
+            f"{self.name} needs a proxy input image for sample {sample_id!r}. "
+            "Set model.sample_image_map, model.input_image_dir, or model.default_input_image."
+        )
+
+    def _copy_input_image(self, source: Path, target_dir: Path, sample_id: str) -> Path:
+        target_dir.mkdir(parents=True, exist_ok=True)
+        suffix = source.suffix.lower() or ".png"
+        target = target_dir / f"{self._safe_sample_id(sample_id)}{suffix}"
+        shutil.copyfile(source, target)
+        return target
 
     @contextmanager
     def _temporary_sys_path(self, *paths: Path) -> Iterator[None]:

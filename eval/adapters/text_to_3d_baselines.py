@@ -98,6 +98,135 @@ class GaussianCubeAdapter(OfficialCommandTextTo3DAdapter):
         return command
 
 
+class InstantMeshAdapter(OfficialCommandTextTo3DAdapter):
+    name = "instantmesh"
+    baseline_name = "instantmesh"
+    supported_tasks = frozenset({"generation"})
+    capabilities = {"batched_generation": False, "generation_produces_mesh": True}
+
+    def load(self, cfg: Dict[str, Any], device: Any) -> None:
+        super().load(cfg, device)
+        self._repo_file("run.py")
+
+    def _extra_context(self, prompt: str, sample_id: str, work_dir: Path, cfg: Dict[str, Any]) -> Dict[str, Any]:
+        input_dir = work_dir / "input_images"
+        input_image = self._copy_input_image(self._input_image_for_sample(sample_id, cfg), input_dir, sample_id)
+        return {
+            "input_image": str(input_image),
+            "official_config": str(self._model_cfg(cfg).get("official_config", "configs/instant-mesh-large.yaml")),
+            "diffusion_steps": str(self._infer_cfg(cfg).get("diffusion_steps", 75)),
+            "seed": str(self._infer_cfg(cfg).get("seed", 42)),
+            "view": str(self._infer_cfg(cfg).get("view", 6)),
+        }
+
+    def _default_command(self, cfg: Dict[str, Any], context: Dict[str, Any]) -> Sequence[str]:
+        command = [
+            "{python}",
+            "run.py",
+            "{official_config}",
+            "{input_image}",
+            "--output_path",
+            "{work_dir}",
+            "--diffusion_steps",
+            "{diffusion_steps}",
+            "--seed",
+            "{seed}",
+            "--view",
+            "{view}",
+        ]
+        if self._infer_cfg(cfg).get("no_rembg", False):
+            command.append("--no_rembg")
+        if self._infer_cfg(cfg).get("export_texmap", False):
+            command.append("--export_texmap")
+        if self._infer_cfg(cfg).get("save_video", False):
+            command.append("--save_video")
+        return command
+
+
+class ThreeDTopiaXLAdapter(OfficialCommandTextTo3DAdapter):
+    name = "3dtopia_xl"
+    baseline_name = "3dtopia_xl"
+    supported_tasks = frozenset({"generation"})
+    capabilities = {"batched_generation": False, "generation_produces_mesh": True}
+
+    def load(self, cfg: Dict[str, Any], device: Any) -> None:
+        super().load(cfg, device)
+        self._repo_file("inference.py")
+
+    def _extra_context(self, prompt: str, sample_id: str, work_dir: Path, cfg: Dict[str, Any]) -> Dict[str, Any]:
+        input_dir = work_dir / "input_images"
+        self._copy_input_image(self._input_image_for_sample(sample_id, cfg), input_dir, sample_id)
+        return {
+            "input_dir": str(input_dir),
+            "official_config": str(self._model_cfg(cfg).get("official_config", "configs/inference_dit.yml")),
+            "root_data_dir": str(work_dir),
+            "seed": str(self._infer_cfg(cfg).get("seed", 42)),
+            "ddim": str(self._infer_cfg(cfg).get("ddim", 25)),
+            "cfg_scale": str(self._infer_cfg(cfg).get("cfg", 6)),
+        }
+
+    def _default_command(self, cfg: Dict[str, Any], context: Dict[str, Any]) -> Sequence[str]:
+        return [
+            "{python}",
+            "inference.py",
+            "{official_config}",
+            "root_data_dir={root_data_dir}",
+            "inference.input_dir={input_dir}",
+            "inference.seed={seed}",
+            "inference.ddim={ddim}",
+            "inference.cfg={cfg_scale}",
+        ]
+
+
+class LGMAdapter(OfficialCommandTextTo3DAdapter):
+    name = "lgm"
+    baseline_name = "lgm"
+    supported_tasks = frozenset({"generation"})
+    capabilities = {"batched_generation": False, "generation_produces_mesh": True}
+
+    def load(self, cfg: Dict[str, Any], device: Any) -> None:
+        super().load(cfg, device)
+        self._repo_file("app.py")
+
+    def _extra_context(self, prompt: str, sample_id: str, work_dir: Path, cfg: Dict[str, Any]) -> Dict[str, Any]:
+        helper = Path(__file__).resolve().parents[1] / "baselines" / "run_lgm_text.py"
+        model_cfg = self._model_cfg(cfg)
+        infer_cfg = self._infer_cfg(cfg)
+        return {
+            "helper": str(helper),
+            "checkpoint_path": str(model_cfg.get("checkpoint_path", "pretrained/model_fp16_fixrot.safetensors")),
+            "model_size": str(model_cfg.get("model_size", "big")),
+            "seed": str(infer_cfg.get("seed", 42)),
+            "steps": str(infer_cfg.get("num_steps", 30)),
+            "elevation": str(infer_cfg.get("elevation", 0)),
+            "negative_prompt": str(infer_cfg.get("negative_prompt", "")),
+        }
+
+    def _default_command(self, cfg: Dict[str, Any], context: Dict[str, Any]) -> Sequence[str]:
+        return [
+            "{python}",
+            "{helper}",
+            "--repo-dir",
+            "{repo_dir}",
+            "--model-size",
+            "{model_size}",
+            "--resume",
+            "{checkpoint_path}",
+            "--workspace",
+            "{work_dir}",
+            "--prompt",
+            "{prompt}",
+            "--negative-prompt",
+            "{negative_prompt}",
+            "--seed",
+            "{seed}",
+            "--num-steps",
+            "{steps}",
+            "--elevation",
+            "{elevation}",
+        ]
+
+
 class TrellisAdapter(ExternalBaselineAdapter):
     name = "trellis"
     baseline_name = "trellis"

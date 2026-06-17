@@ -7,8 +7,21 @@ from typing import Dict, Type
 from .base import ModelAdapter
 from .shapellm_adapter import ShapeLLMAdapter
 from .sparse_sdf_adapter import SparseSDFQwen3Adapter
-from .text_to_3d_baselines import GaussianCubeAdapter, SAR3DAdapter, ShapEAdapter, TrellisAdapter
-from .understanding_baselines import PointLLM13BAdapter, ThreeDLLMAdapter
+from .text_to_3d_baselines import (
+    GaussianCubeAdapter,
+    InstantMeshAdapter,
+    LGMAdapter,
+    SAR3DAdapter,
+    ShapEAdapter,
+    ThreeDTopiaXLAdapter,
+    TrellisAdapter,
+)
+from .understanding_baselines import (
+    InstructBLIP13BAdapter,
+    LLaVA13BAdapter,
+    PointLLM13BAdapter,
+    ThreeDLLMAdapter,
+)
 
 ADAPTER_REGISTRY: Dict[str, Type[ModelAdapter]] = {
     "shapellm": ShapeLLMAdapter,
@@ -17,8 +30,13 @@ ADAPTER_REGISTRY: Dict[str, Type[ModelAdapter]] = {
     "trellis": TrellisAdapter,
     "gaussiancube": GaussianCubeAdapter,
     "shape_e": ShapEAdapter,
+    "instantmesh": InstantMeshAdapter,
+    "3dtopia_xl": ThreeDTopiaXLAdapter,
+    "lgm": LGMAdapter,
     "three_d_llm": ThreeDLLMAdapter,
     "pointllm_13b": PointLLM13BAdapter,
+    "instructblip_13b": InstructBLIP13BAdapter,
+    "llava_13b": LLaVA13BAdapter,
 }
 
 
