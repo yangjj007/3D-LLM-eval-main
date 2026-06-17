@@ -1,0 +1,207 @@
+{
+  "corpus_prefix": "pad_outputs/qwen3vl_3d_sft_8cat.jsonl",
+  "merge_table": "pad_outputs/merge_table_rel_offset.json",
+  "samples": 18577,
+  "total_leaf_tokens": 42142078,
+  "total_macro_tokens": 31788778,
+  "compression_ratio_total": 0.7543239324838229,
+  "compression_rate_percent": 24.56760675161771,
+  "leaf": {
+    "vocab_observed": 8192,
+    "unigram_entropy_bits": 10.910369424864584,
+    "adjacency": {
+      "edge_count": 92050424.0,
+      "pair_entropy_bits": 19.662481156422672,
+      "source_direction_entropy_bits": 12.366735466748509,
+      "target_entropy_bits": 10.934948019039984,
+      "target_given_source_direction_entropy_bits": 7.295745689674163,
+      "source_direction_target_mutual_information_bits": 3.6392023293658227,
+      "direction_entropy_bits": 1.583845665137659
+    }
+  },
+  "macro": {
+    "vocab_observed": 16384,
+    "unigram_entropy_bits": 12.487879607897531,
+    "unigram_entropy_bits_per_leaf": 9.419906454213805
+  },
+  "macro_anchor": {
+    "adjacency": {
+      "edge_count": 55864837.0,
+      "pair_entropy_bits": 22.378682727515265,
+      "source_direction_entropy_bits": 13.55796405284843,
+      "target_entropy_bits": 12.39906739146383,
+      "target_given_source_direction_entropy_bits": 8.820718674666836,
+      "source_direction_target_mutual_information_bits": 3.578348716796995,
+      "direction_entropy_bits": 1.5849038606760324
+    }
+  },
+  "macro_boundary": {
+    "adjacency": {
+      "edge_count": 81228699.0,
+      "pair_entropy_bits": 22.88481454715083,
+      "source_direction_entropy_bits": 14.175874766023489,
+      "target_entropy_bits": 12.741259510142994,
+      "target_given_source_direction_entropy_bits": 8.708939781127343,
+      "source_direction_target_mutual_information_bits": 4.032319729015651,
+      "direction_entropy_bits": 1.584814025920529
+    }
+  },
+  "per_direction": {
+    "plus_x": {
+      "leaf": {
+        "adjacency": {
+          "edge_count": 31710906.0,
+          "pair_entropy_bits": 17.828105781841717,
+          "source_direction_entropy_bits": 10.71172090760688,
+          "target_entropy_bits": 10.708914655555612,
+          "target_given_source_direction_entropy_bits": 7.1163848742348375,
+          "source_direction_target_mutual_information_bits": 3.592529781320774,
+          "direction_entropy_bits": 0.0
+        }
+      },
+      "macro_anchor": {
+        "adjacency": {
+          "edge_count": 18777894.0,
+          "pair_entropy_bits": 20.762539937958664,
+          "source_direction_entropy_bits": 11.952324013216096,
+          "target_entropy_bits": 12.275212181993165,
+          "target_given_source_direction_entropy_bits": 8.810215924742568,
+          "source_direction_target_mutual_information_bits": 3.464996257250597,
+          "direction_entropy_bits": 0.0
+        }
+      },
+      "macro_boundary": {
+        "adjacency": {
+          "edge_count": 27574593.0,
+          "pair_entropy_bits": 21.226217587841933,
+          "source_direction_entropy_bits": 12.57797963687591,
+          "target_entropy_bits": 12.572888024502957,
+          "target_given_source_direction_entropy_bits": 8.648237950966024,
+          "source_direction_target_mutual_information_bits": 3.9246500735369345,
+          "direction_entropy_bits": 0.0
+        }
+      }
+    },
+    "plus_y": {
+      "leaf": {
+        "adjacency": {
+          "edge_count": 28997025.0,
+          "pair_entropy_bits": 18.524481649215698,
+          "source_direction_entropy_bits": 10.919138058785371,
+          "target_entropy_bits": 10.931232572473885,
+          "target_given_source_direction_entropy_bits": 7.605343590430326,
+          "source_direction_target_mutual_information_bits": 3.3258889820435584,
+          "direction_entropy_bits": 0.0
+        }
+      },
+      "macro_anchor": {
+        "adjacency": {
+          "edge_count": 18388906.0,
+          "pair_entropy_bits": 20.835759236601536,
+          "source_direction_entropy_bits": 12.016580556801431,
+          "target_entropy_bits": 12.254555150076099,
+          "target_given_source_direction_entropy_bits": 8.819178679800105,
+          "source_direction_target_mutual_information_bits": 3.435376470275994,
+          "direction_entropy_bits": 0.0
+        }
+      },
+      "macro_boundary": {
+        "adjacency": {
+          "edge_count": 26626392.0,
+          "pair_entropy_bits": 21.383943809791848,
+          "source_direction_entropy_bits": 12.61253073447277,
+          "target_entropy_bits": 12.59278080978747,
+          "target_given_source_direction_entropy_bits": 8.771413075319078,
+          "source_direction_target_mutual_information_bits": 3.8213677344683923,
+          "direction_entropy_bits": 0.0
+        }
+      }
+    },
+    "plus_z": {
+      "leaf": {
+        "adjacency": {
+          "edge_count": 31342493.0,
+          "pair_entropy_bits": 17.919628109909727,
+          "source_direction_entropy_bits": 10.72884291990097,
+          "target_entropy_bits": 10.725060081955789,
+          "target_given_source_direction_entropy_bits": 7.190785190008757,
+          "source_direction_target_mutual_information_bits": 3.5342748919470317,
+          "direction_entropy_bits": 0.0
+        }
+      },
+      "macro_anchor": {
+        "adjacency": {
+          "edge_count": 18698037.0,
+          "pair_entropy_bits": 20.783864910520197,
+          "source_direction_entropy_bits": 11.951084081855576,
+          "target_entropy_bits": 12.262031189613722,
+          "target_given_source_direction_entropy_bits": 8.832780828664621,
+          "source_direction_target_mutual_information_bits": 3.4292503609491014,
+          "direction_entropy_bits": 0.0
+        }
+      },
+      "macro_boundary": {
+        "adjacency": {
+          "edge_count": 27027714.0,
+          "pair_entropy_bits": 21.292579487186693,
+          "source_direction_entropy_bits": 12.583255330115533,
+          "target_entropy_bits": 12.564867399147271,
+          "target_given_source_direction_entropy_bits": 8.70932415707116,
+          "source_direction_target_mutual_information_bits": 3.8555432420761093,
+          "direction_entropy_bits": 0.0
+        }
+      }
+    }
+  },
+  "macro_footprint_vocab": {
+    "merge_rules": 8192,
+    "mean_cells": 2.602294921875,
+    "p50": 2.0,
+    "p90": 4.0,
+    "max_cells": 64
+  },
+  "merge_table_metadata": {
+    "merge_freq_skipped": true,
+    "merge_freq_skip_reason": "merge_table entries have no freq/frequency field (training log not exported)"
+  },
+  "deltas": {
+    "unigram_entropy_bits": -1.5775101830329472,
+    "unigram_entropy_bits_per_leaf": 1.4904629706507784,
+    "unigram_entropy_per_leaf_ratio": 0.8633902379827733,
+    "boundary_pair_entropy_bits": -3.22233339072816,
+    "boundary_conditional_entropy_bits": -1.41319409145318,
+    "boundary_mutual_information_bits": -0.39311739964982806,
+    "boundary_mi_ratio": 1.1080229577997478,
+    "boundary_edge_ratio": 0.8824369891006695,
+    "weighted_boundary_mi_ratio": 0.9777604427352276
+  },
+  "paper_reporting": {
+    "headline_bits_per_leaf_before_H1_X": 10.910369424864584,
+    "headline_bits_per_leaf_after_H1_B_times_R_len": 9.419906454213805,
+    "weighted_boundary_mi_ratio": 0.9777604427352276,
+    "per_edge_boundary_mi_ratio": 1.1080229577997478,
+    "note_per_edge_mi_survivor_bias": "per-edge MI ratio can exceed 1 after BPE because high-MI adjacent pairs are absorbed into macros; report weighted_boundary_mi_ratio for total MI flux."
+  },
+  "bootstrap_ci": {
+    "compression_ratio_total": {
+      "lo": 0.7524806909175135,
+      "hi": 0.756209793122324,
+      "mean": 0.7543459071189212
+    },
+    "boundary_edge_ratio": {
+      "lo": 0.8814583874931247,
+      "hi": 0.8834143896784679,
+      "mean": 0.8824456157002437
+    },
+    "iterations": 1000,
+    "seed": 0
+  },
+  "reliability": {
+    "encode_decode_roundtrip_checked": 18577,
+    "encode_decode_failures": 0,
+    "encode_decode_success_rate": 1.0,
+    "save_load_encode_checked": 18577,
+    "save_load_id_mismatches": 0,
+    "save_load_match_rate": 1.0
+  }
+}

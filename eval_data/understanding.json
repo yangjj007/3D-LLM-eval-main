@@ -1,0 +1,2697 @@
+[
+  {
+    "sample_id": "pointllm_0012",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-091/e5ed116b39f04332a44da04668ac4c64.glb",
+    "prompt": "Characterize the object this point cloud is illustrating.",
+    "ground_truth": "Grey coloured paper boat with green connecting rafts inside with a tapering front and rectangular other end.",
+    "ground_truths": [
+      "Grey coloured paper boat with green connecting rafts inside with a tapering front and rectangular other end."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "e5ed116b39f04332a44da04668ac4c64"
+  },
+  {
+    "sample_id": "pointllm_0029",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-090/7c2049d2a4654625b56ab719fd6a507b.glb",
+    "prompt": "Describe the object that this point cloud forms.",
+    "ground_truth": "A cartoon green geometric figure in 3d",
+    "ground_truths": [
+      "A cartoon green geometric figure in 3d"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "7c2049d2a4654625b56ab719fd6a507b"
+  },
+  {
+    "sample_id": "pointllm_0041",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-136/c4dc6b82f917442aaa4000cdb62232c8.glb",
+    "prompt": "Can you briefly outline the shape represented by these points?",
+    "ground_truth": "A multicolored carving",
+    "ground_truths": [
+      "A multicolored carving"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "c4dc6b82f917442aaa4000cdb62232c8"
+  },
+  {
+    "sample_id": "pointllm_0069",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-110/f7d86614605947cfa0a21dbaeac6a112.glb",
+    "prompt": "Can you briefly outline the shape represented by these points?",
+    "ground_truth": "A black tyre\nBlack tyres",
+    "ground_truths": [
+      "A black tyre\nBlack tyres"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "f7d86614605947cfa0a21dbaeac6a112"
+  },
+  {
+    "sample_id": "pointllm_0071",
+    "mesh_path": "eval_data/meshes/609d58a0095a43bdb3a359d9ea98f674.glb",
+    "prompt": "Give a brief explanation of the object that this cloud of points forms.",
+    "ground_truth": "White mobile with blue and green touch screen",
+    "ground_truths": [
+      "White mobile with blue and green touch screen"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "609d58a0095a43bdb3a359d9ea98f674"
+  },
+  {
+    "sample_id": "pointllm_0089",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-039/98630065b01e40f38714e8b0d39c8ef9.glb",
+    "prompt": "Give a brief explanation of the object that this cloud of points forms.",
+    "ground_truth": "Bronze age axe mould",
+    "ground_truths": [
+      "Bronze age axe mould"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "98630065b01e40f38714e8b0d39c8ef9"
+  },
+  {
+    "sample_id": "pointllm_0093",
+    "mesh_path": "eval_data/meshes/d83f35ad19e8433d96187bba7352e9d7.glb",
+    "prompt": "Offer a succinct summary of this 3D object.",
+    "ground_truth": "A animated red colour can that has white cap",
+    "ground_truths": [
+      "A animated red colour can that has white cap"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "d83f35ad19e8433d96187bba7352e9d7"
+  },
+  {
+    "sample_id": "pointllm_0106",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-101/f9e4b03e63624e7aa050a798b63bc9c4.glb",
+    "prompt": "Give a concise interpretation of the 3D data presented here.",
+    "ground_truth": "A rare tool",
+    "ground_truths": [
+      "A rare tool"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "f9e4b03e63624e7aa050a798b63bc9c4"
+  },
+  {
+    "sample_id": "pointllm_0117",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-134/69e3f3ec5cc44b14afaa85c53db09c1f.glb",
+    "prompt": "Provide a short explanation of this 3D structure.",
+    "ground_truth": "A mouse",
+    "ground_truths": [
+      "A mouse"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "69e3f3ec5cc44b14afaa85c53db09c1f"
+  },
+  {
+    "sample_id": "pointllm_0119",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-089/a9fa3b6a1da74b5aa36925012f251638.glb",
+    "prompt": "What is the nature of the object this point cloud is representing?",
+    "ground_truth": "A black smartphone with a blue colored screen saver.",
+    "ground_truths": [
+      "A black smartphone with a blue colored screen saver."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "a9fa3b6a1da74b5aa36925012f251638"
+  },
+  {
+    "sample_id": "pointllm_0129",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-093/4593a635ce1a48c3803f161ae836fdb2.glb",
+    "prompt": "How would you describe the 3D form shown in this point cloud?",
+    "ground_truth": "Half upper portion of fox statue.",
+    "ground_truths": [
+      "Half upper portion of fox statue."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "4593a635ce1a48c3803f161ae836fdb2"
+  },
+  {
+    "sample_id": "pointllm_0132",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-038/650c53d68d374c18886aab91bcf8bb54.glb",
+    "prompt": "How would you interpret this 3D point cloud?",
+    "ground_truth": "A green toy dinosaur with white belly.",
+    "ground_truths": [
+      "A green toy dinosaur with white belly."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "650c53d68d374c18886aab91bcf8bb54"
+  },
+  {
+    "sample_id": "pointllm_0146",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-052/b609a8c52be74eaf82f3a1713d264779.glb",
+    "prompt": "Deliver a quick description of the object represented here.",
+    "ground_truth": "A white brown skeleton",
+    "ground_truths": [
+      "A white brown skeleton"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "b609a8c52be74eaf82f3a1713d264779"
+  },
+  {
+    "sample_id": "pointllm_0149",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-091/84f0854871d246d0b9d1c9c4c85926de.glb",
+    "prompt": "Express in brief, what this point cloud is representing.",
+    "ground_truth": "Black colour panels made toy camera model.",
+    "ground_truths": [
+      "Black colour panels made toy camera model."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "84f0854871d246d0b9d1c9c4c85926de"
+  },
+  {
+    "sample_id": "pointllm_0166",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-120/da1c77dbf00c436ab8d294e431adf2ed.glb",
+    "prompt": "Offer a succinct summary of this 3D object.",
+    "ground_truth": "Part of a red and white train.",
+    "ground_truths": [
+      "Part of a red and white train."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "da1c77dbf00c436ab8d294e431adf2ed"
+  },
+  {
+    "sample_id": "pointllm_0168",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-154/505aae38374944608ad985e0e6d734a5.glb",
+    "prompt": "What kind of structure does this 3D point cloud depict?",
+    "ground_truth": "Three d model of yellow diamond shaped and blue coloured rectangular wall along with grey coloured long battens unit.",
+    "ground_truths": [
+      "Three d model of yellow diamond shaped and blue coloured rectangular wall along with grey coloured long battens unit."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "505aae38374944608ad985e0e6d734a5"
+  },
+  {
+    "sample_id": "pointllm_0183",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-136/b58f1f0d4f0c4e02b6398b13826397d3.glb",
+    "prompt": "What object is this point cloud rendering?",
+    "ground_truth": "A gold ring with red extension",
+    "ground_truths": [
+      "A gold ring with red extension"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "b58f1f0d4f0c4e02b6398b13826397d3"
+  },
+  {
+    "sample_id": "pointllm_0191",
+    "mesh_path": "eval_data/meshes/0ee9db64d58e47b5a3a1ac21ea0ec9ab.glb",
+    "prompt": "Give a quick overview of the object represented by this 3D cloud.",
+    "ground_truth": "A cover of a book",
+    "ground_truths": [
+      "A cover of a book"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "0ee9db64d58e47b5a3a1ac21ea0ec9ab"
+  },
+  {
+    "sample_id": "pointllm_0194",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-090/88867268d228490da73b99d3126dc25c.glb",
+    "prompt": "Can you briefly outline the shape represented by these points?",
+    "ground_truth": "A cartoon blue and red car with flag of usa",
+    "ground_truths": [
+      "A cartoon blue and red car with flag of usa"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "88867268d228490da73b99d3126dc25c"
+  },
+  {
+    "sample_id": "pointllm_0207",
+    "mesh_path": "eval_data/meshes/4d3019b5aff941a79bda3cd5eb039337.glb",
+    "prompt": "How would you summarize this 3D data set?",
+    "ground_truth": "A ornament with flowers color white",
+    "ground_truths": [
+      "A ornament with flowers color white"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "4d3019b5aff941a79bda3cd5eb039337"
+  },
+  {
+    "sample_id": "pointllm_0225",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-159/a4a0a21eedae4d82b0deac43b61dc4a3.glb",
+    "prompt": "Present a compact account of this 3D object's key features.",
+    "ground_truth": "A brown wooden shelf",
+    "ground_truths": [
+      "A brown wooden shelf"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "a4a0a21eedae4d82b0deac43b61dc4a3"
+  },
+  {
+    "sample_id": "pointllm_0232",
+    "mesh_path": "eval_data/meshes/de46bd5e633f4014ac817957bedc90b3.glb",
+    "prompt": "Provide an outline of this 3D shape's characteristics.",
+    "ground_truth": "Gray wallet",
+    "ground_truths": [
+      "Gray wallet"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "de46bd5e633f4014ac817957bedc90b3"
+  },
+  {
+    "sample_id": "pointllm_0236",
+    "mesh_path": "eval_data/meshes/aefb287ce6ea4ed6bc573ba327b7e4f3.glb",
+    "prompt": "What kind of object is illustrated by this collection of points?",
+    "ground_truth": "Scissors with a black hold",
+    "ground_truths": [
+      "Scissors with a black hold"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "aefb287ce6ea4ed6bc573ba327b7e4f3"
+  },
+  {
+    "sample_id": "pointllm_0237",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-109/dab99241a6294b6292a69ef9a2ee0e72.glb",
+    "prompt": "What is the nature of the object this point cloud is representing?",
+    "ground_truth": "Excavator supported by red ropes to a metal structure.",
+    "ground_truths": [
+      "Excavator supported by red ropes to a metal structure."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "dab99241a6294b6292a69ef9a2ee0e72"
+  },
+  {
+    "sample_id": "pointllm_0242",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-008/990ac62a74304d8fad0cdcb6c76dc432.glb",
+    "prompt": "Give a brief explanation of the object that this cloud of points forms.",
+    "ground_truth": "A green fat hen cartoon standing and having two eara on head top.",
+    "ground_truths": [
+      "A green fat hen cartoon standing and having two eara on head top."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "990ac62a74304d8fad0cdcb6c76dc432"
+  },
+  {
+    "sample_id": "pointllm_0243",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-136/df3dd33df99e4f79a73e1cd00aaa12e7.glb",
+    "prompt": "What kind of object is depicted by this point cloud?",
+    "ground_truth": "A white human cartoon had with a virtual reality headset with red writing on it.",
+    "ground_truths": [
+      "A white human cartoon had with a virtual reality headset with red writing on it."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "df3dd33df99e4f79a73e1cd00aaa12e7"
+  },
+  {
+    "sample_id": "pointllm_0257",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-136/69865c89fc7344be8ed5c1a54dbddc20.glb",
+    "prompt": "What object is this point cloud rendering?",
+    "ground_truth": "A storyed building",
+    "ground_truths": [
+      "A storyed building"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "69865c89fc7344be8ed5c1a54dbddc20"
+  },
+  {
+    "sample_id": "pointllm_0268",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-139/73e092e4ce344683b1347521e28d5df6.glb",
+    "prompt": "What kind of object is depicted by this point cloud?",
+    "ground_truth": "A strip blue white shade with two wooden standing poles.\nA shed with a triangular curved roof and having two standing poles at each end.",
+    "ground_truths": [
+      "A strip blue white shade with two wooden standing poles.\nA shed with a triangular curved roof and having two standing poles at each end."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "73e092e4ce344683b1347521e28d5df6"
+  },
+  {
+    "sample_id": "pointllm_0275",
+    "mesh_path": "eval_data/meshes/3066dc0d8f1c48a49c415caf769924a5.glb",
+    "prompt": "Offer a clear and concise description of this point cloud object.",
+    "ground_truth": "A grey coloured mug with gold top and golden handle",
+    "ground_truths": [
+      "A grey coloured mug with gold top and golden handle"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "3066dc0d8f1c48a49c415caf769924a5"
+  },
+  {
+    "sample_id": "pointllm_0280",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-136/5151b9ce52a84656bd7c0fac96f5a743.glb",
+    "prompt": "Offer a summary of the 3D object illustrated by this cloud.",
+    "ground_truth": "Three d model of grey walled home with brown wooden panel balcony and flower light grey floored drawing area placed with white coloured three seater and single seater sofa and centre brown coffee table. set of wooden cabinets in study room, bed room and store and grey flooring on rest of floor. with white relaxing chairs in balcony",
+    "ground_truths": [
+      "Three d model of grey walled home with brown wooden panel balcony and flower light grey floored drawing area placed with white coloured three seater and single seater sofa and centre brown coffee table. set of wooden cabinets in study room, bed room and store and grey flooring on rest of floor. with white relaxing chairs in balcony"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "5151b9ce52a84656bd7c0fac96f5a743"
+  },
+  {
+    "sample_id": "pointllm_0326",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-000/059a7936ed89419ba9eae3153753ae86.glb",
+    "prompt": "Offer a clear and concise description of this point cloud object.",
+    "ground_truth": "A blue cartoon",
+    "ground_truths": [
+      "A blue cartoon"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "059a7936ed89419ba9eae3153753ae86"
+  },
+  {
+    "sample_id": "pointllm_0336",
+    "mesh_path": "eval_data/meshes/1628198c46ce466781505d24f3292e3e.glb",
+    "prompt": "Give a brief explanation of the object that this cloud of points forms.",
+    "ground_truth": "Grey coloured brown vertical brown panels made cylindrical shaped circular nosed gun three d model.",
+    "ground_truths": [
+      "Grey coloured brown vertical brown panels made cylindrical shaped circular nosed gun three d model."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "1628198c46ce466781505d24f3292e3e"
+  },
+  {
+    "sample_id": "pointllm_0345",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-015/c345e4dd7d584ca0beee9c06247c82ec.glb",
+    "prompt": "Provide a short explanation of this 3D structure.",
+    "ground_truth": "A dark brown and light brown truck",
+    "ground_truths": [
+      "A dark brown and light brown truck"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "c345e4dd7d584ca0beee9c06247c82ec"
+  },
+  {
+    "sample_id": "pointllm_0346",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-038/8caaef98c3704e688242aac0e49cee03.glb",
+    "prompt": "How would you summarize this 3D data set?",
+    "ground_truth": "A cartoon girl with long yellow hair and a bow on her head",
+    "ground_truths": [
+      "A cartoon girl with long yellow hair and a bow on her head"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "8caaef98c3704e688242aac0e49cee03"
+  },
+  {
+    "sample_id": "pointllm_0350",
+    "mesh_path": "eval_data/meshes/9e3d49935cc649a495471000269f0f9f.glb",
+    "prompt": "What object is this point cloud rendering?",
+    "ground_truth": "Football newspaper",
+    "ground_truths": [
+      "Football newspaper"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "9e3d49935cc649a495471000269f0f9f"
+  },
+  {
+    "sample_id": "pointllm_0355",
+    "mesh_path": "eval_data/meshes/94d5f526587245c4b8ac1f538888aba8.glb",
+    "prompt": "Could you delineate the form indicated by this point cloud?",
+    "ground_truth": "Grey coloured toy camera with circular projecting lens set at centre of front side.",
+    "ground_truths": [
+      "Grey coloured toy camera with circular projecting lens set at centre of front side."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "94d5f526587245c4b8ac1f538888aba8"
+  },
+  {
+    "sample_id": "pointllm_0360",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-072/1ccbda8800b94066b48af17f93fa9712.glb",
+    "prompt": "Share a brief interpretation of this 3D point cloud.",
+    "ground_truth": "A cartoon old computer",
+    "ground_truths": [
+      "A cartoon old computer"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "1ccbda8800b94066b48af17f93fa9712"
+  },
+  {
+    "sample_id": "pointllm_0362",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-098/82ad2c59603d4e48b0d3b003949fd884.glb",
+    "prompt": "Express in brief, what this point cloud is representing.",
+    "ground_truth": "Pink statue looks like a cat with circular hair",
+    "ground_truths": [
+      "Pink statue looks like a cat with circular hair"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "82ad2c59603d4e48b0d3b003949fd884"
+  },
+  {
+    "sample_id": "pointllm_0373",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-112/37906c6e67c24b71b36bdc03ae55834a.glb",
+    "prompt": "Offer a summary of the 3D object illustrated by this cloud.",
+    "ground_truth": "A grey cylindrical shaped object like a pot with five base curved legs.",
+    "ground_truths": [
+      "A grey cylindrical shaped object like a pot with five base curved legs."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "37906c6e67c24b71b36bdc03ae55834a"
+  },
+  {
+    "sample_id": "pointllm_0379",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-006/b408ae196798446ea5e23e41b89d5506.glb",
+    "prompt": "Summarize the 3D point cloud object briefly.",
+    "ground_truth": "Green coloured toy van with rectangular curved surface yellow front lights and red seats with grey coloured wheels.",
+    "ground_truths": [
+      "Green coloured toy van with rectangular curved surface yellow front lights and red seats with grey coloured wheels."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "b408ae196798446ea5e23e41b89d5506"
+  },
+  {
+    "sample_id": "pointllm_0410",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-159/c0c0f2d8b980400cae6045139244c3d7.glb",
+    "prompt": "Share a brief interpretation of this 3D point cloud.",
+    "ground_truth": "A white doll with a red tie and a red belly",
+    "ground_truths": [
+      "A white doll with a red tie and a red belly"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "c0c0f2d8b980400cae6045139244c3d7"
+  },
+  {
+    "sample_id": "pointllm_0448",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-139/c8ea472ef90f4df4ad1d98e02e1e4dfe.glb",
+    "prompt": "Give a quick overview of the object represented by this 3D cloud.",
+    "ground_truth": "A cartoon look like a bomb with legs",
+    "ground_truths": [
+      "A cartoon look like a bomb with legs"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "c8ea472ef90f4df4ad1d98e02e1e4dfe"
+  },
+  {
+    "sample_id": "pointllm_0460",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-098/c048d2bee4954a48ad37debad7cb9daa.glb",
+    "prompt": "Summarize the 3D point cloud object briefly.",
+    "ground_truth": "Figure of a black cat with yellow eyes the face or undefined face cannot be distinguished following a small green ball that is suspended by a very thin white rope the cat stands on two legs on a round light brown surface and the other two legs are outside touching what would be the floor the image is in 3d with a gray background.",
+    "ground_truths": [
+      "Figure of a black cat with yellow eyes the face or undefined face cannot be distinguished following a small green ball that is suspended by a very thin white rope the cat stands on two legs on a round light brown surface and the other two legs are outside touching what would be the floor the image is in 3d with a gray background."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "c048d2bee4954a48ad37debad7cb9daa"
+  },
+  {
+    "sample_id": "pointllm_0466",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-001/0fe718a253bd43aca376780aad0f318b.glb",
+    "prompt": "Provide an outline of this 3D shape's characteristics.",
+    "ground_truth": "A garlic shaped white object.",
+    "ground_truths": [
+      "A garlic shaped white object."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "0fe718a253bd43aca376780aad0f318b"
+  },
+  {
+    "sample_id": "pointllm_0481",
+    "mesh_path": "eval_data/meshes/7c71d54b77d54447ab869f4dd93034c7.glb",
+    "prompt": "Express in brief, what this point cloud is representing.",
+    "ground_truth": "Drinking butter & milk ,which is a combination of milk and hokkaido butter that makes you feel as if you are drinking melted butter it is a yellow glass with a sealed airtight lid.",
+    "ground_truths": [
+      "Drinking butter & milk ,which is a combination of milk and hokkaido butter that makes you feel as if you are drinking melted butter it is a yellow glass with a sealed airtight lid."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "7c71d54b77d54447ab869f4dd93034c7"
+  },
+  {
+    "sample_id": "pointllm_0486",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-070/70b5238278b144158b482f5359c3ee8e.glb",
+    "prompt": "What kind of object is illustrated by this collection of points?",
+    "ground_truth": "Private jet",
+    "ground_truths": [
+      "Private jet"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "70b5238278b144158b482f5359c3ee8e"
+  },
+  {
+    "sample_id": "pointllm_0494",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-140/5691d345d5394df886f7c6c5b7441a5f.glb",
+    "prompt": "Offer a clear and concise description of this point cloud object.",
+    "ground_truth": "A cartoon different tools",
+    "ground_truths": [
+      "A cartoon different tools"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "5691d345d5394df886f7c6c5b7441a5f"
+  },
+  {
+    "sample_id": "pointllm_0536",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-146/8c83e6584b90436882a68c690a324a4b.glb",
+    "prompt": "How would you interpret this 3D point cloud?",
+    "ground_truth": "A cartoon white and red look like a boat",
+    "ground_truths": [
+      "A cartoon white and red look like a boat"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "8c83e6584b90436882a68c690a324a4b"
+  },
+  {
+    "sample_id": "pointllm_0544",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-071/fc8dd5a2fc9f4dd19ad6a64a8a6e89e9.glb",
+    "prompt": "Offer a summary of the 3D object illustrated by this cloud.",
+    "ground_truth": "A white snow doll wearing a brown circular hat and carrying a brown hand bag on the side.",
+    "ground_truths": [
+      "A white snow doll wearing a brown circular hat and carrying a brown hand bag on the side."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "fc8dd5a2fc9f4dd19ad6a64a8a6e89e9"
+  },
+  {
+    "sample_id": "pointllm_0547",
+    "mesh_path": "eval_data/meshes/1b228ad506a24fa9a93d8fdbcf633889.glb",
+    "prompt": "Give a quick overview of the object represented by this 3D cloud.",
+    "ground_truth": "A three layer structure with green oval top and white middle part and also having a brown base.",
+    "ground_truths": [
+      "A three layer structure with green oval top and white middle part and also having a brown base."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "1b228ad506a24fa9a93d8fdbcf633889"
+  },
+  {
+    "sample_id": "pointllm_0556",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-040/64bae3331cb043c5b11bbb219e96e2c4.glb",
+    "prompt": "How would you describe the 3D form shown in this point cloud?",
+    "ground_truth": "A sword with a cross at its middle",
+    "ground_truths": [
+      "A sword with a cross at its middle"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "64bae3331cb043c5b11bbb219e96e2c4"
+  },
+  {
+    "sample_id": "pointllm_0571",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-068/5fe793315b0a4b7882cbb67cf1ef6703.glb",
+    "prompt": "What does this collection of points represent?",
+    "ground_truth": "A animated white colour dog that has hais",
+    "ground_truths": [
+      "A animated white colour dog that has hais"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "5fe793315b0a4b7882cbb67cf1ef6703"
+  },
+  {
+    "sample_id": "pointllm_0626",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-115/983fa8b23a084f5dacd157e6c9ceba97.glb",
+    "prompt": "What kind of structure does this 3D point cloud depict?",
+    "ground_truth": "A cartoon pony",
+    "ground_truths": [
+      "A cartoon pony"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "983fa8b23a084f5dacd157e6c9ceba97"
+  },
+  {
+    "sample_id": "pointllm_0640",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-105/0ea33b6617174530b97d6b7a92c275fb.glb",
+    "prompt": "Summarize the 3D point cloud object briefly.",
+    "ground_truth": "A cartoon green and red like a fruit",
+    "ground_truths": [
+      "A cartoon green and red like a fruit"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "0ea33b6617174530b97d6b7a92c275fb"
+  },
+  {
+    "sample_id": "pointllm_0642",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-136/91440f33337a4b51929806dc5a5b9d1d.glb",
+    "prompt": "Can you briefly outline the shape represented by these points?",
+    "ground_truth": "A animated instruments for physical disabled people that has in white colour it is helping such people to walk",
+    "ground_truths": [
+      "A animated instruments for physical disabled people that has in white colour it is helping such people to walk"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "91440f33337a4b51929806dc5a5b9d1d"
+  },
+  {
+    "sample_id": "pointllm_0652",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-000/93bfec3a68214dc5ba44f225698a5af5.glb",
+    "prompt": "Offer a clear and concise description of this point cloud object.",
+    "ground_truth": "A foldable knife pen with white holder.",
+    "ground_truths": [
+      "A foldable knife pen with white holder."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "93bfec3a68214dc5ba44f225698a5af5"
+  },
+  {
+    "sample_id": "pointllm_0669",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-124/ca0f888791514830a99d4c4ae057ade8.glb",
+    "prompt": "Give a brief explanation of the object that this cloud of points forms.",
+    "ground_truth": "A dark writing board with a yellow stand.",
+    "ground_truths": [
+      "A dark writing board with a yellow stand."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "ca0f888791514830a99d4c4ae057ade8"
+  },
+  {
+    "sample_id": "pointllm_0670",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-016/4ef9e579fddd48589ba5e36915503b98.glb",
+    "prompt": "Could you delineate the form indicated by this point cloud?",
+    "ground_truth": "Prostock 3d model car\nA red racing car\nA red toy car with a cylindrical part on top of the bonnet and white writing on the bonnet.",
+    "ground_truths": [
+      "Prostock 3d model car\nA red racing car\nA red toy car with a cylindrical part on top of the bonnet and white writing on the bonnet."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "4ef9e579fddd48589ba5e36915503b98"
+  },
+  {
+    "sample_id": "pointllm_0705",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-104/f12f0dd7968d4f14ac7c3d0562a5d394.glb",
+    "prompt": "Could you delineate the form indicated by this point cloud?",
+    "ground_truth": "A cartoon usb white in 3d",
+    "ground_truths": [
+      "A cartoon usb white in 3d"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "f12f0dd7968d4f14ac7c3d0562a5d394"
+  },
+  {
+    "sample_id": "pointllm_0708",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-019/0a203577c66c402085d7b85f4bb281f2.glb",
+    "prompt": "Deliver a quick description of the object represented here.",
+    "ground_truth": "A carton looking rod with rolls on its middle",
+    "ground_truths": [
+      "A carton looking rod with rolls on its middle"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "0a203577c66c402085d7b85f4bb281f2"
+  },
+  {
+    "sample_id": "pointllm_0709",
+    "mesh_path": "eval_data/meshes/3f0e63a48d2b4063b9a67dd041426357.glb",
+    "prompt": "Can you give a brief overview of this point cloud?",
+    "ground_truth": "A lamp cover with a white short stand and a cylindrical base",
+    "ground_truths": [
+      "A lamp cover with a white short stand and a cylindrical base"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "3f0e63a48d2b4063b9a67dd041426357"
+  },
+  {
+    "sample_id": "pointllm_0711",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-019/b103a1ec9bb549848d884a003f96b3fe.glb",
+    "prompt": "Express in brief, what this point cloud is representing.",
+    "ground_truth": "Grey coloured toy push button telephone.",
+    "ground_truths": [
+      "Grey coloured toy push button telephone."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "b103a1ec9bb549848d884a003f96b3fe"
+  },
+  {
+    "sample_id": "pointllm_0751",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-027/c20eb3a5a93e4cddb06c2f98626b1830.glb",
+    "prompt": "What kind of object is illustrated by this collection of points?",
+    "ground_truth": "A wooden rectangular board with a clay pot on a three stand and a table having some utensils on top.",
+    "ground_truths": [
+      "A wooden rectangular board with a clay pot on a three stand and a table having some utensils on top."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "c20eb3a5a93e4cddb06c2f98626b1830"
+  },
+  {
+    "sample_id": "pointllm_0754",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-013/91701f32c03b49f0b30ce565ff1655c6.glb",
+    "prompt": "What does this collection of points represent?",
+    "ground_truth": "House in 3d",
+    "ground_truths": [
+      "House in 3d"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "91701f32c03b49f0b30ce565ff1655c6"
+  },
+  {
+    "sample_id": "pointllm_0759",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-051/3061e9a9236d4b98b74c95ff189d28a0.glb",
+    "prompt": "Share a brief interpretation of this 3D point cloud.",
+    "ground_truth": "Three story building in a beige color floor.",
+    "ground_truths": [
+      "Three story building in a beige color floor."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "3061e9a9236d4b98b74c95ff189d28a0"
+  },
+  {
+    "sample_id": "pointllm_0760",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-132/bed2c5c9c36a4659820597b422fc95a9.glb",
+    "prompt": "Can you give a brief overview of this point cloud?",
+    "ground_truth": "A model of a yellow bird",
+    "ground_truths": [
+      "A model of a yellow bird"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "bed2c5c9c36a4659820597b422fc95a9"
+  },
+  {
+    "sample_id": "pointllm_0768",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-045/607145499815434d9ee4e8ae5b0689ca.glb",
+    "prompt": "What does this collection of points represent?",
+    "ground_truth": "A yellow pipe joint",
+    "ground_truths": [
+      "A yellow pipe joint"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "607145499815434d9ee4e8ae5b0689ca"
+  },
+  {
+    "sample_id": "pointllm_0787",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-097/ac73f58f1ca8483eb3e14264da12c3d9.glb",
+    "prompt": "How would you interpret this 3D point cloud?",
+    "ground_truth": "It is a red icosahedron with a ferrari emblem.",
+    "ground_truths": [
+      "It is a red icosahedron with a ferrari emblem."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "ac73f58f1ca8483eb3e14264da12c3d9"
+  },
+  {
+    "sample_id": "pointllm_0795",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-117/12c80f148c6840ad92433948566ef5a4.glb",
+    "prompt": "What kind of object is illustrated by this collection of points?",
+    "ground_truth": "3d version of a blue robot",
+    "ground_truths": [
+      "3d version of a blue robot"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "12c80f148c6840ad92433948566ef5a4"
+  },
+  {
+    "sample_id": "pointllm_0829",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-096/3a528f050d1443dc8b5423253627d349.glb",
+    "prompt": "Share a brief interpretation of this 3D point cloud.",
+    "ground_truth": "Grey coloured circular disc panel space ship with antenna.",
+    "ground_truths": [
+      "Grey coloured circular disc panel space ship with antenna."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "3a528f050d1443dc8b5423253627d349"
+  },
+  {
+    "sample_id": "pointllm_0832",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-077/51be235eb692425ebb7aaaeb056fd3b7.glb",
+    "prompt": "Provide an outline of this 3D shape's characteristics.",
+    "ground_truth": "A cartoon purple rectangle figure with circles",
+    "ground_truths": [
+      "A cartoon purple rectangle figure with circles"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "51be235eb692425ebb7aaaeb056fd3b7"
+  },
+  {
+    "sample_id": "pointllm_0838",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-117/e72dcc58707843fa93384690e3f16d9f.glb",
+    "prompt": "How would you summarize this 3D data set?",
+    "ground_truth": "A white pony with pink hair on the head and tail.",
+    "ground_truths": [
+      "A white pony with pink hair on the head and tail."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "e72dcc58707843fa93384690e3f16d9f"
+  },
+  {
+    "sample_id": "pointllm_0848",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-046/69e85f0a164f47e0bfe9f8c1c6229fd3.glb",
+    "prompt": "Offer a clear and concise description of this point cloud object.",
+    "ground_truth": "Gray colored toy elephant with curved front teeth and long stringed tail.",
+    "ground_truths": [
+      "Gray colored toy elephant with curved front teeth and long stringed tail."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "69e85f0a164f47e0bfe9f8c1c6229fd3"
+  },
+  {
+    "sample_id": "pointllm_0851",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-049/b8ebc803ac0d4157986c718328a00205.glb",
+    "prompt": "Could you delineate the form indicated by this point cloud?",
+    "ground_truth": "A white cartoon scorpion with eight legs.",
+    "ground_truths": [
+      "A white cartoon scorpion with eight legs."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "b8ebc803ac0d4157986c718328a00205"
+  },
+  {
+    "sample_id": "pointllm_0866",
+    "mesh_path": "eval_data/meshes/15f6699f24f5465c8993b20051b55772.glb",
+    "prompt": "Offer a succinct summary of this 3D object.",
+    "ground_truth": "A smiling cartoon insect with bulging eyes and four hands is yellow in color and resembles a cockroach",
+    "ground_truths": [
+      "A smiling cartoon insect with bulging eyes and four hands is yellow in color and resembles a cockroach"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "15f6699f24f5465c8993b20051b55772"
+  },
+  {
+    "sample_id": "pointllm_0885",
+    "mesh_path": "eval_data/meshes/77f6c39b03f240d4a724930b0cbc665a.glb",
+    "prompt": "Provide a short explanation of this 3D structure.",
+    "ground_truth": "A set of pliers. the pliers have a yellow and black colored grip.",
+    "ground_truths": [
+      "A set of pliers. the pliers have a yellow and black colored grip."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "77f6c39b03f240d4a724930b0cbc665a"
+  },
+  {
+    "sample_id": "pointllm_0886",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-139/252f3b3f5cd64698826fc1ab42614677.glb",
+    "prompt": "Share a brief interpretation of this 3D point cloud.",
+    "ground_truth": "A drown with grey body and four red arms.",
+    "ground_truths": [
+      "A drown with grey body and four red arms."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "252f3b3f5cd64698826fc1ab42614677"
+  },
+  {
+    "sample_id": "pointllm_0895",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-102/78e89f3165164480a2738f11f1d5a568.glb",
+    "prompt": "Give a brief explanation of the object that this cloud of points forms.",
+    "ground_truth": "Ornament-type golden horse is standing facing forward.",
+    "ground_truths": [
+      "Ornament-type golden horse is standing facing forward."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "78e89f3165164480a2738f11f1d5a568"
+  },
+  {
+    "sample_id": "pointllm_0901",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-008/5e04c38c79dd4b85a88fe997b70abc8d.glb",
+    "prompt": "Share a brief interpretation of this 3D point cloud.",
+    "ground_truth": "A cartoon blue look like a pokemon in 3d",
+    "ground_truths": [
+      "A cartoon blue look like a pokemon in 3d"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "5e04c38c79dd4b85a88fe997b70abc8d"
+  },
+  {
+    "sample_id": "pointllm_0908",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-078/7610a160fbaf41d681c7d7b9627df85d.glb",
+    "prompt": "What does this collection of points represent?",
+    "ground_truth": "A yellow coloured brown panels made sloping roofed house model with brown windows and grey tiled front base.",
+    "ground_truths": [
+      "A yellow coloured brown panels made sloping roofed house model with brown windows and grey tiled front base."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "7610a160fbaf41d681c7d7b9627df85d"
+  },
+  {
+    "sample_id": "pointllm_0909",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-156/cb5fba40366f47858acebc90cf37479f.glb",
+    "prompt": "Give a quick overview of the object represented by this 3D cloud.",
+    "ground_truth": "A 3d model of a sports car and a high body with black windows.",
+    "ground_truths": [
+      "A 3d model of a sports car and a high body with black windows."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "cb5fba40366f47858acebc90cf37479f"
+  },
+  {
+    "sample_id": "pointllm_0910",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-113/c6f203f1cf554c188272a10756e9498a.glb",
+    "prompt": "Deliver a quick description of the object represented here.",
+    "ground_truth": "A black robot with four tyres, a white face and a long neck",
+    "ground_truths": [
+      "A black robot with four tyres, a white face and a long neck"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "c6f203f1cf554c188272a10756e9498a"
+  },
+  {
+    "sample_id": "pointllm_0913",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-048/19b64dad6ab542bc903119201f74b251.glb",
+    "prompt": "Present a compact account of this 3D object's key features.",
+    "ground_truth": "Light brown shaded toy car with red tail in back.",
+    "ground_truths": [
+      "Light brown shaded toy car with red tail in back."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "19b64dad6ab542bc903119201f74b251"
+  },
+  {
+    "sample_id": "pointllm_0933",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-124/abc413b5e2d14a028dab615b49777167.glb",
+    "prompt": "What object is this point cloud rendering?",
+    "ground_truth": "A black and brown colored gun.",
+    "ground_truths": [
+      "A black and brown colored gun."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "abc413b5e2d14a028dab615b49777167"
+  },
+  {
+    "sample_id": "pointllm_0965",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-046/ae0d06982560423a8dab1590ffc4de4f.glb",
+    "prompt": "Give a quick overview of the object represented by this 3D cloud.",
+    "ground_truth": "A cartoon colorful look like a woman in 3d",
+    "ground_truths": [
+      "A cartoon colorful look like a woman in 3d"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "ae0d06982560423a8dab1590ffc4de4f"
+  },
+  {
+    "sample_id": "pointllm_0966",
+    "mesh_path": "eval_data/meshes/11d6edfdf58142e78d5435dc4bc03460.glb",
+    "prompt": "What kind of object is illustrated by this collection of points?",
+    "ground_truth": "A brown hummer with its grey head\nGrey hammer with brown rod handle.",
+    "ground_truths": [
+      "A brown hummer with its grey head\nGrey hammer with brown rod handle."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "11d6edfdf58142e78d5435dc4bc03460"
+  },
+  {
+    "sample_id": "pointllm_0968",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-013/8c833864d0bb40f4b3f3a3fe1e99e702.glb",
+    "prompt": "What does this collection of points represent?",
+    "ground_truth": "White car with gray thick band running all over roof and bonnet having gray side panels and wheels",
+    "ground_truths": [
+      "White car with gray thick band running all over roof and bonnet having gray side panels and wheels"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "8c833864d0bb40f4b3f3a3fe1e99e702"
+  },
+  {
+    "sample_id": "pointllm_0984",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-136/ac880a2f5402467dad230ce23655a929.glb",
+    "prompt": "Can you briefly outline the shape represented by these points?",
+    "ground_truth": "White petal shape folding iron ing table model with folding grey leg on back side.",
+    "ground_truths": [
+      "White petal shape folding iron ing table model with folding grey leg on back side."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "ac880a2f5402467dad230ce23655a929"
+  },
+  {
+    "sample_id": "pointllm_1008",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-087/0e708d1e0ce0447ba5637a5320f5729c.glb",
+    "prompt": "What kind of structure does this 3D point cloud depict?",
+    "ground_truth": "3d figure of an octo expansion octopus from splatoon 2 in fuccia color with its two large tentacles and large gray eyes.",
+    "ground_truths": [
+      "3d figure of an octo expansion octopus from splatoon 2 in fuccia color with its two large tentacles and large gray eyes."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "0e708d1e0ce0447ba5637a5320f5729c"
+  },
+  {
+    "sample_id": "pointllm_1009",
+    "mesh_path": "eval_data/meshes/d85f899a00114042abd0562c25a08438.glb",
+    "prompt": "Characterize the object this point cloud is illustrating.",
+    "ground_truth": "A old cartoon cellphone",
+    "ground_truths": [
+      "A old cartoon cellphone"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "d85f899a00114042abd0562c25a08438"
+  },
+  {
+    "sample_id": "pointllm_1025",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-025/245af7dde0cd4add9f7e11db3bbbccba.glb",
+    "prompt": "What does this collection of points represent?",
+    "ground_truth": "Yellow colored blue glassed submarine",
+    "ground_truths": [
+      "Yellow colored blue glassed submarine"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "245af7dde0cd4add9f7e11db3bbbccba"
+  },
+  {
+    "sample_id": "pointllm_1031",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-115/d6a3520486bb474f9b5e72eda8408974.glb",
+    "prompt": "Can you briefly outline the shape represented by these points?",
+    "ground_truth": "Wooden batten united rectangular box with open top.",
+    "ground_truths": [
+      "Wooden batten united rectangular box with open top."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "d6a3520486bb474f9b5e72eda8408974"
+  },
+  {
+    "sample_id": "pointllm_1039",
+    "mesh_path": "eval_data/meshes/246bb60df89a4c73bb4613bb22b0367b.glb",
+    "prompt": "Offer a succinct summary of this 3D object.",
+    "ground_truth": "A animated sword that has a green colour handle",
+    "ground_truths": [
+      "A animated sword that has a green colour handle"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "246bb60df89a4c73bb4613bb22b0367b"
+  },
+  {
+    "sample_id": "pointllm_1053",
+    "mesh_path": "eval_data/meshes/89f1b1d686904dc3b51d10da37efd11d.glb",
+    "prompt": "What kind of object is illustrated by this collection of points?",
+    "ground_truth": "A packed pokemon stickers of different types.",
+    "ground_truths": [
+      "A packed pokemon stickers of different types."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "89f1b1d686904dc3b51d10da37efd11d"
+  },
+  {
+    "sample_id": "pointllm_1066",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-145/844518dcccf44c86ad1ead660ab103fb.glb",
+    "prompt": "Explain the object this point cloud depicts succinctly.",
+    "ground_truth": "A cartoon figure of a white man fat",
+    "ground_truths": [
+      "A cartoon figure of a white man fat"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "844518dcccf44c86ad1ead660ab103fb"
+  },
+  {
+    "sample_id": "pointllm_1068",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-146/f2785bbde26b4b0f8e09ee736f1c9638.glb",
+    "prompt": "What is the nature of the object this point cloud is representing?",
+    "ground_truth": "A toy house with cubical body and triangular roof and open door.",
+    "ground_truths": [
+      "A toy house with cubical body and triangular roof and open door."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "f2785bbde26b4b0f8e09ee736f1c9638"
+  },
+  {
+    "sample_id": "pointllm_1092",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-039/a2ce958da7c248118813eb8e2e349674.glb",
+    "prompt": "Offer a clear and concise description of this point cloud object.",
+    "ground_truth": "A cartoon small dog pink",
+    "ground_truths": [
+      "A cartoon small dog pink"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "a2ce958da7c248118813eb8e2e349674"
+  },
+  {
+    "sample_id": "pointllm_1118",
+    "mesh_path": "eval_data/meshes/eff40b1550e0466a9c3273a519139143.glb",
+    "prompt": "Convey a summary of the 3D structure represented in this point cloud.",
+    "ground_truth": "Unos cigarrilos",
+    "ground_truths": [
+      "Unos cigarrilos"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "eff40b1550e0466a9c3273a519139143"
+  },
+  {
+    "sample_id": "pointllm_1127",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-124/e02e1f5f7cf2419fb47a6ecc8ec63120.glb",
+    "prompt": "What does this collection of points represent?",
+    "ground_truth": "A brown trench with curved u top.",
+    "ground_truths": [
+      "A brown trench with curved u top."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "e02e1f5f7cf2419fb47a6ecc8ec63120"
+  },
+  {
+    "sample_id": "pointllm_1128",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-013/d79a32a512c64c5e93dc856864789a7e.glb",
+    "prompt": "What kind of object is depicted by this point cloud?",
+    "ground_truth": "A animated man that has popcin face and he has big hands and big shoes",
+    "ground_truths": [
+      "A animated man that has popcin face and he has big hands and big shoes"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "d79a32a512c64c5e93dc856864789a7e"
+  },
+  {
+    "sample_id": "pointllm_1135",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-072/b11ad0a8c43e43579925d37e5341aeaa.glb",
+    "prompt": "What kind of object is depicted by this point cloud?",
+    "ground_truth": "A black smartphone with a circular rear camera and torch. it is also having a black screen.",
+    "ground_truths": [
+      "A black smartphone with a circular rear camera and torch. it is also having a black screen."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "b11ad0a8c43e43579925d37e5341aeaa"
+  },
+  {
+    "sample_id": "pointllm_1150",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-127/b4bbf2116b1a41a5a3b9d3622b07074c.glb",
+    "prompt": "What kind of structure does this 3D point cloud depict?",
+    "ground_truth": "A black shoe with a white sole",
+    "ground_truths": [
+      "A black shoe with a white sole"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "b4bbf2116b1a41a5a3b9d3622b07074c"
+  },
+  {
+    "sample_id": "pointllm_1185",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-005/6b4ab1eb046447f69fb514aece085fb3.glb",
+    "prompt": "Present a compact account of this 3D object's key features.",
+    "ground_truth": "A cartoon white dinosaur",
+    "ground_truths": [
+      "A cartoon white dinosaur"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "6b4ab1eb046447f69fb514aece085fb3"
+  },
+  {
+    "sample_id": "pointllm_1189",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-091/fb766137ad7d4767bd89acab7a8c3191.glb",
+    "prompt": "What is the nature of the object this point cloud is representing?",
+    "ground_truth": "Unfinished house",
+    "ground_truths": [
+      "Unfinished house"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "fb766137ad7d4767bd89acab7a8c3191"
+  },
+  {
+    "sample_id": "pointllm_1195",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-102/bb84fad67afe490ca7c29211bebf68ba.glb",
+    "prompt": "Offer a clear and concise description of this point cloud object.",
+    "ground_truth": "3d version of a house print",
+    "ground_truths": [
+      "3d version of a house print"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "bb84fad67afe490ca7c29211bebf68ba"
+  },
+  {
+    "sample_id": "pointllm_1216",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-044/f223fd8263bb401da586fa6c34cf8fe6.glb",
+    "prompt": "How would you interpret this 3D point cloud?",
+    "ground_truth": "A white police van with yellow and blue plaid pattern sides.",
+    "ground_truths": [
+      "A white police van with yellow and blue plaid pattern sides."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "f223fd8263bb401da586fa6c34cf8fe6"
+  },
+  {
+    "sample_id": "pointllm_1218",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-135/c8f45fe11d684b30ade3b547be5cefd1.glb",
+    "prompt": "Share a brief interpretation of this 3D point cloud.",
+    "ground_truth": "White and red toy car with heavy bumpers in front and back",
+    "ground_truths": [
+      "White and red toy car with heavy bumpers in front and back"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "c8f45fe11d684b30ade3b547be5cefd1"
+  },
+  {
+    "sample_id": "pointllm_1222",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-136/d109af142eb84b45bc2c4c97f1b93354.glb",
+    "prompt": "Can you give a brief overview of this point cloud?",
+    "ground_truth": "A white bag with blue straps",
+    "ground_truths": [
+      "A white bag with blue straps"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "d109af142eb84b45bc2c4c97f1b93354"
+  },
+  {
+    "sample_id": "pointllm_1225",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-035/4813a6e6bea446f7a59597456c9a7e83.glb",
+    "prompt": "What does this collection of points represent?",
+    "ground_truth": "A yellow spherical ball with a circular yellow holding ring.",
+    "ground_truths": [
+      "A yellow spherical ball with a circular yellow holding ring."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "4813a6e6bea446f7a59597456c9a7e83"
+  },
+  {
+    "sample_id": "pointllm_1230",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-135/47f6f6f2e43a4c21896bd6e1c8ddda8f.glb",
+    "prompt": "Convey a summary of the 3D structure represented in this point cloud.",
+    "ground_truth": "A cartoon silver mouse",
+    "ground_truths": [
+      "A cartoon silver mouse"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "47f6f6f2e43a4c21896bd6e1c8ddda8f"
+  },
+  {
+    "sample_id": "pointllm_1231",
+    "mesh_path": "eval_data/meshes/337591e795c042958201ffb981487a1e.glb",
+    "prompt": "Give a brief explanation of the object that this cloud of points forms.",
+    "ground_truth": "A brown guitor",
+    "ground_truths": [
+      "A brown guitor"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "337591e795c042958201ffb981487a1e"
+  },
+  {
+    "sample_id": "pointllm_1236",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-010/35c07a68cdb246c59bb425610b934bf8.glb",
+    "prompt": "Give a concise interpretation of the 3D data presented here.",
+    "ground_truth": "A white candle stick with thin stand.",
+    "ground_truths": [
+      "A white candle stick with thin stand."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "35c07a68cdb246c59bb425610b934bf8"
+  },
+  {
+    "sample_id": "pointllm_1246",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-110/7ac4782d7acf461a8786c6761a54e6d4.glb",
+    "prompt": "Give a concise interpretation of the 3D data presented here.",
+    "ground_truth": "A fat blue doll with a white belly.",
+    "ground_truths": [
+      "A fat blue doll with a white belly."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "7ac4782d7acf461a8786c6761a54e6d4"
+  },
+  {
+    "sample_id": "pointllm_1259",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-124/0b1ded6f5a8a4e1fbf835e59e5d49359.glb",
+    "prompt": "Give a quick overview of the object represented by this 3D cloud.",
+    "ground_truth": "A red copper like wire with tied top and curved center.",
+    "ground_truths": [
+      "A red copper like wire with tied top and curved center."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "0b1ded6f5a8a4e1fbf835e59e5d49359"
+  },
+  {
+    "sample_id": "pointllm_1261",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-085/8d79676617024cd69197dab1b353e163.glb",
+    "prompt": "Provide a short explanation of this 3D structure.",
+    "ground_truth": "Sword with a dark blade and a dark handle\nA black sword",
+    "ground_truths": [
+      "Sword with a dark blade and a dark handle\nA black sword"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "8d79676617024cd69197dab1b353e163"
+  },
+  {
+    "sample_id": "pointllm_1281",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-087/9ca585120bdb44d1b35105dfcf11316a.glb",
+    "prompt": "What object is this point cloud rendering?",
+    "ground_truth": "A iguana with shirt yellow",
+    "ground_truths": [
+      "A iguana with shirt yellow"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "9ca585120bdb44d1b35105dfcf11316a"
+  },
+  {
+    "sample_id": "pointllm_1327",
+    "mesh_path": "eval_data/meshes/0b17855c99e64b1f907651e8ab2b574c.glb",
+    "prompt": "What kind of object is depicted by this point cloud?",
+    "ground_truth": "A bolt cutter",
+    "ground_truths": [
+      "A bolt cutter"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "0b17855c99e64b1f907651e8ab2b574c"
+  },
+  {
+    "sample_id": "pointllm_1335",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-136/ff4cd9547f5543c2b85b3a021c5bea0f.glb",
+    "prompt": "Summarize the 3D point cloud object briefly.",
+    "ground_truth": "Protein structure",
+    "ground_truths": [
+      "Protein structure"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "ff4cd9547f5543c2b85b3a021c5bea0f"
+  },
+  {
+    "sample_id": "pointllm_1354",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-084/19e2303fdbae4b979f46797b1c6bea45.glb",
+    "prompt": "Offer a clear and concise description of this point cloud object.",
+    "ground_truth": "White coloured blue masked superman character three d model with black and yellow head and yellow belt",
+    "ground_truths": [
+      "White coloured blue masked superman character three d model with black and yellow head and yellow belt"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "19e2303fdbae4b979f46797b1c6bea45"
+  },
+  {
+    "sample_id": "pointllm_1372",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-010/b8dd58c2ac084267a3b50aeef0598988.glb",
+    "prompt": "How would you describe the 3D form shown in this point cloud?",
+    "ground_truth": "A red peg",
+    "ground_truths": [
+      "A red peg"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "b8dd58c2ac084267a3b50aeef0598988"
+  },
+  {
+    "sample_id": "pointllm_1378",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-004/0031ba19d3e042c4bcf79eba40ccc812.glb",
+    "prompt": "What object is this point cloud rendering?",
+    "ground_truth": "A white container like car with six black tractor legs and yellow sides.",
+    "ground_truths": [
+      "A white container like car with six black tractor legs and yellow sides."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "0031ba19d3e042c4bcf79eba40ccc812"
+  },
+  {
+    "sample_id": "pointllm_1392",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-091/9d34f25cb4744435a087099c6d273d04.glb",
+    "prompt": "What is the nature of the object this point cloud is representing?",
+    "ground_truth": "A gift box.",
+    "ground_truths": [
+      "A gift box."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "9d34f25cb4744435a087099c6d273d04"
+  },
+  {
+    "sample_id": "pointllm_1393",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-050/e85ebb729b02402bbe3b917e1196f8d3.glb",
+    "prompt": "Can you give a brief overview of this point cloud?",
+    "ground_truth": "A cartoon black monster like a dragon",
+    "ground_truths": [
+      "A cartoon black monster like a dragon"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "e85ebb729b02402bbe3b917e1196f8d3"
+  },
+  {
+    "sample_id": "pointllm_1401",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-030/23553a1bc13a478486033f2e19c14497.glb",
+    "prompt": "How would you describe the 3D form shown in this point cloud?",
+    "ground_truth": "A white cuboid object like container.",
+    "ground_truths": [
+      "A white cuboid object like container."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "23553a1bc13a478486033f2e19c14497"
+  },
+  {
+    "sample_id": "pointllm_1410",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-095/541747a461f84142a113e2f591a7eb9b.glb",
+    "prompt": "What kind of object is depicted by this point cloud?",
+    "ground_truth": "A brown curved rectangular front object with various machines and gadgets and a green circular display.",
+    "ground_truths": [
+      "A brown curved rectangular front object with various machines and gadgets and a green circular display."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "541747a461f84142a113e2f591a7eb9b"
+  },
+  {
+    "sample_id": "pointllm_1412",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-045/e31257064fa64cdeac1cf264fded96b7.glb",
+    "prompt": "How would you interpret this 3D point cloud?",
+    "ground_truth": "A brown bottle with a black cap",
+    "ground_truths": [
+      "A brown bottle with a black cap"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "e31257064fa64cdeac1cf264fded96b7"
+  },
+  {
+    "sample_id": "pointllm_1422",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-075/93fc33be25e34b44b205c5b962d66e61.glb",
+    "prompt": "What kind of object is illustrated by this collection of points?",
+    "ground_truth": "A four wheel drive",
+    "ground_truths": [
+      "A four wheel drive"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "93fc33be25e34b44b205c5b962d66e61"
+  },
+  {
+    "sample_id": "pointllm_1423",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-089/c8540e358b7b47d68bb7ec9c39cc6a75.glb",
+    "prompt": "Share a brief interpretation of this 3D point cloud.",
+    "ground_truth": "A model of a blue colure car\nA toy blue car with black windscreen and windows.",
+    "ground_truths": [
+      "A model of a blue colure car\nA toy blue car with black windscreen and windows."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "c8540e358b7b47d68bb7ec9c39cc6a75"
+  },
+  {
+    "sample_id": "pointllm_1424",
+    "mesh_path": "eval_data/meshes/9eb45ccbc540440b8308001b50b5e321.glb",
+    "prompt": "Deliver a quick description of the object represented here.",
+    "ground_truth": "An apple that has been eaten",
+    "ground_truths": [
+      "An apple that has been eaten"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "9eb45ccbc540440b8308001b50b5e321"
+  },
+  {
+    "sample_id": "pointllm_1458",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-041/30eb9fd904b942e9abb3be2195255c6e.glb",
+    "prompt": "Offer a clear and concise description of this point cloud object.",
+    "ground_truth": "An 3d image of a light house in white colour in all directions",
+    "ground_truths": [
+      "An 3d image of a light house in white colour in all directions"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "30eb9fd904b942e9abb3be2195255c6e"
+  },
+  {
+    "sample_id": "pointllm_1508",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-104/67beae18c3d24be68f9c8f0ec382d8e3.glb",
+    "prompt": "Offer a summary of the 3D object illustrated by this cloud.",
+    "ground_truth": "A cartoon black truck in 3d",
+    "ground_truths": [
+      "A cartoon black truck in 3d"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "67beae18c3d24be68f9c8f0ec382d8e3"
+  },
+  {
+    "sample_id": "pointllm_1509",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-150/8b39b8957231420d919b60febb627bd5.glb",
+    "prompt": "What object is this point cloud rendering?",
+    "ground_truth": "A storyed building with green background",
+    "ground_truths": [
+      "A storyed building with green background"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "8b39b8957231420d919b60febb627bd5"
+  },
+  {
+    "sample_id": "pointllm_1543",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-059/494854c6ffd540339a1bc6bd91c0349b.glb",
+    "prompt": "What can you infer about the object from this point cloud?",
+    "ground_truth": "A cartoon purple figure of a several box",
+    "ground_truths": [
+      "A cartoon purple figure of a several box"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "494854c6ffd540339a1bc6bd91c0349b"
+  },
+  {
+    "sample_id": "pointllm_1557",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-136/82caf23bb2ac4a46811d9dde1b8cc25e.glb",
+    "prompt": "Express in brief, what this point cloud is representing.",
+    "ground_truth": "Yellow star with white eyes",
+    "ground_truths": [
+      "Yellow star with white eyes"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "82caf23bb2ac4a46811d9dde1b8cc25e"
+  },
+  {
+    "sample_id": "pointllm_1571",
+    "mesh_path": "eval_data/meshes/e9d9f54942f64b6084fc9567a98ddde5.glb",
+    "prompt": "Provide a short explanation of this 3D structure.",
+    "ground_truth": "Toy hammer with black head and brown long cylindrical wooden handle.",
+    "ground_truths": [
+      "Toy hammer with black head and brown long cylindrical wooden handle."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "e9d9f54942f64b6084fc9567a98ddde5"
+  },
+  {
+    "sample_id": "pointllm_1586",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-159/71e499219de548a7a1be74c237b6a2fb.glb",
+    "prompt": "Can you briefly outline the shape represented by these points?",
+    "ground_truth": "A toy truck with a red head and black trailer.",
+    "ground_truths": [
+      "A toy truck with a red head and black trailer."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "71e499219de548a7a1be74c237b6a2fb"
+  },
+  {
+    "sample_id": "pointllm_1590",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-105/e0e688d507be49738bf80e83828631ba.glb",
+    "prompt": "Deliver a quick description of the object represented here.",
+    "ground_truth": "Forklift 3d model",
+    "ground_truths": [
+      "Forklift 3d model"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "e0e688d507be49738bf80e83828631ba"
+  },
+  {
+    "sample_id": "pointllm_1601",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-031/d501614def4d4d1d8dc9e7c3795467c9.glb",
+    "prompt": "What kind of object is depicted by this point cloud?",
+    "ground_truth": "A cartoon black figure with open arms",
+    "ground_truths": [
+      "A cartoon black figure with open arms"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "d501614def4d4d1d8dc9e7c3795467c9"
+  },
+  {
+    "sample_id": "pointllm_1605",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-020/7a488a80bd184b479b4d358b9473a782.glb",
+    "prompt": "Offer a succinct summary of this 3D object.",
+    "ground_truth": "A circular brown board with three blue mugs on top.",
+    "ground_truths": [
+      "A circular brown board with three blue mugs on top."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "7a488a80bd184b479b4d358b9473a782"
+  },
+  {
+    "sample_id": "pointllm_1614",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-099/526b18079304425fa7c694b6fce38db8.glb",
+    "prompt": "What can you infer about the object from this point cloud?",
+    "ground_truth": "A cartoon doll in a black gas mask and in an orange hoodie and trousers.",
+    "ground_truths": [
+      "A cartoon doll in a black gas mask and in an orange hoodie and trousers."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "526b18079304425fa7c694b6fce38db8"
+  },
+  {
+    "sample_id": "pointllm_1617",
+    "mesh_path": "eval_data/meshes/02a80be5ddb14f19898cbf4b14ae783e.glb",
+    "prompt": "Convey a summary of the 3D structure represented in this point cloud.",
+    "ground_truth": "A grey metal pliers with one thin handle and other thick handle.\nCartoon wrench with its working end open.",
+    "ground_truths": [
+      "A grey metal pliers with one thin handle and other thick handle.\nCartoon wrench with its working end open."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "02a80be5ddb14f19898cbf4b14ae783e"
+  },
+  {
+    "sample_id": "pointllm_1638",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-072/304f656a07d741caabdf36d58b9eb471.glb",
+    "prompt": "Characterize the object this point cloud is illustrating.",
+    "ground_truth": "Not clear",
+    "ground_truths": [
+      "Not clear"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "304f656a07d741caabdf36d58b9eb471"
+  },
+  {
+    "sample_id": "pointllm_1639",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-125/bd97f1a7c97345e5a86a581205b19193.glb",
+    "prompt": "What object is this point cloud rendering?",
+    "ground_truth": "Woods interconnected to form a pulpit",
+    "ground_truths": [
+      "Woods interconnected to form a pulpit"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "bd97f1a7c97345e5a86a581205b19193"
+  },
+  {
+    "sample_id": "pointllm_1660",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-085/98163a297e974b998385eeb3fe85cc45.glb",
+    "prompt": "Present a compact account of this 3D object's key features.",
+    "ground_truth": "Bunny with long ears, blue hat, black vest, blue shirt, red scarf, black shorts and wristbands.",
+    "ground_truths": [
+      "Bunny with long ears, blue hat, black vest, blue shirt, red scarf, black shorts and wristbands."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "98163a297e974b998385eeb3fe85cc45"
+  },
+  {
+    "sample_id": "pointllm_1694",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-030/99d626e0967d418096b6b5546f144e01.glb",
+    "prompt": "Offer a clear and concise description of this point cloud object.",
+    "ground_truth": "A blue toy with yellow vertical cardboard on the head and wearing a black coat.",
+    "ground_truths": [
+      "A blue toy with yellow vertical cardboard on the head and wearing a black coat."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "99d626e0967d418096b6b5546f144e01"
+  },
+  {
+    "sample_id": "pointllm_1705",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-012/b6452e7e86fc4270b7ef471329a640eb.glb",
+    "prompt": "Express in brief, what this point cloud is representing.",
+    "ground_truth": "White colored doll with red colored long and wide gown.",
+    "ground_truths": [
+      "White colored doll with red colored long and wide gown."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "b6452e7e86fc4270b7ef471329a640eb"
+  },
+  {
+    "sample_id": "pointllm_1719",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-083/e280e015ed534bec916a06b37f004af1.glb",
+    "prompt": "Offer a clear and concise description of this point cloud object.",
+    "ground_truth": "A grey background with two slaps",
+    "ground_truths": [
+      "A grey background with two slaps"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "e280e015ed534bec916a06b37f004af1"
+  },
+  {
+    "sample_id": "pointllm_1733",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-099/0b8da82a3d7a436f9b585436c4b72f56.glb",
+    "prompt": "Can you briefly outline the shape represented by these points?",
+    "ground_truth": "A cartoon red car in 3d",
+    "ground_truths": [
+      "A cartoon red car in 3d"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "0b8da82a3d7a436f9b585436c4b72f56"
+  },
+  {
+    "sample_id": "pointllm_1739",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-013/3a61b9d2451c4df2a1c6a6550e1875df.glb",
+    "prompt": "What object is this point cloud rendering?",
+    "ground_truth": "A white cartoon bus with blue windscreen and windows and black side mirrors.",
+    "ground_truths": [
+      "A white cartoon bus with blue windscreen and windows and black side mirrors."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "3a61b9d2451c4df2a1c6a6550e1875df"
+  },
+  {
+    "sample_id": "pointllm_1741",
+    "mesh_path": "eval_data/meshes/e97dfa13fe054120b92945aaef2cf04e.glb",
+    "prompt": "Give a quick overview of the object represented by this 3D cloud.",
+    "ground_truth": "A conical brown bowl with a flat base.",
+    "ground_truths": [
+      "A conical brown bowl with a flat base."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "e97dfa13fe054120b92945aaef2cf04e"
+  },
+  {
+    "sample_id": "pointllm_1744",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-132/dd45a467c50541ef897d4243242e243d.glb",
+    "prompt": "Express in brief, what this point cloud is representing.",
+    "ground_truth": "A cellphone",
+    "ground_truths": [
+      "A cellphone"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "dd45a467c50541ef897d4243242e243d"
+  },
+  {
+    "sample_id": "pointllm_1770",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-138/76faa9de2b1a446387a930e37465081e.glb",
+    "prompt": "Provide an outline of this 3D shape's characteristics.",
+    "ground_truth": "A white computer mouse",
+    "ground_truths": [
+      "A white computer mouse"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "76faa9de2b1a446387a930e37465081e"
+  },
+  {
+    "sample_id": "pointllm_1795",
+    "mesh_path": "eval_data/meshes/111dfa6ca3b740c6917a48784527ff1e.glb",
+    "prompt": "Describe the object that this point cloud forms.",
+    "ground_truth": "A dvd player with a knob at its front",
+    "ground_truths": [
+      "A dvd player with a knob at its front"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "111dfa6ca3b740c6917a48784527ff1e"
+  },
+  {
+    "sample_id": "pointllm_1813",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-013/d56401a8a5d142feb1108106b0f581cc.glb",
+    "prompt": "Give a brief explanation of the object that this cloud of points forms.",
+    "ground_truth": "Gray color thin panel",
+    "ground_truths": [
+      "Gray color thin panel"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "d56401a8a5d142feb1108106b0f581cc"
+  },
+  {
+    "sample_id": "pointllm_1821",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-155/6d9f07e743444513a1a564e309b455af.glb",
+    "prompt": "Offer a clear and concise description of this point cloud object.",
+    "ground_truth": "A cartoon black look like a rimel",
+    "ground_truths": [
+      "A cartoon black look like a rimel"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "6d9f07e743444513a1a564e309b455af"
+  },
+  {
+    "sample_id": "pointllm_1833",
+    "mesh_path": "eval_data/meshes/14daacbaf0f94f458851e15dfd717426.glb",
+    "prompt": "Offer a succinct summary of this 3D object.",
+    "ground_truth": "A blue super stallete sink with white right side written stereo in white capital letters and a white arrow and a yellow button on the top",
+    "ground_truths": [
+      "A blue super stallete sink with white right side written stereo in white capital letters and a white arrow and a yellow button on the top"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "14daacbaf0f94f458851e15dfd717426"
+  },
+  {
+    "sample_id": "pointllm_1845",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-017/260d1fe21bd741849e885058d5df4318.glb",
+    "prompt": "How would you describe the 3D form shown in this point cloud?",
+    "ground_truth": "A grey model of a brief case",
+    "ground_truths": [
+      "A grey model of a brief case"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "260d1fe21bd741849e885058d5df4318"
+  },
+  {
+    "sample_id": "pointllm_1849",
+    "mesh_path": "eval_data/meshes/d0ff257bc4fc4b5d9f9a0d319f174a00.glb",
+    "prompt": "How would you summarize this 3D data set?",
+    "ground_truth": "3d version of a television test",
+    "ground_truths": [
+      "3d version of a television test"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "d0ff257bc4fc4b5d9f9a0d319f174a00"
+  },
+  {
+    "sample_id": "pointllm_1889",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-096/8257772b0e2f408ba269264855dfea00.glb",
+    "prompt": "What kind of object is depicted by this point cloud?",
+    "ground_truth": "A brown hard cover book with white pages.",
+    "ground_truths": [
+      "A brown hard cover book with white pages."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "8257772b0e2f408ba269264855dfea00"
+  },
+  {
+    "sample_id": "pointllm_1896",
+    "mesh_path": "eval_data/meshes/9f469c795db945d7a9072d1287dcdf0d.glb",
+    "prompt": "Describe the object that this point cloud forms.",
+    "ground_truth": "Black headphone comprising black inside and white outwards disk earphones",
+    "ground_truths": [
+      "Black headphone comprising black inside and white outwards disk earphones"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "9f469c795db945d7a9072d1287dcdf0d"
+  },
+  {
+    "sample_id": "pointllm_1901",
+    "mesh_path": "eval_data/meshes/11a4b72183e043f598a0106ff2cc9545.glb",
+    "prompt": "How would you interpret this 3D point cloud?",
+    "ground_truth": "A cartoon red hat in 3d",
+    "ground_truths": [
+      "A cartoon red hat in 3d"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "11a4b72183e043f598a0106ff2cc9545"
+  },
+  {
+    "sample_id": "pointllm_1907",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-141/ffa6a425ecb04b229542a66d8df21e90.glb",
+    "prompt": "How would you summarize this 3D data set?",
+    "ground_truth": "Red spiral",
+    "ground_truths": [
+      "Red spiral"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "ffa6a425ecb04b229542a66d8df21e90"
+  },
+  {
+    "sample_id": "pointllm_1913",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-150/2221aec5809d43d88aedf82738432318.glb",
+    "prompt": "Provide an outline of this 3D shape's characteristics.",
+    "ground_truth": "A cartoon robotic white toy",
+    "ground_truths": [
+      "A cartoon robotic white toy"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "2221aec5809d43d88aedf82738432318"
+  },
+  {
+    "sample_id": "pointllm_1917",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-022/346548d0577b44ff9817e2007048f859.glb",
+    "prompt": "Give a brief explanation of the object that this cloud of points forms.",
+    "ground_truth": "A gold coloured bird",
+    "ground_truths": [
+      "A gold coloured bird"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "346548d0577b44ff9817e2007048f859"
+  },
+  {
+    "sample_id": "pointllm_1919",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-124/3a1f027057894d1a9ecfee18752b96a2.glb",
+    "prompt": "Present a compact account of this 3D object's key features.",
+    "ground_truth": "Circles connected forming a c",
+    "ground_truths": [
+      "Circles connected forming a c"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "3a1f027057894d1a9ecfee18752b96a2"
+  },
+  {
+    "sample_id": "pointllm_1933",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-009/b156e91504374c77ac354a3dbe803876.glb",
+    "prompt": "Can you briefly outline the shape represented by these points?",
+    "ground_truth": "A cartoon yellow look like a banana with arms",
+    "ground_truths": [
+      "A cartoon yellow look like a banana with arms"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "b156e91504374c77ac354a3dbe803876"
+  },
+  {
+    "sample_id": "pointllm_1962",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-124/2552879ebfe34d209658731149e7b8d1.glb",
+    "prompt": "Provide an outline of this 3D shape's characteristics.",
+    "ground_truth": "A brown box with a cream white paper.",
+    "ground_truths": [
+      "A brown box with a cream white paper."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "2552879ebfe34d209658731149e7b8d1"
+  },
+  {
+    "sample_id": "pointllm_1968",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-098/62d737fd396b40b7ba7752b765a37898.glb",
+    "prompt": "Offer a summary of the 3D object illustrated by this cloud.",
+    "ground_truth": "A cartoon black professional camera in 3d",
+    "ground_truths": [
+      "A cartoon black professional camera in 3d"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "62d737fd396b40b7ba7752b765a37898"
+  },
+  {
+    "sample_id": "pointllm_1972",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-136/733e3986850b43bea83523fff82e6ee3.glb",
+    "prompt": "Express in brief, what this point cloud is representing.",
+    "ground_truth": "A three dimensional white on a green highland.",
+    "ground_truths": [
+      "A three dimensional white on a green highland."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "733e3986850b43bea83523fff82e6ee3"
+  },
+  {
+    "sample_id": "pointllm_1976",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-126/c1af9921cc2640018703a8481b1af64e.glb",
+    "prompt": "What object is this point cloud rendering?",
+    "ground_truth": "A cartoon black carpet in 3d",
+    "ground_truths": [
+      "A cartoon black carpet in 3d"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "c1af9921cc2640018703a8481b1af64e"
+  },
+  {
+    "sample_id": "pointllm_1987",
+    "mesh_path": "eval_data/meshes/f7fadbe9533e472d8d8a7482052b4b59.glb",
+    "prompt": "What kind of object is illustrated by this collection of points?",
+    "ground_truth": "A brown guitar with white strings",
+    "ground_truths": [
+      "A brown guitar with white strings"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "f7fadbe9533e472d8d8a7482052b4b59"
+  },
+  {
+    "sample_id": "pointllm_1993",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-097/118d0fa6d01947b7823878769834bfd8.glb",
+    "prompt": "Provide an outline of this 3D shape's characteristics.",
+    "ground_truth": "A cartoon wheel of boat",
+    "ground_truths": [
+      "A cartoon wheel of boat"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "118d0fa6d01947b7823878769834bfd8"
+  },
+  {
+    "sample_id": "pointllm_2017",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-017/8026380c3c734754951fa2315968e979.glb",
+    "prompt": "How would you summarize this 3D data set?",
+    "ground_truth": "A pencil",
+    "ground_truths": [
+      "A pencil"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "8026380c3c734754951fa2315968e979"
+  },
+  {
+    "sample_id": "pointllm_2022",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-058/c016a85431eb4ded9b6dbdc409345c2c.glb",
+    "prompt": "Deliver a quick description of the object represented here.",
+    "ground_truth": "A white u shaped bar with grey base.",
+    "ground_truths": [
+      "A white u shaped bar with grey base."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "c016a85431eb4ded9b6dbdc409345c2c"
+  },
+  {
+    "sample_id": "pointllm_2026",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-092/ace648eb3044412099c5fae424dcc30c.glb",
+    "prompt": "Could you delineate the form indicated by this point cloud?",
+    "ground_truth": "Grey fin threaded hexagonal umbrella panel sided camera.",
+    "ground_truths": [
+      "Grey fin threaded hexagonal umbrella panel sided camera."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "ace648eb3044412099c5fae424dcc30c"
+  },
+  {
+    "sample_id": "pointllm_2034",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-141/ab02bde2768849e89dbb4ef3312c85ff.glb",
+    "prompt": "What does this collection of points represent?",
+    "ground_truth": "A cartoon white a beautiful tree in 3d",
+    "ground_truths": [
+      "A cartoon white a beautiful tree in 3d"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "ab02bde2768849e89dbb4ef3312c85ff"
+  },
+  {
+    "sample_id": "pointllm_2035",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-139/ff0bbee222f546c899b029c4b64f7bea.glb",
+    "prompt": "Give a quick overview of the object represented by this 3D cloud.",
+    "ground_truth": "A man in a red diving costume swimming.",
+    "ground_truths": [
+      "A man in a red diving costume swimming."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "ff0bbee222f546c899b029c4b64f7bea"
+  },
+  {
+    "sample_id": "pointllm_2054",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-040/252c69eec4ff4fdcaeaee1b709d42012.glb",
+    "prompt": "Can you briefly outline the shape represented by these points?",
+    "ground_truth": "A yellow and white fish with black stripes and fins",
+    "ground_truths": [
+      "A yellow and white fish with black stripes and fins"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "252c69eec4ff4fdcaeaee1b709d42012"
+  },
+  {
+    "sample_id": "pointllm_2058",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-099/fa221f081f3844b5b013d5c1d863d572.glb",
+    "prompt": "Can you briefly outline the shape represented by these points?",
+    "ground_truth": "A 3d girrafee diagram with white colour and in all directions",
+    "ground_truths": [
+      "A 3d girrafee diagram with white colour and in all directions"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "fa221f081f3844b5b013d5c1d863d572"
+  },
+  {
+    "sample_id": "pointllm_2060",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-111/b5ff764eaf4847eb928a8bb627221531.glb",
+    "prompt": "Can you give a brief overview of this point cloud?",
+    "ground_truth": "A orange and green cuboid",
+    "ground_truths": [
+      "A orange and green cuboid"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "b5ff764eaf4847eb928a8bb627221531"
+  },
+  {
+    "sample_id": "pointllm_2083",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-069/9a48392c60034e898befe16424359b79.glb",
+    "prompt": "Offer a summary of the 3D object illustrated by this cloud.",
+    "ground_truth": "Small black and white robot toy with disattachable parts",
+    "ground_truths": [
+      "Small black and white robot toy with disattachable parts"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "9a48392c60034e898befe16424359b79"
+  },
+  {
+    "sample_id": "pointllm_2102",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-136/f33e91fbbc424d07ad0ca4972ed2b4c6.glb",
+    "prompt": "How would you interpret this 3D point cloud?",
+    "ground_truth": "A cartoon black rectangle look like a box of tools",
+    "ground_truths": [
+      "A cartoon black rectangle look like a box of tools"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "f33e91fbbc424d07ad0ca4972ed2b4c6"
+  },
+  {
+    "sample_id": "pointllm_2105",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-017/78bdd5a7735f42fc879849803a6678dc.glb",
+    "prompt": "Give a concise interpretation of the 3D data presented here.",
+    "ground_truth": "A 3d model of a old game cd with a super mario image.",
+    "ground_truths": [
+      "A 3d model of a old game cd with a super mario image."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "78bdd5a7735f42fc879849803a6678dc"
+  },
+  {
+    "sample_id": "pointllm_2113",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-019/b2f41619cb43474383840cc6f2d2121e.glb",
+    "prompt": "Share a brief interpretation of this 3D point cloud.",
+    "ground_truth": "A cartoon green look like a very big and old church",
+    "ground_truths": [
+      "A cartoon green look like a very big and old church"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "b2f41619cb43474383840cc6f2d2121e"
+  },
+  {
+    "sample_id": "pointllm_2124",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-158/64e3683f33c74e1680a626a630fab41e.glb",
+    "prompt": "Express in brief, what this point cloud is representing.",
+    "ground_truth": "A white knitted rattan flower vase",
+    "ground_truths": [
+      "A white knitted rattan flower vase"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "64e3683f33c74e1680a626a630fab41e"
+  },
+  {
+    "sample_id": "pointllm_2125",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-123/6aba73fade25443c910a1cb9c54032db.glb",
+    "prompt": "Share a brief interpretation of this 3D point cloud.",
+    "ground_truth": "A cartoon figure circle look like a shield",
+    "ground_truths": [
+      "A cartoon figure circle look like a shield"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "6aba73fade25443c910a1cb9c54032db"
+  },
+  {
+    "sample_id": "pointllm_2128",
+    "mesh_path": "eval_data/meshes/5b54ed8243804b6baa399a61439fe5e1.glb",
+    "prompt": "Can you briefly outline the shape represented by these points?",
+    "ground_truth": "3d version of a baseball glove",
+    "ground_truths": [
+      "3d version of a baseball glove"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "5b54ed8243804b6baa399a61439fe5e1"
+  },
+  {
+    "sample_id": "pointllm_2129",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-047/8bd70337959749db8b16af638722b53d.glb",
+    "prompt": "How would you summarize this 3D data set?",
+    "ground_truth": "A circular frame fan with black circle in the front and having a standing pole with plus sign four legs at the base.",
+    "ground_truths": [
+      "A circular frame fan with black circle in the front and having a standing pole with plus sign four legs at the base."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "8bd70337959749db8b16af638722b53d"
+  },
+  {
+    "sample_id": "pointllm_2156",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-085/85f82b805b804a32804ea3e2afdb6e19.glb",
+    "prompt": "Deliver a quick description of the object represented here.",
+    "ground_truth": "Blue coloured curved striped irregular shaped entangled abstract three d model.",
+    "ground_truths": [
+      "Blue coloured curved striped irregular shaped entangled abstract three d model."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "85f82b805b804a32804ea3e2afdb6e19"
+  },
+  {
+    "sample_id": "pointllm_2165",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-124/8b8fd739dabf43a2a03ffc2989ec7365.glb",
+    "prompt": "What kind of object is illustrated by this collection of points?",
+    "ground_truth": "A plant with purple and white flowers",
+    "ground_truths": [
+      "A plant with purple and white flowers"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "8b8fd739dabf43a2a03ffc2989ec7365"
+  },
+  {
+    "sample_id": "pointllm_2166",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-084/7dd564ce814e4d22b8eeb9d4e79dbca2.glb",
+    "prompt": "How would you interpret this 3D point cloud?",
+    "ground_truth": "A dark green motherboard",
+    "ground_truths": [
+      "A dark green motherboard"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "7dd564ce814e4d22b8eeb9d4e79dbca2"
+  },
+  {
+    "sample_id": "pointllm_2167",
+    "mesh_path": "eval_data/meshes/92fe73b27c7b4daabcfa22279767e166.glb",
+    "prompt": "Express in brief, what this point cloud is representing.",
+    "ground_truth": "A conical shaped bowl with a curved base and having white crack like lines.",
+    "ground_truths": [
+      "A conical shaped bowl with a curved base and having white crack like lines."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "92fe73b27c7b4daabcfa22279767e166"
+  },
+  {
+    "sample_id": "pointllm_2175",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-119/3ca7caa7f6e14bbb8c5e17381d5d8c39.glb",
+    "prompt": "Convey a summary of the 3D structure represented in this point cloud.",
+    "ground_truth": "Grey colored whale with shaded body having pointed short fins and tail.",
+    "ground_truths": [
+      "Grey colored whale with shaded body having pointed short fins and tail."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "3ca7caa7f6e14bbb8c5e17381d5d8c39"
+  },
+  {
+    "sample_id": "pointllm_2177",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-142/a107f9d8e87c4693a9b5f8fa94ac505c.glb",
+    "prompt": "Present a compact account of this 3D object's key features.",
+    "ground_truth": "A tree with a green plant",
+    "ground_truths": [
+      "A tree with a green plant"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "a107f9d8e87c4693a9b5f8fa94ac505c"
+  },
+  {
+    "sample_id": "pointllm_2188",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-136/a7e1c2fedd5540c48dd10324ea5514fc.glb",
+    "prompt": "How would you describe the 3D form shown in this point cloud?",
+    "ground_truth": "Green and white balloon capped face with green eyes three d model.",
+    "ground_truths": [
+      "Green and white balloon capped face with green eyes three d model."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "a7e1c2fedd5540c48dd10324ea5514fc"
+  },
+  {
+    "sample_id": "pointllm_2203",
+    "mesh_path": "eval_data/meshes/52b792f591ce418a9ac2685329f4bc4a.glb",
+    "prompt": "Could you delineate the form indicated by this point cloud?",
+    "ground_truth": "A brown box of chocolate milk",
+    "ground_truths": [
+      "A brown box of chocolate milk"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "52b792f591ce418a9ac2685329f4bc4a"
+  },
+  {
+    "sample_id": "pointllm_2219",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-013/de8ec2a724f14fc4b54624512f80f13e.glb",
+    "prompt": "Provide an outline of this 3D shape's characteristics.",
+    "ground_truth": "A black insect",
+    "ground_truths": [
+      "A black insect"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "de8ec2a724f14fc4b54624512f80f13e"
+  },
+  {
+    "sample_id": "pointllm_2223",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-158/c27165c83e9040fb88e50eb3d3d88f08.glb",
+    "prompt": "What does this collection of points represent?",
+    "ground_truth": "A black and red colored spaceship toy",
+    "ground_truths": [
+      "A black and red colored spaceship toy"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "c27165c83e9040fb88e50eb3d3d88f08"
+  },
+  {
+    "sample_id": "pointllm_2231",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-104/0a9893005a7a4985ba1ee8625d0f859f.glb",
+    "prompt": "How would you summarize this 3D data set?",
+    "ground_truth": "Digital image for the tr-909 drum machine by roland brand with 30 dials and 8 scuare yellow buttons , 6 little scuare white buttons and 18 white buttons 16 buttons with leds light and a red scuare power button.",
+    "ground_truths": [
+      "Digital image for the tr-909 drum machine by roland brand with 30 dials and 8 scuare yellow buttons , 6 little scuare white buttons and 18 white buttons 16 buttons with leds light and a red scuare power button."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "0a9893005a7a4985ba1ee8625d0f859f"
+  },
+  {
+    "sample_id": "pointllm_2236",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-044/3ae619d071214c058d49364b972782f5.glb",
+    "prompt": "What kind of object is illustrated by this collection of points?",
+    "ground_truth": "A flat grey object with a key hole gap in the top and having two flat regions in the back.",
+    "ground_truths": [
+      "A flat grey object with a key hole gap in the top and having two flat regions in the back."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "3ae619d071214c058d49364b972782f5"
+  },
+  {
+    "sample_id": "pointllm_2257",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-011/5c08f723bfc94a98b7d7918e3e4ff1dc.glb",
+    "prompt": "Describe the object that this point cloud forms.",
+    "ground_truth": "Images of an all dark car.wheels are also dark and the windows tinted",
+    "ground_truths": [
+      "Images of an all dark car.wheels are also dark and the windows tinted"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "5c08f723bfc94a98b7d7918e3e4ff1dc"
+  },
+  {
+    "sample_id": "pointllm_2259",
+    "mesh_path": "eval_data/meshes/d557073223684759856c7d73cd5a07c9.glb",
+    "prompt": "Summarize the 3D point cloud object briefly.",
+    "ground_truth": "A champagne bottle with a red cork and black and white in colour with a touch of red",
+    "ground_truths": [
+      "A champagne bottle with a red cork and black and white in colour with a touch of red"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "d557073223684759856c7d73cd5a07c9"
+  },
+  {
+    "sample_id": "pointllm_2261",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-015/7ee9a0f997ed42dfa01a8a8bfd87c6ac.glb",
+    "prompt": "Convey a summary of the 3D structure represented in this point cloud.",
+    "ground_truth": "A cartoon rare figure look like a box blue with legs red",
+    "ground_truths": [
+      "A cartoon rare figure look like a box blue with legs red"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "7ee9a0f997ed42dfa01a8a8bfd87c6ac"
+  },
+  {
+    "sample_id": "pointllm_2270",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-154/a6d8409125274a8187c32bbd0aeae04c.glb",
+    "prompt": "Present a compact account of this 3D object's key features.",
+    "ground_truth": "A cartoon black car",
+    "ground_truths": [
+      "A cartoon black car"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "a6d8409125274a8187c32bbd0aeae04c"
+  },
+  {
+    "sample_id": "pointllm_2273",
+    "mesh_path": "eval_data/meshes/1445ab184a8f4e8ba0c7ae8753f96978.glb",
+    "prompt": "What kind of object is depicted by this point cloud?",
+    "ground_truth": "A pine appple",
+    "ground_truths": [
+      "A pine appple"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "1445ab184a8f4e8ba0c7ae8753f96978"
+  },
+  {
+    "sample_id": "pointllm_2293",
+    "mesh_path": "eval_data/meshes/a530c8c7eef04235bc865b85dcfc0ac8.glb",
+    "prompt": "What does this collection of points represent?",
+    "ground_truth": "A pink play station controller",
+    "ground_truths": [
+      "A pink play station controller"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "a530c8c7eef04235bc865b85dcfc0ac8"
+  },
+  {
+    "sample_id": "pointllm_2306",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-061/b745134fe5ce468fb029278e8e0d5369.glb",
+    "prompt": "Give a concise interpretation of the 3D data presented here.",
+    "ground_truth": "Stairway in a brown background",
+    "ground_truths": [
+      "Stairway in a brown background"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "b745134fe5ce468fb029278e8e0d5369"
+  },
+  {
+    "sample_id": "pointllm_2336",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-072/39930c4d685f4a9c8f7bd63c1a2a7dee.glb",
+    "prompt": "What kind of structure does this 3D point cloud depict?",
+    "ground_truth": "A red toy car with black windscreen and windows and having a v shaped logo at the back.",
+    "ground_truths": [
+      "A red toy car with black windscreen and windows and having a v shaped logo at the back."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "39930c4d685f4a9c8f7bd63c1a2a7dee"
+  },
+  {
+    "sample_id": "pointllm_2352",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-058/19a2ee7b29914c90bfc5e008aa6fded5.glb",
+    "prompt": "What does this collection of points represent?",
+    "ground_truth": "Maroon and black saloon car",
+    "ground_truths": [
+      "Maroon and black saloon car"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "19a2ee7b29914c90bfc5e008aa6fded5"
+  },
+  {
+    "sample_id": "pointllm_2369",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-014/8733696148774e39b558cd7e8df0c544.glb",
+    "prompt": "How would you describe the 3D form shown in this point cloud?",
+    "ground_truth": "A animated white colour object that is in triangle shape",
+    "ground_truths": [
+      "A animated white colour object that is in triangle shape"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "8733696148774e39b558cd7e8df0c544"
+  },
+  {
+    "sample_id": "pointllm_2381",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-121/66d40cfa1e4a4aa2805e516a75156162.glb",
+    "prompt": "Express in brief, what this point cloud is representing.",
+    "ground_truth": "A silver robot with blue eyes and a blue diamond shape on its chest",
+    "ground_truths": [
+      "A silver robot with blue eyes and a blue diamond shape on its chest"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "66d40cfa1e4a4aa2805e516a75156162"
+  },
+  {
+    "sample_id": "pointllm_2384",
+    "mesh_path": "eval_data/meshes/f205bfd609cd43718741ae5aa17dc7e9.glb",
+    "prompt": "Share a brief interpretation of this 3D point cloud.",
+    "ground_truth": "Rubik's cube with all same colored cubes on a single face of cube sides are with color white red blue green yellow and orange",
+    "ground_truths": [
+      "Rubik's cube with all same colored cubes on a single face of cube sides are with color white red blue green yellow and orange"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "f205bfd609cd43718741ae5aa17dc7e9"
+  },
+  {
+    "sample_id": "pointllm_2395",
+    "mesh_path": "eval_data/meshes/55616d87747b4074bd75b408ec7628cb.glb",
+    "prompt": "What kind of object is illustrated by this collection of points?",
+    "ground_truth": "Grey coloured shining ring model with white ,blue and grey shaded stone.",
+    "ground_truths": [
+      "Grey coloured shining ring model with white ,blue and grey shaded stone."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "55616d87747b4074bd75b408ec7628cb"
+  },
+  {
+    "sample_id": "pointllm_2398",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-124/c9c36e9cfdc64f22b7199940af434092.glb",
+    "prompt": "Offer a succinct summary of this 3D object.",
+    "ground_truth": "A cartoon white figure look like a rare figure in 3d",
+    "ground_truths": [
+      "A cartoon white figure look like a rare figure in 3d"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "c9c36e9cfdc64f22b7199940af434092"
+  },
+  {
+    "sample_id": "pointllm_2406",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-104/7bcf8626eaca40e592ffd0aed08aa30b.glb",
+    "prompt": "Could you delineate the form indicated by this point cloud?",
+    "ground_truth": "A cartoon black tuning car",
+    "ground_truths": [
+      "A cartoon black tuning car"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "7bcf8626eaca40e592ffd0aed08aa30b"
+  },
+  {
+    "sample_id": "pointllm_2408",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-075/b472057e7749488b867e6c72d365b925.glb",
+    "prompt": "What does this collection of points represent?",
+    "ground_truth": "A red toy car with white windscreen and windows and three black lines in the bonnet .",
+    "ground_truths": [
+      "A red toy car with white windscreen and windows and three black lines in the bonnet ."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "b472057e7749488b867e6c72d365b925"
+  },
+  {
+    "sample_id": "pointllm_2414",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-096/56834061ce914fd29843fcfdf3369eec.glb",
+    "prompt": "Provide a short explanation of this 3D structure.",
+    "ground_truth": "A cuboid horizontal tv box with large speakers and an antenna on top.",
+    "ground_truths": [
+      "A cuboid horizontal tv box with large speakers and an antenna on top."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "56834061ce914fd29843fcfdf3369eec"
+  },
+  {
+    "sample_id": "pointllm_2426",
+    "mesh_path": "eval_data/meshes/205550e0468546ff9c69c237a6cfc7cb.glb",
+    "prompt": "Characterize the object this point cloud is illustrating.",
+    "ground_truth": "A statue of a man riding horse back",
+    "ground_truths": [
+      "A statue of a man riding horse back"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "205550e0468546ff9c69c237a6cfc7cb"
+  },
+  {
+    "sample_id": "pointllm_2451",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-011/e69c1c6adcd94e15920380728200b931.glb",
+    "prompt": "Provide an outline of this 3D shape's characteristics.",
+    "ground_truth": "Various grey pyramids together",
+    "ground_truths": [
+      "Various grey pyramids together"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "e69c1c6adcd94e15920380728200b931"
+  },
+  {
+    "sample_id": "pointllm_2454",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-055/4df0c79458844dc2a7ee80367e7426c1.glb",
+    "prompt": "Offer a succinct summary of this 3D object.",
+    "ground_truth": "A cartoon green figure of a man work",
+    "ground_truths": [
+      "A cartoon green figure of a man work"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "4df0c79458844dc2a7ee80367e7426c1"
+  },
+  {
+    "sample_id": "pointllm_2466",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-128/dab2073ee4084e5f8c5f8bfc53831b74.glb",
+    "prompt": "Describe the object that this point cloud forms.",
+    "ground_truth": "Three d football\nA ball of football",
+    "ground_truths": [
+      "Three d football\nA ball of football"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "dab2073ee4084e5f8c5f8bfc53831b74"
+  },
+  {
+    "sample_id": "pointllm_2502",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-019/8c1ff2dd65be40c283bcb178e7079487.glb",
+    "prompt": "Share a brief interpretation of this 3D point cloud.",
+    "ground_truth": "A green house building",
+    "ground_truths": [
+      "A green house building"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "8c1ff2dd65be40c283bcb178e7079487"
+  },
+  {
+    "sample_id": "pointllm_2525",
+    "mesh_path": "eval_data/meshes/b8db8dc5caad4fa5842a9ed6dbd2e9d6.glb",
+    "prompt": "What kind of structure does this 3D point cloud depict?",
+    "ground_truth": "A cartoon eagle statue",
+    "ground_truths": [
+      "A cartoon eagle statue"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "b8db8dc5caad4fa5842a9ed6dbd2e9d6"
+  },
+  {
+    "sample_id": "pointllm_2528",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-044/7f309e755a0c4b69b64e667977268087.glb",
+    "prompt": "Give a quick overview of the object represented by this 3D cloud.",
+    "ground_truth": "A white drawing",
+    "ground_truths": [
+      "A white drawing"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "7f309e755a0c4b69b64e667977268087"
+  },
+  {
+    "sample_id": "pointllm_2546",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-124/d628e081977243609432fc82f180d82b.glb",
+    "prompt": "Provide an outline of this 3D shape's characteristics.",
+    "ground_truth": "Black and maroon lighting chanderlier",
+    "ground_truths": [
+      "Black and maroon lighting chanderlier"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "d628e081977243609432fc82f180d82b"
+  },
+  {
+    "sample_id": "pointllm_2590",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-044/92536192d82c4ee59da4c29e691d5de5.glb",
+    "prompt": "Share a brief interpretation of this 3D point cloud.",
+    "ground_truth": "Yellow,blue and brown discs",
+    "ground_truths": [
+      "Yellow,blue and brown discs"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "92536192d82c4ee59da4c29e691d5de5"
+  },
+  {
+    "sample_id": "pointllm_2591",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-155/f8a5f438efca4099893afb27ee60c520.glb",
+    "prompt": "What kind of object is depicted by this point cloud?",
+    "ground_truth": "A white cuboid three dimensional house with pyramids on top.",
+    "ground_truths": [
+      "A white cuboid three dimensional house with pyramids on top."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "f8a5f438efca4099893afb27ee60c520"
+  },
+  {
+    "sample_id": "pointllm_2598",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-088/92a1f1eb6a6843e4b60044725cfae8b6.glb",
+    "prompt": "Share a brief interpretation of this 3D point cloud.",
+    "ground_truth": "A clay made purple hippotomus",
+    "ground_truths": [
+      "A clay made purple hippotomus"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "92a1f1eb6a6843e4b60044725cfae8b6"
+  },
+  {
+    "sample_id": "pointllm_2601",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-061/dc797a35886940e19cc79edeb69ec933.glb",
+    "prompt": "How would you interpret this 3D point cloud?",
+    "ground_truth": "A black cap with a camouflage flat part and a white front logo.\nA cartoon black and green hat",
+    "ground_truths": [
+      "A black cap with a camouflage flat part and a white front logo.\nA cartoon black and green hat"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "dc797a35886940e19cc79edeb69ec933"
+  },
+  {
+    "sample_id": "pointllm_2609",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-115/d69b3382961c4a2bb031f21bdbe5e93d.glb",
+    "prompt": "Describe the object that this point cloud forms.",
+    "ground_truth": "A green and yellow model of a basket",
+    "ground_truths": [
+      "A green and yellow model of a basket"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "d69b3382961c4a2bb031f21bdbe5e93d"
+  },
+  {
+    "sample_id": "pointllm_2621",
+    "mesh_path": "eval_data/meshes/14897726f38f4b7da96bb4e9a72630f8.glb",
+    "prompt": "Deliver a quick description of the object represented here.",
+    "ground_truth": "A wooden guitar.",
+    "ground_truths": [
+      "A wooden guitar."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "14897726f38f4b7da96bb4e9a72630f8"
+  },
+  {
+    "sample_id": "pointllm_2639",
+    "mesh_path": "eval_data/meshes/29ef8901d99842f58f10885bd0409e86.glb",
+    "prompt": "Could you delineate the form indicated by this point cloud?",
+    "ground_truth": "A cartoon green figure of a kid clothes green",
+    "ground_truths": [
+      "A cartoon green figure of a kid clothes green"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "29ef8901d99842f58f10885bd0409e86"
+  },
+  {
+    "sample_id": "pointllm_2647",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-046/7103b9e0a43744a69d1658ae120ba7d7.glb",
+    "prompt": "Give a brief explanation of the object that this cloud of points forms.",
+    "ground_truth": "Image of a mat",
+    "ground_truths": [
+      "Image of a mat"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "7103b9e0a43744a69d1658ae120ba7d7"
+  },
+  {
+    "sample_id": "pointllm_2659",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-066/dd491278516040998667f9dd998fad4f.glb",
+    "prompt": "Can you give a brief overview of this point cloud?",
+    "ground_truth": "A black fish with yellow stripes",
+    "ground_truths": [
+      "A black fish with yellow stripes"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "dd491278516040998667f9dd998fad4f"
+  },
+  {
+    "sample_id": "pointllm_2726",
+    "mesh_path": "eval_data/meshes/02ddbf9af2a546f197952a1843dcfc05.glb",
+    "prompt": "Offer a summary of the 3D object illustrated by this cloud.",
+    "ground_truth": "A yellow cartoon chick with two black eyes.",
+    "ground_truths": [
+      "A yellow cartoon chick with two black eyes."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "02ddbf9af2a546f197952a1843dcfc05"
+  },
+  {
+    "sample_id": "pointllm_2751",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-098/4b0d6de0185648019e51021e3a976a1b.glb",
+    "prompt": "Give a quick overview of the object represented by this 3D cloud.",
+    "ground_truth": "A humanoid dressing a white suit and strange mask in similar color , covering its black head",
+    "ground_truths": [
+      "A humanoid dressing a white suit and strange mask in similar color , covering its black head"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "4b0d6de0185648019e51021e3a976a1b"
+  },
+  {
+    "sample_id": "pointllm_2797",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-053/430837577eb740c793f80a713dba1305.glb",
+    "prompt": "What kind of structure does this 3D point cloud depict?",
+    "ground_truth": "A cartoon orange car look like the formula 1 toy",
+    "ground_truths": [
+      "A cartoon orange car look like the formula 1 toy"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "430837577eb740c793f80a713dba1305"
+  },
+  {
+    "sample_id": "pointllm_2882",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-044/82413f74efb84bc3b872a7a8f26cca81.glb",
+    "prompt": "What kind of object is illustrated by this collection of points?",
+    "ground_truth": "A white fish with orange spots\nA white fish with red spots on the body\nWhite fish with red spots.",
+    "ground_truths": [
+      "A white fish with orange spots\nA white fish with red spots on the body\nWhite fish with red spots."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "82413f74efb84bc3b872a7a8f26cca81"
+  },
+  {
+    "sample_id": "pointllm_2907",
+    "mesh_path": "eval_data/meshes/281d40ab0502401da43d26703e2b04cc.glb",
+    "prompt": "What object is this point cloud rendering?",
+    "ground_truth": "A animated hammer that has wood handle and black iron weight",
+    "ground_truths": [
+      "A animated hammer that has wood handle and black iron weight"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "281d40ab0502401da43d26703e2b04cc"
+  },
+  {
+    "sample_id": "pointllm_2920",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-071/83cb2a9e9afb47cd9f45461613796645.glb",
+    "prompt": "Give a concise interpretation of the 3D data presented here.",
+    "ground_truth": "Two yellow shoes with white tied laces.",
+    "ground_truths": [
+      "Two yellow shoes with white tied laces."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "83cb2a9e9afb47cd9f45461613796645"
+  },
+  {
+    "sample_id": "pointllm_2921",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-115/9906e5863a89474da4ee4e178a2daa28.glb",
+    "prompt": "What does this collection of points represent?",
+    "ground_truth": "Animated brown monkey",
+    "ground_truths": [
+      "Animated brown monkey"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "9906e5863a89474da4ee4e178a2daa28"
+  },
+  {
+    "sample_id": "pointllm_2971",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-154/65c1ca532f5b4769b991654bcdb51208.glb",
+    "prompt": "Offer a clear and concise description of this point cloud object.",
+    "ground_truth": "A headset without microphone. the headband is gray on the top and light blue in downside. the earcups and the cushion are grey with a little light blue highlite.",
+    "ground_truths": [
+      "A headset without microphone. the headband is gray on the top and light blue in downside. the earcups and the cushion are grey with a little light blue highlite."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "65c1ca532f5b4769b991654bcdb51208"
+  },
+  {
+    "sample_id": "pointllm_2977",
+    "mesh_path": "eval_data/meshes/267b8ecaf2884abaaa5f03680ce39ad8.glb",
+    "prompt": "Provide an outline of this 3D shape's characteristics.",
+    "ground_truth": "Black color computer cpu\nA desktop central processing unit.",
+    "ground_truths": [
+      "Black color computer cpu\nA desktop central processing unit."
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "267b8ecaf2884abaaa5f03680ce39ad8"
+  },
+  {
+    "sample_id": "pointllm_2978",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-148/d4aa4126fce64397935d128ed54c3def.glb",
+    "prompt": "Give a brief explanation of the object that this cloud of points forms.",
+    "ground_truth": "Fictional character",
+    "ground_truths": [
+      "Fictional character"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "d4aa4126fce64397935d128ed54c3def"
+  },
+  {
+    "sample_id": "pointllm_2989",
+    "mesh_path": "/home/songxinshuai/.objaverse/hf-objaverse-v1/glbs/000-133/d43136ef2b1a46998b7214df1a15b72c.glb",
+    "prompt": "How would you summarize this 3D data set?",
+    "ground_truth": "3d image of a building",
+    "ground_truths": [
+      "3d image of a building"
+    ],
+    "source": "pointllm_objaverse_captioning",
+    "objaverse_uid": "d43136ef2b1a46998b7214df1a15b72c"
+  }
+]

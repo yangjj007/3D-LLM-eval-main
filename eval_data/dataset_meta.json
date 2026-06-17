@@ -1,0 +1,9 @@
+{
+  "total_meshes": 17194,
+  "understanding_samples": 245,
+  "generation_samples": 379,
+  "vqvae_samples": 2000,
+  "pointllm_gt_count": 3000,
+  "alpaca_caption_count": 0,
+  "alpaca_gen_count": 0
+}

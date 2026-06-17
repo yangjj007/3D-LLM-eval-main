@@ -1,0 +1,61 @@
+# ShapeLLM 文本→3D 生成（由 sparse_vqvae/mock_smoke 迁移：数据可与 mock 共用 metadata+GLB；
+# 推理栈为 ShapeLLM + 3DVQVAE + TRELLIS-text，不再使用 mock_llm / sparse SDF VAE。）
+# 运行示例：python -m eval.runner --config eval/configs/tasks/shapellm/generation.yaml --adapter shapellm --gpu_ids 0
+
+adapter: shapellm
+task: generation
+
+data:
+  # 与 mock_smoke 一致：从 CSV + GLB 读 caption（需 eval_data/metadata.csv 与对应 .glb）
+  metadata_csv: eval_data/metadata.csv
+  glb_dir: eval_data
+  gen_caption_indices: "0"
+  max_samples: null
+  sample_seed: 42
+  # 若改用 JSON 列表：注释掉上面 metadata_csv/glb_dir/gen_caption_indices，取消下一行
+  # data_path: eval_data/generation.json
+
+model:
+  llm_loader: auto
+  trust_remote_code: true
+  load_llm: true
+  llm_path: yejunliang23/ShapeLLM-7B-omni
+  load_trellis_image: false
+  load_trellis_text: true
+  trellis_text_path: JeffreyXiang/TRELLIS-text-xlarge
+  hf_cache_dir: ./eval_data/hf_cache
+  colorization:
+    enabled: true
+    simplify: 0.95
+    texture_size: 1024
+
+inference:
+  max_new_tokens: 4096
+  prompt_prefix: "Please generate a 3D asset based on the prompt I provided: "
+  run_trellis: true
+  seed: 42
+  temperature: 0.7
+  top_k: 8192
+  top_p: 0.7
+  batch_size: 1
+  verbose_eval: true
+
+metrics:
+  - fd_inception
+  - kd_inception
+  - clip_score
+
+metrics_config:
+  render:
+    nviews: 4
+    resolution: 256
+    kid_subset_size: 20
+    clip_model: openai/clip-vit-base-patch32
+    save_images: true
+    device: cuda
+    inception_batch_size: 128
+    clip_batch_size: 32
+
+reporting:
+  formats: [json, csv, latex]
+  output_dir: eval_results/shapellm/generation

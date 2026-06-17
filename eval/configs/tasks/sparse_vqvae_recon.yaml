@@ -1,0 +1,71 @@
+adapter: sparse_sdf_qwen3
+task: vqvae_recon
+
+data:
+  metadata_csv: eval_data/metadata.csv
+  glb_dir: eval_data
+  max_samples: 1000
+
+model:
+  vae_config: eval/configs/vae/sdf_vqvae_stage2.json
+  vae_ckpt: /yangjunjie/Med-3D-LLM-main/pad_outputs/sdf_vqvae_stage2_512_0.5/ckpts/vqvae_step0000300.pt
+  sdf_from_mesh_only: true
+  sdf_resolution: 512
+  sdf_threshold_factor: 0.5
+  sdf_cache_dir: eval_data/sdf_cache_eval
+  mc_threshold: 0.0
+  bpe_merge_table: ""
+  bpe_base_vocab_size: 8192
+  bpe_token_format: id_only
+  white_mesh_postprocess:
+    enabled: false
+    log_timings: true
+    bounds_min: [-1.0, -1.0, -1.0]
+    bounds_max: [1.0, 1.0, 1.0]
+    marching_cubes_iso: 0.5
+    voxel_remesh:
+      enabled: true
+      resolution: 512
+      use_gpu_morphology: true
+    connect_components:
+      enabled: true
+      min_component_ratio: 0.05
+      max_components: 8
+      bridge_radius: 1
+    morphology:
+      enabled: true
+      closing_iters: 1
+      opening_iters: 0
+      kernel_size: 3
+    fill_holes:
+      enabled: true
+    marching_cubes:
+      enabled: true
+    taubin:
+      enabled: false
+      iterations: 5
+      lamb: 0.5
+      nu: -0.53
+    decimate:
+      enabled: false
+      target_triangles: 50000
+    pymeshfix:
+      enabled: false
+      verbose: false
+    keep_largest_component:
+      enabled: true
+      criterion: faces
+
+inference:
+  batch_size: 1
+  verbose_eval: true
+
+# 3D 几何重建指标已默认关闭；仅导出 mesh 供人工检查
+metrics: []
+
+metrics_config:
+  num_sample_points: 8192
+
+reporting:
+  formats: [json, csv, latex]
+  output_dir: eval_results/sparse_sdf_qwen3/vqvae_recon

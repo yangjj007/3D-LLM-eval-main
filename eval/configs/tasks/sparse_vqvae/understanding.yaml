@@ -1,0 +1,38 @@
+adapter: sparse_sdf_qwen3
+task: understanding
+
+data:
+  data_path: eval_data/understanding.json
+  gen_caption_indices: "0"
+  default_prompt: "Describe this 3D shape in one sentence:"
+  max_samples: null
+
+model:
+  vae_config: eval/configs/vae/sdf_vqvae_stage2.json
+  vae_ckpt: /yangjunjie/Med-3D-LLM-main/pad_outputs/sdf_vqvae_stage2_512_0.5/ckpts/vqvae_step0000300.pt
+  llm_path: LLaMA-Factory/saves/qwen3-4b/sft_bpe_3d_stage2/checkpoint-55000
+  trust_remote_code: true
+  llm_dtype: bfloat16
+  sdf_from_mesh_only: true
+  sdf_resolution: 512
+  sdf_threshold_factor: 0.5
+  sdf_cache_dir: eval_data/sdf_cache_eval
+  bpe_merge_table: ""
+  bpe_base_vocab_size: 8192
+  bpe_token_format: id_only
+
+inference:
+  max_new_tokens: 512
+  temperature: 0.0
+  batch_size: 1
+  verbose_eval: true
+
+metrics:
+  - bleu
+  - rouge_l
+  - sentence_bert
+  - simcse
+
+reporting:
+  formats: [json, csv, latex]
+  output_dir: eval_results/sparse_vqvae/understanding

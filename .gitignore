@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs & outputs
+*.log
+outputs/
+eval_outputs/
+logs/
+
+# Hugging Face / model caches (downloaded at runtime)
+eval_data/hf_cache/
+eval_data_objaverse/
+
+# Large data artifacts
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+*.npz
+*.glb
+*.obj
+*.ply
+*.stl
+
+# Compiled extensions
+*.pyd
+*.dll

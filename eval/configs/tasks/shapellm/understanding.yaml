@@ -1,0 +1,40 @@
+adapter: shapellm
+task: understanding
+
+data:
+  data_path: eval_data/understanding.json
+  # 文本指标使用的参考 caption：取 ``captions`` / ``ground_truths`` 中第几条（从 0 起）；仅取逗号分隔的第一个整数。
+  # 若删除本字段且 JSON 含多条参考，则保留全部 ``ground_truths`` 供多参考指标使用。
+  gen_caption_indices: "0"
+  default_prompt: Give a quick overview of the object represented by this 3D mesh.
+  max_samples: null
+
+model:
+  llm_loader: auto
+  trust_remote_code: true
+  load_llm: true
+  llm_path: "/yangjunjie/3D-LLM-eval-main/eval_data/hf_cache/models--yejunliang23--ShapeLLM-7B-omni/snapshots/b9922e4feb9bfbffe5f1c9941146b8a8f1fb124e"
+  load_trellis_image: false
+  load_trellis_text: false
+
+inference:
+  max_new_tokens: 512
+  temperature: 0.0
+  top_k: 1
+  top_p: 1.0
+
+metrics:
+  - bleu
+  - rouge_l
+  - meteor
+  - cider
+  - bert_score
+
+metrics_config:
+  bert_score:
+    # bert-score 内置 layer 映射表不含带组织前缀的 id 时，会在代码里用 AutoConfig 自动补 ``num_layers``。
+    model_type: roberta-large
+
+reporting:
+  formats: [json, csv, latex]
+  output_dir: eval_results/shapellm/understanding

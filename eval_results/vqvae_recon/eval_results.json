@@ -1,0 +1,88 @@
+{
+  "task": "vqvae_recon",
+  "model": "yejunliang23/ShapeLLM-7B-omni",
+  "timestamp": "2026-04-17T22:00:12.672611",
+  "config": {
+    "model": {
+      "llm_path": "yejunliang23/ShapeLLM-7B-omni",
+      "vqvae_repo": "yejunliang23/3DVQVAE",
+      "vqvae_filename": "3DVQVAE.bin",
+      "vqvae_num_embeddings": 8192,
+      "dtype": "auto",
+      "device_map": "auto",
+      "load_llm": false,
+      "load_trellis_text": false,
+      "load_trellis_image": false,
+      "trellis_text_path": "JeffreyXiang/TRELLIS-text-xlarge",
+      "trellis_image_path": "JeffreyXiang/TRELLIS-image-large"
+    },
+    "data": {
+      "max_samples": 2,
+      "data_path": "eval_data/vqvae_recon.json"
+    },
+    "inference": {
+      "max_new_tokens": 512,
+      "temperature": 0.0,
+      "top_k": 1,
+      "top_p": 1.0,
+      "batch_size": 1,
+      "seed": 42
+    },
+    "reporting": {
+      "formats": [
+        "json",
+        "csv",
+        "latex"
+      ],
+      "output_dir": "eval_results/shapellm/vqvae_recon",
+      "wandb": {
+        "enabled": false,
+        "project": "shapellm-omni-eval",
+        "entity": null,
+        "run_name": null
+      }
+    },
+    "metrics": [
+      "voxel_iou",
+      "voxel_f1",
+      "voxel_precision",
+      "voxel_recall"
+    ],
+    "task": "vqvae_recon"
+  },
+  "num_samples": 2,
+  "aggregate_metrics": {
+    "voxel_iou": 0.8685089647769928,
+    "voxel_f1": 0.9285954836480517,
+    "voxel_precision": 0.9335900545120239,
+    "voxel_recall": 0.9236841201782227
+  },
+  "per_sample_results": [
+    {
+      "sample_id": "vqvae_0001c4ddd54a4a9a",
+      "mesh_path": "eval_data/meshes/0001c4ddd54a4a9a8afe5e03ed0bd082.glb",
+      "num_tokens": 1024,
+      "original_occupied": 9792,
+      "reconstructed_occupied": 9764,
+      "metrics": {
+        "voxel_iou": 0.9265096783638,
+        "voxel_f1": 0.9618531417079816,
+        "voxel_precision": 0.9632322788238525,
+        "voxel_recall": 0.9604779481887817
+      }
+    },
+    {
+      "sample_id": "vqvae_000213ffa7574972",
+      "mesh_path": "eval_data/meshes/000213ffa75749729c5a69e3d30519a9.glb",
+      "num_tokens": 1024,
+      "original_occupied": 9062,
+      "reconstructed_occupied": 8891,
+      "metrics": {
+        "voxel_iou": 0.8105082511901855,
+        "voxel_f1": 0.8953378255881218,
+        "voxel_precision": 0.9039478302001953,
+        "voxel_recall": 0.8868902921676636
+      }
+    }
+  ]
+}

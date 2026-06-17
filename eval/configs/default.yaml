@@ -1,0 +1,59 @@
+# 3D-LLM Evaluation — default configuration (task YAML merges over this)
+
+adapter: shapellm
+
+resume: true
+save_meshes: true
+
+parallel:
+  gpu_ids: [0]
+
+model:
+  hf_cache_dir: "./eval_data/hf_cache"
+  llm_path: "yejunliang23/ShapeLLM-7B-omni"
+  vqvae_repo: "yejunliang23/3DVQVAE"
+  vqvae_filename: "3DVQVAE.bin"
+  vqvae_num_embeddings: 8192
+  dtype: "auto"
+  device_map: "auto"
+  load_llm: true
+  load_trellis_text: false
+  load_trellis_image: false
+  trellis_text_path: "JeffreyXiang/TRELLIS-text-xlarge"
+  trellis_image_path: "JeffreyXiang/TRELLIS-image-large"
+
+data:
+  max_samples: null
+  # 与 max_samples 配合：先按该种子打乱再通过 max_samples 取前 N；null 表示不打乱（保持 CSV/文件顺序）
+  sample_seed: null
+
+inference:
+  max_new_tokens: 512
+  temperature: 0.0
+  top_k: 1
+  top_p: 1.0
+  batch_size: 1
+  seed: 42
+
+metrics_config:
+  render:
+    save_images: false
+    # 图像类 aggregate 指标（fd_inception / kd_inception / clip_score）可选：
+    # device: auto | cuda | cuda:0 | cpu；inception_batch_size / clip_batch_size 控制 GPU 显存
+    # 彩色 GLB 渲染可用 mesh_render_backend: auto|cuda|pyvista|matplotlib；
+    # render_gpu_ids: auto 或 [0,1,...] 会在聚合阶段用多进程把渲染分发到多张 GPU。
+    # 细粒度耗时与 GPU：verbose_metrics_timeline；debug_gpu_poll + debug_gpu_poll_interval_sec；
+    # debug_gpu_phase_snapshots（各阶段 nvidia-smi 快照）。环境变量：EVAL_RENDER_METRICS_TIMELINE、EVAL_RENDER_METRICS_GPU_POLL
+    # 以上键须写在 metrics_config.render 下；若误写在 model 下，当前版本会从 model 合并并打印 [warn] 提示迁移。
+
+reporting:
+  formats:
+    - json
+    - csv
+    - latex
+  output_dir: "./eval_results"
+  wandb:
+    enabled: false
+    project: "3d-llm-eval"
+    entity: null
+    run_name: null

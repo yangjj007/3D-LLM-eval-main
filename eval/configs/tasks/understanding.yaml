@@ -1,0 +1,30 @@
+adapter: shapellm
+data:
+  data_path: eval_data/understanding.json
+  gen_caption_indices: "0"
+  default_prompt: Give a quick overview of the object represented by this 3D mesh.
+  max_samples: null
+inference:
+  max_new_tokens: 512
+  temperature: 0.0
+  top_k: 1
+  top_p: 1.0
+metrics:
+- bleu
+- rouge_l
+- cider
+- bert_score
+model:
+  llm_loader: auto
+  trust_remote_code: true
+  load_llm: true
+  llm_path: "/yangjunjie/3D-LLM-eval-main/eval_data/hf_cache/models--yejunliang23--ShapeLLM-7B-omni/snapshots/b9922e4feb9bfbffe5f1c9941146b8a8f1fb124e"
+  load_trellis_image: false
+  load_trellis_text: false
+reporting:
+  formats:
+  - json
+  - csv
+  - latex
+  output_dir: eval_results/shapellm/understanding
+task: understanding

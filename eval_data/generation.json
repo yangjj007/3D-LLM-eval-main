@@ -1,0 +1,1897 @@
+[
+  {
+    "sample_id": "builtin_gen_0000",
+    "prompt": "A drone with four propellers and a central body.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0001",
+    "prompt": "A stone axe with a handle.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0002",
+    "prompt": "The titanic, aerial view.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0003",
+    "prompt": "A 3D model of a small yellow and blue robot with wheels and two pots.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0004",
+    "prompt": "A futuristic vehicle with a sleek design and multiple wheels.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0005",
+    "prompt": "A car with four wheels and a roof.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0006",
+    "prompt": "A wooden chair with four legs and armrests.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0007",
+    "prompt": "A medieval castle with towers and walls.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0008",
+    "prompt": "A rocket ship ready for launch.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0009",
+    "prompt": "A small sailing boat on water.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0010",
+    "prompt": "A vintage typewriter with round keys.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0011",
+    "prompt": "A grand piano with an open lid.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0012",
+    "prompt": "A mechanical clock with visible gears.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0013",
+    "prompt": "A steam locomotive with smoke coming from the chimney.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0014",
+    "prompt": "A lighthouse on a rocky cliff.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0015",
+    "prompt": "A small house with a chimney and a fence.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0016",
+    "prompt": "A military tank with a turret and tracks.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0017",
+    "prompt": "A space station orbiting Earth.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0018",
+    "prompt": "A submarine with a periscope.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0019",
+    "prompt": "A vintage camera with a large lens.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0020",
+    "prompt": "A windmill with four blades.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0021",
+    "prompt": "A helicopter with rotors and tail fin.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0022",
+    "prompt": "A microscope with adjustment knobs.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0023",
+    "prompt": "A telescope on a tripod.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0024",
+    "prompt": "A compass with a rotating needle.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0025",
+    "prompt": "A viking ship with a dragon figurehead.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0026",
+    "prompt": "A hot air balloon with a basket.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0027",
+    "prompt": "A fire truck with a ladder.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0028",
+    "prompt": "A bicycle with thin wheels.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0029",
+    "prompt": "A motorcycle with a sidecar.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0030",
+    "prompt": "A sports car with aerodynamic design.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0031",
+    "prompt": "A classic pickup truck.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0032",
+    "prompt": "A double-decker bus.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0033",
+    "prompt": "A tractor with large rear wheels.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0034",
+    "prompt": "A skateboard with colorful graphics.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0035",
+    "prompt": "A snowboard with bindings.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0036",
+    "prompt": "A surfboard with a pointed nose.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0037",
+    "prompt": "A kayak with a paddle.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0038",
+    "prompt": "A canoe for two people.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0039",
+    "prompt": "A jet ski on water.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0040",
+    "prompt": "An electric guitar with six strings.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0041",
+    "prompt": "A violin with a bow.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0042",
+    "prompt": "A drum set with cymbals.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0043",
+    "prompt": "A trumpet with three valves.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0044",
+    "prompt": "A flute with silver keys.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0045",
+    "prompt": "A harp with golden frame.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0046",
+    "prompt": "A saxophone with a curved body.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0047",
+    "prompt": "A cello standing upright.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0048",
+    "prompt": "A xylophone with colored bars.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0049",
+    "prompt": "An accordion with bellows.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0050",
+    "prompt": "A teddy bear with a bow tie.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0051",
+    "prompt": "A rubber duck.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0052",
+    "prompt": "A chess piece - the knight.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0053",
+    "prompt": "A chess piece - the king.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0054",
+    "prompt": "A globe on a stand.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0055",
+    "prompt": "A magnifying glass with a wooden handle.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0056",
+    "prompt": "A lantern with a candle inside.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0057",
+    "prompt": "A treasure chest with gold coins.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0058",
+    "prompt": "A crown with jewels.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0059",
+    "prompt": "A shield with a coat of arms.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0060",
+    "prompt": "A sword with an ornate handle.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0061",
+    "prompt": "A bow and arrow.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0062",
+    "prompt": "A catapult ready to fire.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0063",
+    "prompt": "A cannon on wheels.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0064",
+    "prompt": "A torch with flames.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0065",
+    "prompt": "A wizard hat with stars.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0066",
+    "prompt": "A magic wand with a glowing tip.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0067",
+    "prompt": "A crystal ball on a stand.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0068",
+    "prompt": "A potion bottle with bubbling liquid.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0069",
+    "prompt": "A scroll with ancient writing.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0070",
+    "prompt": "A mushroom with red cap and white spots.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0071",
+    "prompt": "A cactus in a pot.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0072",
+    "prompt": "A bonsai tree.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0073",
+    "prompt": "A sunflower in full bloom.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0074",
+    "prompt": "A rose with thorns.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0075",
+    "prompt": "A palm tree on a beach.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0076",
+    "prompt": "An oak tree with broad branches.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0077",
+    "prompt": "A pine tree covered in snow.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0078",
+    "prompt": "A bamboo stalk.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0079",
+    "prompt": "A pumpkin with a carved face.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0080",
+    "prompt": "A watermelon slice.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0081",
+    "prompt": "An apple with a leaf.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0082",
+    "prompt": "A banana bunch.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0083",
+    "prompt": "A strawberry with seeds.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0084",
+    "prompt": "A pineapple with a crown.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0085",
+    "prompt": "A bunch of grapes.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0086",
+    "prompt": "A cherry pair on a stem.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0087",
+    "prompt": "A lemon cut in half.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0088",
+    "prompt": "An orange with a peel.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0089",
+    "prompt": "A birthday cake with candles.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0090",
+    "prompt": "A cupcake with frosting.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0091",
+    "prompt": "A donut with sprinkles.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0092",
+    "prompt": "A slice of pizza.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0093",
+    "prompt": "A hamburger with lettuce and tomato.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0094",
+    "prompt": "A hot dog with mustard.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0095",
+    "prompt": "A taco with fillings.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0096",
+    "prompt": "A sushi roll.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0097",
+    "prompt": "An ice cream cone with three scoops.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0098",
+    "prompt": "A coffee cup with steam.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0099",
+    "prompt": "A school bus with stop sign.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0100",
+    "prompt": "A police car with sirens.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0101",
+    "prompt": "An ambulance with a red cross.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0102",
+    "prompt": "A garbage truck with a lift arm.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0103",
+    "prompt": "A cement mixer truck.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0104",
+    "prompt": "A forklift carrying a pallet.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0105",
+    "prompt": "An airplane taking off.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0106",
+    "prompt": "A fighter jet with missiles.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0107",
+    "prompt": "A blimp floating in the sky.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0108",
+    "prompt": "A speedboat cutting through waves.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0109",
+    "prompt": "A cruise ship with multiple decks.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0110",
+    "prompt": "A train with passenger cars.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0111",
+    "prompt": "A monorail on elevated tracks.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0112",
+    "prompt": "A cable car hanging from wires.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0113",
+    "prompt": "A rickshaw with a seat.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0114",
+    "prompt": "A horse-drawn carriage.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0115",
+    "prompt": "A segway personal transporter.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0116",
+    "prompt": "A hovercraft on water.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0117",
+    "prompt": "A snowmobile on snow.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0118",
+    "prompt": "A quad bike with large tires.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0119",
+    "prompt": "A Gothic cathedral with stained glass.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0120",
+    "prompt": "A Japanese pagoda with five tiers.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0121",
+    "prompt": "A Greek temple with columns.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0122",
+    "prompt": "A modern skyscraper with glass facade.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0123",
+    "prompt": "A log cabin in the woods.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0124",
+    "prompt": "A treehouse with a rope ladder.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0125",
+    "prompt": "A bridge over a river.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0126",
+    "prompt": "A water tower on stilts.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0127",
+    "prompt": "A barn with a red roof.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0128",
+    "prompt": "A greenhouse with glass panels.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0129",
+    "prompt": "A gazebo in a garden.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0130",
+    "prompt": "An igloo made of ice blocks.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0131",
+    "prompt": "A pyramid with stone blocks.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0132",
+    "prompt": "A colosseum with arched openings.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0133",
+    "prompt": "A mosque with a dome and minaret.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0134",
+    "prompt": "A church with a steeple.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0135",
+    "prompt": "A factory with smokestacks.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0136",
+    "prompt": "A stadium with seating rows.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0137",
+    "prompt": "A phone booth, classic red.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0138",
+    "prompt": "A mailbox on a post.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0139",
+    "prompt": "A bookshelf filled with books.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0140",
+    "prompt": "A round dining table with four chairs.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0141",
+    "prompt": "A rocking chair on a porch.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0142",
+    "prompt": "A desk lamp with adjustable arm.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0143",
+    "prompt": "A standing floor lamp.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0144",
+    "prompt": "A ceiling fan with lights.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0145",
+    "prompt": "A wardrobe with double doors.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0146",
+    "prompt": "A kitchen sink with faucet.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0147",
+    "prompt": "A bathtub with clawed feet.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0148",
+    "prompt": "A toilet with a tank.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0149",
+    "prompt": "A washing machine with a round door.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0150",
+    "prompt": "A refrigerator with two doors.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0151",
+    "prompt": "A microwave oven.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0152",
+    "prompt": "A toaster with two slots.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0153",
+    "prompt": "A blender with a glass jar.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0154",
+    "prompt": "A vacuum cleaner with a hose.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0155",
+    "prompt": "An ironing board with an iron.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0156",
+    "prompt": "A sewing machine with a needle.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0157",
+    "prompt": "A grandfather clock with pendulum.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0158",
+    "prompt": "A fireplace with a mantle.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0159",
+    "prompt": "A desktop computer with monitor and keyboard.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0160",
+    "prompt": "A laptop computer, open.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0161",
+    "prompt": "A smartphone with a large screen.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0162",
+    "prompt": "A tablet device with a stylus.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0163",
+    "prompt": "A game controller with joysticks.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0164",
+    "prompt": "A pair of headphones.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0165",
+    "prompt": "A speaker with a mesh grille.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0166",
+    "prompt": "A projector on a ceiling mount.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0167",
+    "prompt": "A router with antennas.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0168",
+    "prompt": "A drone with a camera underneath.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0169",
+    "prompt": "A VR headset.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0170",
+    "prompt": "A smartwatch on a wrist.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0171",
+    "prompt": "A 3D printer with a build plate.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0172",
+    "prompt": "A CNC machine with cutting tool.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0173",
+    "prompt": "A robot arm with joints.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0174",
+    "prompt": "A satellite dish pointed upward.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0175",
+    "prompt": "A walkie-talkie radio.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0176",
+    "prompt": "A flashlight with a beam.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0177",
+    "prompt": "A battery pack with cables.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0178",
+    "prompt": "A solar panel on a roof.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0179",
+    "prompt": "A cat sitting on a cushion.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0180",
+    "prompt": "A dog with a wagging tail.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0181",
+    "prompt": "A horse galloping.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0182",
+    "prompt": "An elephant with large ears.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0183",
+    "prompt": "A giraffe with a long neck.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0184",
+    "prompt": "A lion with a mane.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0185",
+    "prompt": "A penguin standing on ice.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0186",
+    "prompt": "An eagle with spread wings.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0187",
+    "prompt": "A dolphin jumping out of water.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0188",
+    "prompt": "A shark with an open mouth.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0189",
+    "prompt": "A whale breaching the surface.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0190",
+    "prompt": "A turtle with a shell.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0191",
+    "prompt": "A frog on a lily pad.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0192",
+    "prompt": "A snake coiled up.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0193",
+    "prompt": "A butterfly with colorful wings.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0194",
+    "prompt": "A spider on a web.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0195",
+    "prompt": "A bear standing on hind legs.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0196",
+    "prompt": "A rabbit with long ears.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0197",
+    "prompt": "An owl perched on a branch.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0198",
+    "prompt": "A parrot on a perch.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0199",
+    "prompt": "A hammer with a wooden handle.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0200",
+    "prompt": "A wrench with an adjustable jaw.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0201",
+    "prompt": "A screwdriver with a flat head.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0202",
+    "prompt": "A power drill with a bit.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0203",
+    "prompt": "A chainsaw with a guide bar.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0204",
+    "prompt": "A wheelbarrow filled with soil.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0205",
+    "prompt": "A ladder leaning against a wall.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0206",
+    "prompt": "A fire extinguisher.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0207",
+    "prompt": "A toolbox with compartments.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0208",
+    "prompt": "A paint roller with a handle.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0209",
+    "prompt": "A shovel stuck in the ground.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0210",
+    "prompt": "A pickaxe with a wooden handle.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0211",
+    "prompt": "A crowbar.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0212",
+    "prompt": "A level tool with a bubble.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0213",
+    "prompt": "A tape measure extended.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0214",
+    "prompt": "A clamp holding two boards.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0215",
+    "prompt": "A vise grip on a workbench.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0216",
+    "prompt": "A welding mask.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0217",
+    "prompt": "A safety helmet, yellow.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0218",
+    "prompt": "A pair of work gloves.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0219",
+    "prompt": "A basketball with orange texture.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0220",
+    "prompt": "A soccer ball with black and white panels.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0221",
+    "prompt": "A football with laces.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0222",
+    "prompt": "A tennis racket with strings.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0223",
+    "prompt": "A baseball bat and glove.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0224",
+    "prompt": "A golf club and ball.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0225",
+    "prompt": "A hockey stick and puck.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0226",
+    "prompt": "A bowling pin.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0227",
+    "prompt": "A dartboard with darts.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0228",
+    "prompt": "A punching bag on a chain.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0229",
+    "prompt": "A trampoline with safety net.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0230",
+    "prompt": "A swing set with two swings.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0231",
+    "prompt": "A slide for a playground.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0232",
+    "prompt": "A seesaw.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0233",
+    "prompt": "A sandbox with toys.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0234",
+    "prompt": "A tent for camping.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0235",
+    "prompt": "A sleeping bag rolled up.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0236",
+    "prompt": "A fishing rod with a reel.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0237",
+    "prompt": "A life jacket, orange.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0238",
+    "prompt": "A pair of binoculars.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0239",
+    "prompt": "A dragon breathing fire.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0240",
+    "prompt": "A unicorn with a spiral horn.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0241",
+    "prompt": "A phoenix with flaming wings.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0242",
+    "prompt": "A spaceship with laser cannons.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0243",
+    "prompt": "A mech warrior with weapons.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0244",
+    "prompt": "An alien with large eyes.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0245",
+    "prompt": "A flying saucer hovering.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0246",
+    "prompt": "A portal with swirling energy.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0247",
+    "prompt": "A magic staff with a crystal.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0248",
+    "prompt": "A floating island with waterfalls.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0249",
+    "prompt": "A time machine with dials.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0250",
+    "prompt": "A robot butler serving drinks.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0251",
+    "prompt": "A hoverboard glowing neon.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0252",
+    "prompt": "A space helmet with visor.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0253",
+    "prompt": "A laser rifle, futuristic.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0254",
+    "prompt": "An energy shield generator.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0255",
+    "prompt": "A holographic display table.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0256",
+    "prompt": "A cyberpunk motorcycle.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0257",
+    "prompt": "A steampunk airship.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0258",
+    "prompt": "A medieval knight in full armor.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0259",
+    "prompt": "A volcano with lava flowing.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0260",
+    "prompt": "A mountain with snow peak.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0261",
+    "prompt": "A waterfall cascading into a pool.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0262",
+    "prompt": "A cave entrance with stalactites.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0263",
+    "prompt": "A desert sand dune.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0264",
+    "prompt": "A coral reef with fish.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0265",
+    "prompt": "An iceberg floating in the sea.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0266",
+    "prompt": "A canyon with layered rock.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0267",
+    "prompt": "A river winding through a valley.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0268",
+    "prompt": "A forest clearing with sunlight.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0269",
+    "prompt": "A croissant with flaky layers.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0270",
+    "prompt": "A pretzel with salt.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0271",
+    "prompt": "A bowl of ramen with chopsticks.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0272",
+    "prompt": "A plate of spaghetti with sauce.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0273",
+    "prompt": "A stack of pancakes with syrup.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0274",
+    "prompt": "A loaf of bread on a board.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0275",
+    "prompt": "A cheese wheel cut open.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0276",
+    "prompt": "A wine bottle with a glass.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0277",
+    "prompt": "A teapot with a lid.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0278",
+    "prompt": "A jar of honey with a dipper.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0279",
+    "prompt": "A pair of scissors.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0280",
+    "prompt": "A padlock with a key.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0281",
+    "prompt": "An umbrella, open.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0282",
+    "prompt": "A suitcase with wheels.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0283",
+    "prompt": "A backpack with straps.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0284",
+    "prompt": "A gift box with a ribbon.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0285",
+    "prompt": "A candle in a holder.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0286",
+    "prompt": "A mirror with an ornate frame.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0287",
+    "prompt": "A vase with flowers.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0288",
+    "prompt": "A birdhouse on a pole.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0289",
+    "prompt": "A mailbox, classic American style.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0290",
+    "prompt": "A traffic light, red.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0291",
+    "prompt": "A street lamp, vintage.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0292",
+    "prompt": "A fire hydrant, red.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0293",
+    "prompt": "A park bench under a tree.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0294",
+    "prompt": "A fountain in a plaza.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0295",
+    "prompt": "A statue on a pedestal.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0296",
+    "prompt": "A clock tower.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0297",
+    "prompt": "A weather vane on a roof.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0298",
+    "prompt": "A sundial in a garden.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0299",
+    "prompt": "A pair of running shoes.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0300",
+    "prompt": "A top hat.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0301",
+    "prompt": "A baseball cap.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0302",
+    "prompt": "A pair of sunglasses.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0303",
+    "prompt": "A wristwatch with a leather strap.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0304",
+    "prompt": "A necktie with stripes.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0305",
+    "prompt": "A handbag with a clasp.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0306",
+    "prompt": "A belt with a buckle.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0307",
+    "prompt": "A pair of boots.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0308",
+    "prompt": "A scarf wrapped around a mannequin.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0309",
+    "prompt": "A stethoscope.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0310",
+    "prompt": "A syringe with a needle.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0311",
+    "prompt": "A pill bottle with tablets.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0312",
+    "prompt": "A DNA double helix model.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0313",
+    "prompt": "A molecule model, ball and stick.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0314",
+    "prompt": "An atom model with orbiting electrons.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0315",
+    "prompt": "A beaker with liquid.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0316",
+    "prompt": "A test tube rack with tubes.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0317",
+    "prompt": "A Bunsen burner with flame.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0318",
+    "prompt": "A petri dish with culture.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0319",
+    "prompt": "A pencil sharpener.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0320",
+    "prompt": "A stapler.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0321",
+    "prompt": "A paper clip, large.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0322",
+    "prompt": "A rubber stamp.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0323",
+    "prompt": "A filing cabinet with drawers.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0324",
+    "prompt": "A whiteboard with markers.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0325",
+    "prompt": "A calculator.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0326",
+    "prompt": "A hole puncher.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0327",
+    "prompt": "A notebook with spiral binding.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0328",
+    "prompt": "A pen holder with pens.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0329",
+    "prompt": "The planet Saturn with rings.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0330",
+    "prompt": "The Earth from space.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0331",
+    "prompt": "The Moon with craters.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0332",
+    "prompt": "A Mars rover on rocky terrain.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0333",
+    "prompt": "A space telescope in orbit.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0334",
+    "prompt": "An asteroid with irregular shape.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0335",
+    "prompt": "A comet with a glowing tail.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0336",
+    "prompt": "A space shuttle on launch pad.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0337",
+    "prompt": "An astronaut in a spacesuit.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0338",
+    "prompt": "A lunar lander with legs.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0339",
+    "prompt": "An anchor with a chain.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0340",
+    "prompt": "A ship's wheel.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0341",
+    "prompt": "A pirate flag, skull and crossbones.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0342",
+    "prompt": "A treasure map, rolled.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0343",
+    "prompt": "A diving helmet, old style.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0344",
+    "prompt": "A buoy floating on water.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0345",
+    "prompt": "A fishing net.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0346",
+    "prompt": "A seashell, conch.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0347",
+    "prompt": "A starfish.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0348",
+    "prompt": "A seahorse.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0349",
+    "prompt": "A snowman with a top hat.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0350",
+    "prompt": "A Christmas tree with ornaments.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0351",
+    "prompt": "A gingerbread house.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0352",
+    "prompt": "A sled with runners.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0353",
+    "prompt": "Ice skates, a pair.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0354",
+    "prompt": "A menorah with candles.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0355",
+    "prompt": "A jack-o-lantern glowing.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0356",
+    "prompt": "A Easter egg with patterns.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0357",
+    "prompt": "A firework rocket.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0358",
+    "prompt": "A party hat with streamers.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0359",
+    "prompt": "A gear wheel with teeth.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0360",
+    "prompt": "A pulley system with rope.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0361",
+    "prompt": "A spring coil, metal.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0362",
+    "prompt": "A piston and cylinder.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0363",
+    "prompt": "A valve with a handle.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0364",
+    "prompt": "A conveyor belt with boxes.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0365",
+    "prompt": "A crane with a hook.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0366",
+    "prompt": "An excavator with bucket.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0367",
+    "prompt": "A bulldozer with blade.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0368",
+    "prompt": "A steamroller on a road.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0369",
+    "prompt": "An easel with a canvas.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0370",
+    "prompt": "A paint palette with colors.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0371",
+    "prompt": "A pottery wheel with clay.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0372",
+    "prompt": "A sculpture bust.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0373",
+    "prompt": "A mosaic tile pattern.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0374",
+    "prompt": "A weaving loom.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0375",
+    "prompt": "A knitting basket with yarn.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0376",
+    "prompt": "An origami crane.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0377",
+    "prompt": "A calligraphy brush and ink.",
+    "source": "builtin_prompts"
+  },
+  {
+    "sample_id": "builtin_gen_0378",
+    "prompt": "A picture frame, ornate.",
+    "source": "builtin_prompts"
+  }
+]

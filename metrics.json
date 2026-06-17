@@ -1,0 +1,60 @@
+{
+  "corpus_prefix": "pad_outputs/qwen3vl_3d_sft_8cat.jsonl",
+  "merge_table": "pad_outputs/merge_table_rel_offset.json",
+  "samples": 18577,
+  "total_leaf_tokens": 42142078,
+  "total_macro_tokens": 31788778,
+  "compression_ratio_total": 0.7543239324838229,
+  "compression_rate_percent": 24.56760675161771,
+  "leaf": {
+    "vocab_observed": 8192,
+    "unigram_entropy_bits": 10.910369424864584,
+    "adjacency": {
+      "edge_count": 92050424.0,
+      "pair_entropy_bits": 19.662481156422672,
+      "source_direction_entropy_bits": 12.366735466748509,
+      "target_entropy_bits": 10.934948019039984,
+      "target_given_source_direction_entropy_bits": 7.295745689674163,
+      "source_direction_target_mutual_information_bits": 3.6392023293658227,
+      "direction_entropy_bits": 1.583845665137659
+    }
+  },
+  "macro": {
+    "vocab_observed": 16384,
+    "unigram_entropy_bits": 12.487879607897531,
+    "unigram_entropy_bits_per_leaf": 9.419906454213805
+  },
+  "macro_anchor": {
+    "adjacency": {
+      "edge_count": 55864837.0,
+      "pair_entropy_bits": 22.378682727515265,
+      "source_direction_entropy_bits": 13.55796405284843,
+      "target_entropy_bits": 12.39906739146383,
+      "target_given_source_direction_entropy_bits": 8.820718674666836,
+      "source_direction_target_mutual_information_bits": 3.578348716796995,
+      "direction_entropy_bits": 1.5849038606760324
+    }
+  },
+  "macro_boundary": {
+    "adjacency": {
+      "edge_count": 81228699.0,
+      "pair_entropy_bits": 22.88481454715083,
+      "source_direction_entropy_bits": 14.175874766023489,
+      "target_entropy_bits": 12.741259510142994,
+      "target_given_source_direction_entropy_bits": 8.708939781127343,
+      "source_direction_target_mutual_information_bits": 4.032319729015651,
+      "direction_entropy_bits": 1.584814025920529
+    }
+  },
+  "deltas": {
+    "unigram_entropy_bits": -1.5775101830329472,
+    "unigram_entropy_bits_per_leaf": 1.4904629706507784,
+    "unigram_entropy_per_leaf_ratio": 0.8633902379827733,
+    "boundary_pair_entropy_bits": -3.22233339072816,
+    "boundary_conditional_entropy_bits": -1.41319409145318,
+    "boundary_mutual_information_bits": -0.39311739964982806,
+    "boundary_mi_ratio": 1.1080229577997478,
+    "boundary_edge_ratio": 0.8824369891006695,
+    "weighted_boundary_mi_ratio": 0.9777604427352276
+  }
+}

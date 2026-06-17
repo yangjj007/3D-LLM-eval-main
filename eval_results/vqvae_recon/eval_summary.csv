@@ -1,0 +1,5 @@
+metric,value
+voxel_f1,0.928595
+voxel_iou,0.868509
+voxel_precision,0.933590
+voxel_recall,0.923684

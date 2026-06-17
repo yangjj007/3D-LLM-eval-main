@@ -1,0 +1,45 @@
+adapter: shapellm
+task: generation
+
+data:
+  data_path: eval_data/generation.json
+  max_samples: null
+
+model:
+  llm_loader: auto
+  trust_remote_code: true
+  load_llm: true
+  llm_path: yejunliang23/ShapeLLM-7B-omni
+  load_trellis_image: false
+  load_trellis_text: true
+  trellis_text_path: JeffreyXiang/TRELLIS-text-xlarge
+  hf_cache_dir: ./eval_data/hf_cache
+  colorization:
+    enabled: true
+    simplify: 0.95
+    texture_size: 1024
+
+inference:
+  max_new_tokens: 2048
+  prompt_prefix: "Please generate a 3D asset based on the prompt I provided: "
+  run_trellis: true
+  seed: 42
+  temperature: 0.7
+  top_k: 8192
+  top_p: 0.7
+
+metrics:
+  - fd_inception
+  - kd_inception
+  - clip_score
+
+metrics_config:
+  render:
+    nviews: 4
+    resolution: 512
+    kid_subset_size: 50
+    clip_model: openai/clip-vit-base-patch32
+
+reporting:
+  formats: [json, csv, latex]
+  output_dir: eval_results/shapellm/generation

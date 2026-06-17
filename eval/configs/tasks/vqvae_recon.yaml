@@ -1,0 +1,23 @@
+adapter: shapellm
+task: vqvae_recon
+
+data:
+  metadata_csv: eval_data/metadata.csv
+  glb_dir: eval_data
+  max_samples: null
+
+model:
+  llm_loader: auto
+  trust_remote_code: true
+  load_llm: false
+  load_trellis_image: false
+  load_trellis_text: false
+
+inference:
+  batch_size: 1
+
+metrics: []
+
+reporting:
+  formats: [json, csv, latex]
+  output_dir: eval_results/shapellm/vqvae_recon

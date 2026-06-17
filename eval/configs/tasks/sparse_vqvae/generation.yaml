@@ -1,0 +1,118 @@
+# Sparse VQ-VAE 文本生成 mesh：真实加载 Qwen3 SFT 权重（非 mock_llm）。
+# 其余参数对齐 mock_smoke.yaml；需在 CUDA 环境填写 eval_data、VAE 与 merge_table 等路径。
+
+adapter: sparse_sdf_qwen3
+task: sparse_mesh
+
+data:
+  metadata_csv: eval_data/metadata.csv
+  glb_dir: eval_data
+  gen_caption_indices: "0"
+  max_samples: 5
+  sample_seed: 42
+
+model:
+  vae_config: eval/configs/vae/sdf_vqvae_stage2.json
+  vae_ckpt: /yangjunjie/Med-3D-LLM-main/outputs_pad_sdf/sdf_vqvae_stage2_512_0.5/ckpts/vqvae_step0000200.pt
+  llm_path: LLaMA-Factory/saves/qwen3-4b/sft_bpe_cord_3d_stage2/checkpoint-50000
+  trust_remote_code: true
+  llm_dtype: bfloat16
+  hf_cache_dir: ./eval_data/hf_cache
+  sdf_from_mesh_only: true
+  sdf_resolution: 512
+  sdf_threshold_factor: 0.5
+  sdf_cache_dir: eval_data/sdf_cache_eval
+  mc_threshold: 0.0
+  bpe_merge_table: "./merge_table.json"
+  bpe_base_vocab_size: 8192
+  bpe_token_format: id_only
+  trellis_text_path: JeffreyXiang/TRELLIS-text-xlarge
+  colorization:
+    enabled: true
+    # GT GLB / decoded white mesh are y-up; Trellis colorization expects z-up
+    # and rotates z-up back to y-up when exporting GLB.
+    input_orientation: yup
+    simplify: 0.95
+    texture_size: 1024
+    # Trellis SLAT 流匹配采样（trellis/pipelines/samplers/flow_euler.py）；覆盖管线 checkpoint 里的默认 params
+    slat_sampler_params:
+      steps: 50
+  white_mesh_postprocess:
+    enabled: true
+    log_timings: true
+    bounds_min: [-1.0, -1.0, -1.0]
+    bounds_max: [1.0, 1.0, 1.0]
+    marching_cubes_iso: 0.5
+    voxel_remesh:
+      enabled: true
+      resolution: 512
+      use_gpu_morphology: true
+    connect_components:
+      enabled: true
+      min_component_ratio: 0.1
+      max_components: 8
+      bridge_radius: 2
+    morphology:
+      enabled: true
+      closing_iters: 1
+      opening_iters: 0
+      kernel_size: 3
+    fill_holes:
+      enabled: true
+    marching_cubes:
+      enabled: true
+    taubin:
+      enabled: false
+      iterations: 5
+      lamb: 0.5
+      nu: -0.53
+    decimate:
+      enabled: false
+      target_triangles: 50000
+    pymeshfix:
+      enabled: false
+      verbose: false
+    keep_largest_component:
+      enabled: true
+      criterion: faces
+
+inference:
+  max_new_tokens: 4096
+  reconstruct_prompt: "\nReconstruct this 3D shape in mesh token format:"
+  seed: 42
+  temperature: 0.7
+  top_k: 8192
+  top_p: 0.7
+  batch_size: 1
+  verbose_eval: true
+
+metrics:
+  - fd_inception
+  - kd_inception
+  - clip_score
+  - psnr
+  - ssim
+  - chamfer_distance
+  - hausdorff_distance
+  - f_score
+
+metrics_config:
+  render:
+    # 与论文表4一致：每个 3D 样本用其多视角渲染单独算 FD/KD，再对样本取均值（非全局图像池） pooled / per_sample_mean
+    inception_aggregate: pooled
+    nviews: 4
+    resolution: 256
+    kid_subset_size: 20
+    clip_model: openai/clip-vit-base-patch32
+    save_images: true
+    # 彩色 GLB 多视角渲染：cuda/auto 走 Trellis+nvdiffrast RGB 后端；auto 表示使用所有可见 GPU 并行渲染。
+    mesh_render_backend: cuda
+    render_gpu_ids: auto
+    # Inception FID/KID 与 CLIP：默认 auto=有 CUDA 则用 GPU；也可设 cuda / cuda:0 / cpu
+    device: cuda
+    inception_batch_size: 128
+    clip_batch_size: 32
+
+reporting:
+  formats: [json, csv]
+  output_dir: eval_results/sparse_vqvae/bpe_cord_3d_stage2_ckpt50000

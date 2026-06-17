@@ -1,0 +1,36 @@
+{
+  "Ks": [
+    0,
+    32,
+    128,
+    512,
+    2048,
+    8192
+  ],
+  "compression_by_K": [
+    {
+      "K": 0,
+      "compression_ratio_total": 1.0
+    },
+    {
+      "K": 32,
+      "compression_ratio_total": 0.9667644296040646
+    },
+    {
+      "K": 128,
+      "compression_ratio_total": 0.9351627606023605
+    },
+    {
+      "K": 512,
+      "compression_ratio_total": 0.8903575661361549
+    },
+    {
+      "K": 2048,
+      "compression_ratio_total": 0.831502993279069
+    },
+    {
+      "K": 8192,
+      "compression_ratio_total": 0.7543239324838229
+    }
+  ]
+}

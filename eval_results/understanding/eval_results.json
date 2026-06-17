@@ -1,0 +1,108 @@
+{
+  "task": "understanding",
+  "model": "yejunliang23/ShapeLLM-7B-omni",
+  "timestamp": "2026-04-18T00:54:31.147909",
+  "config": {
+    "model": {
+      "llm_path": "yejunliang23/ShapeLLM-7B-omni",
+      "vqvae_repo": "yejunliang23/3DVQVAE",
+      "vqvae_filename": "3DVQVAE.bin",
+      "vqvae_num_embeddings": 8192,
+      "dtype": "auto",
+      "device_map": "auto",
+      "load_llm": true,
+      "load_trellis_text": false,
+      "load_trellis_image": false,
+      "trellis_text_path": "JeffreyXiang/TRELLIS-text-xlarge",
+      "trellis_image_path": "JeffreyXiang/TRELLIS-image-large"
+    },
+    "data": {
+      "max_samples": 2,
+      "data_path": "eval_data/understanding.json",
+      "default_prompt": "Give a quick overview of the object represented by this 3D mesh."
+    },
+    "inference": {
+      "max_new_tokens": 512,
+      "temperature": 0.0,
+      "top_k": 1,
+      "top_p": 1.0,
+      "batch_size": 1,
+      "seed": 42
+    },
+    "reporting": {
+      "formats": [
+        "json",
+        "csv",
+        "latex"
+      ],
+      "output_dir": "eval_results/shapellm/understanding",
+      "wandb": {
+        "enabled": false,
+        "project": "shapellm-omni-eval",
+        "entity": null,
+        "run_name": null
+      }
+    },
+    "metrics": [
+      "bleu",
+      "rouge_l",
+      "meteor",
+      "cider",
+      "bert_score"
+    ],
+    "task": "understanding"
+  },
+  "num_samples": 2,
+  "aggregate_metrics": {
+    "bleu_1": 0.24977044384392544,
+    "bleu_2": 0.033745797107075565,
+    "bleu_3": 0.017903356959846146,
+    "bleu_4": 0.013408124396186704,
+    "rouge_l": 0.1766917293233083,
+    "meteor": 0.14573170731707316,
+    "cider": -1.0,
+    "bert_score_f1": -1.0
+  },
+  "per_sample_results": [
+    {
+      "sample_id": "pointllm_0012",
+      "prediction": "3D model of a wooden tray with chopsticks and a knife.",
+      "ground_truth": "Grey coloured paper boat with green connecting rafts inside with a tapering front and rectangular other end.",
+      "ground_truths": [
+        "Grey coloured paper boat with green connecting rafts inside with a tapering front and rectangular other end."
+      ],
+      "prompt": "Characterize the object this point cloud is illustrating.",
+      "raw_response": "3D model of a wooden tray with chopsticks and a knife.<|im_end|>",
+      "metrics": {
+        "bleu_1": 0.15806680330494804,
+        "bleu_2": 0.030267488464109288,
+        "bleu_3": 0.018069277493455972,
+        "bleu_4": 0.01437841846606559,
+        "rouge_l": 0.14285714285714285,
+        "meteor": 0.09146341463414633,
+        "cider": -1.0,
+        "bert_score_f1": -1.0
+      }
+    },
+    {
+      "sample_id": "pointllm_0029",
+      "prediction": "A 3D model of a white box with a hole in it.",
+      "ground_truth": "A cartoon green geometric figure in 3d",
+      "ground_truths": [
+        "A cartoon green geometric figure in 3d"
+      ],
+      "prompt": "Describe the object that this point cloud forms.",
+      "raw_response": "A 3D model of a white box with a hole in it.<|im_end|>",
+      "metrics": {
+        "bleu_1": 0.25,
+        "bleu_2": 0.047673129462279626,
+        "bleu_3": 0.02832581674713525,
+        "bleu_4": 0.022416933501922302,
+        "rouge_l": 0.2105263157894737,
+        "meteor": 0.19999999999999998,
+        "cider": -1.0,
+        "bert_score_f1": -1.0
+      }
+    }
+  ]
+}

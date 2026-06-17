@@ -1,0 +1,9 @@
+metric,value
+bert_score_f1,-1.000000
+bleu_1,0.249770
+bleu_2,0.033746
+bleu_3,0.017903
+bleu_4,0.013408
+cider,-1.000000
+meteor,0.145732
+rouge_l,0.176692
