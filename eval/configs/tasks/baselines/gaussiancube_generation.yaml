@@ -1,0 +1,28 @@
+adapter: gaussiancube
+task: generation
+
+data:
+  data_path: eval_data/generation.json
+  max_samples: null
+
+model:
+  baseline_repo_dir: third_party/baselines/GaussianCube
+  model_name: objaverse_v1.1
+  official_config: configs/objaverse_text_cond.yml
+
+inference:
+  batch_size: 1
+  work_dir: eval_external_work
+  guidance_scale: 3.5
+  num_samples: 1
+  render_video: false
+  timeout_sec: null
+
+metrics:
+  - fd_inception
+  - kd_inception
+  - clip_score
+
+reporting:
+  formats: [json, csv, latex]
+  output_dir: eval_results/baselines/gaussiancube/generation

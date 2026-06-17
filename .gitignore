@@ -22,11 +22,14 @@ Thumbs.db
 *.log
 outputs/
 eval_outputs/
+eval_results/
 logs/
 
 # Hugging Face / model caches (downloaded at runtime)
 eval_data/hf_cache/
 eval_data_objaverse/
+eval_external_work/
+third_party/baselines/
 
 # Large data artifacts
 *.ckpt

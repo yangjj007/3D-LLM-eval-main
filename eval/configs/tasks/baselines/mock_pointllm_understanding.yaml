@@ -1,0 +1,21 @@
+adapter: pointllm_13b
+task: understanding
+
+data:
+  data_path: tests/fixtures/understanding_smoke.json
+  default_prompt: Caption this 3D model in detail.
+  max_samples: 1
+
+model:
+  baseline_repo_dir: third_party/baselines/PointLLM
+
+inference:
+  batch_size: 1
+  mock_external:
+    enabled: true
+
+metrics: []
+
+reporting:
+  formats: [json]
+  output_dir: eval_results/baselines/mock_pointllm_13b/understanding

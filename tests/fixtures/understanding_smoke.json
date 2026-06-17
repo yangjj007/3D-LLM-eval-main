@@ -1,0 +1,8 @@
+[
+  {
+    "sample_id": "understanding_smoke_001",
+    "mesh_path": "tests/fixtures/missing_mock_mesh.glb",
+    "prompt": "Caption this 3D model in detail.",
+    "ground_truth": "A simple object."
+  }
+]

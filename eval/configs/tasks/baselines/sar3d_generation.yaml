@@ -1,0 +1,28 @@
+adapter: sar3d
+task: generation
+
+data:
+  data_path: eval_data/generation.json
+  max_samples: null
+
+model:
+  baseline_repo_dir: third_party/baselines/SAR3D
+  vqvae_pretrained_path: ./checkpoint/vqvae-ckpt.pt
+  ar_ckpt_path: ./checkpoint/text-condition-ckpt.pth
+  depth: 16
+  fp16: 2
+  flexicubes: false
+
+inference:
+  batch_size: 1
+  work_dir: eval_external_work
+  timeout_sec: null
+
+metrics:
+  - fd_inception
+  - kd_inception
+  - clip_score
+
+reporting:
+  formats: [json, csv, latex]
+  output_dir: eval_results/baselines/sar3d/generation

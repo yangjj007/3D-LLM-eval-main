@@ -1,0 +1,28 @@
+adapter: trellis
+task: generation
+
+data:
+  data_path: eval_data/generation.json
+  max_samples: null
+
+model:
+  baseline_repo_dir: third_party/baselines/TRELLIS
+  model_id: microsoft/TRELLIS-text-xlarge
+  colorization:
+    simplify: 0.95
+    texture_size: 1024
+
+inference:
+  seed: 1
+  formats: [gaussian, mesh]
+  batch_size: 1
+  work_dir: eval_external_work
+
+metrics:
+  - fd_inception
+  - kd_inception
+  - clip_score
+
+reporting:
+  formats: [json, csv, latex]
+  output_dir: eval_results/baselines/trellis/generation

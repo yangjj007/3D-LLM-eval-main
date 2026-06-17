@@ -1,0 +1,26 @@
+adapter: shape_e
+task: generation
+
+data:
+  data_path: eval_data/generation.json
+  max_samples: null
+
+model:
+  baseline_repo_dir: third_party/baselines/shap-e
+  model_name: text300M
+
+inference:
+  batch_size: 1
+  work_dir: eval_external_work
+  guidance_scale: 15.0
+  num_inference_steps: 64
+  progress: false
+
+metrics:
+  - fd_inception
+  - kd_inception
+  - clip_score
+
+reporting:
+  formats: [json, csv, latex]
+  output_dir: eval_results/baselines/shape_e/generation

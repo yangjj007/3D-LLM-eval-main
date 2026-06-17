@@ -113,6 +113,45 @@ python -m eval.runner --config eval/configs/tasks/sparse_vqvae/generation.yaml -
 - **断点续跑**：重复同一命令；加 `--no_resume` 清空逻辑上已存在记录（需手动删输出目录或 rank 分片文件以彻底重算）。
 - **输出目录**：`eval_results/<adapter>/<task>/` 下含 `per_sample.jsonl`、`aggregate.json`、`meshes/*.obj`（若启用）、以及 json/csv/tex 报告。
 
+### Official external baselines
+
+External baselines live behind the same `ModelAdapter` interface. Clone official
+repositories first; cloned code and generated work dirs are ignored by git:
+
+```bash
+python -m eval.baselines.clone_official_repos
+```
+
+Enabled direct text-to-3D adapters:
+
+```bash
+python -m eval.runner --config eval/configs/tasks/baselines/trellis_generation.yaml --gpu_ids 0 --no_resume
+python -m eval.runner --config eval/configs/tasks/baselines/sar3d_generation.yaml --gpu_ids 0 --no_resume
+python -m eval.runner --config eval/configs/tasks/baselines/gaussiancube_generation.yaml --gpu_ids 0 --no_resume
+python -m eval.runner --config eval/configs/tasks/baselines/shape_e_generation.yaml --gpu_ids 0 --no_resume
+```
+
+Enabled direct 3D understanding adapters:
+
+```bash
+python -m eval.runner --config eval/configs/tasks/baselines/pointllm_13b_understanding.yaml --gpu_ids 0 --no_resume
+python -m eval.runner --config eval/configs/tasks/baselines/three_d_llm_understanding.yaml --gpu_ids 0 --no_resume
+```
+
+For local smoke tests without large weights/CUDA, use the explicit mock configs:
+
+```bash
+python -m eval.runner --config eval/configs/tasks/baselines/mock_trellis_generation.yaml --no_resume
+python -m eval.runner --config eval/configs/tasks/baselines/mock_pointllm_understanding.yaml --no_resume
+```
+
+Strict-mode audited skips:
+
+- `InstantMesh`: official inference is image-to-3D, not direct text-to-3D.
+- `InstructBLIP-13B` and `LLaVA-13B`: official inference consumes 2D images, not 3D objects.
+- `3DTopia-XL`: README requires changing image encoding to text encoding; no direct official text inference entrypoint is exposed.
+- `LGM`: text path is embedded in the Gradio app; CLI `infer.py` is image-to-3D.
+
 ### 按指标挑选样本（ours vs baseline）
 
 ```bash

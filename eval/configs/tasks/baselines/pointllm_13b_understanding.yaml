@@ -1,0 +1,33 @@
+adapter: pointllm_13b
+task: understanding
+
+data:
+  data_path: eval_data/understanding.json
+  default_prompt: Caption this 3D model in detail.
+  max_samples: null
+
+model:
+  baseline_repo_dir: third_party/baselines/PointLLM
+  model_name: RunsenXu/PointLLM_13B_v1.2
+  torch_dtype: bfloat16
+  pointnum: 8192
+  # Optional: directory with official `{sample_id}_8192.npy` colored point clouds.
+  point_cloud_dir: null
+
+inference:
+  batch_size: 1
+  temperature: 1.0
+  top_k: 50
+  top_p: 0.95
+  max_length: 2048
+
+metrics:
+  - bleu
+  - rouge_l
+  - meteor
+  - sentence_bert
+  - simcse
+
+reporting:
+  formats: [json, csv, latex]
+  output_dir: eval_results/baselines/pointllm_13b/understanding
