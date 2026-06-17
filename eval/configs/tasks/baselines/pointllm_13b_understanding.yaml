@@ -2,7 +2,9 @@ adapter: pointllm_13b
 task: understanding
 
 data:
-  data_path: eval_data/understanding.json
+  metadata_csv: eval_data/metadata.csv
+  glb_dir: eval_data
+  gen_caption_indices: "0"
   default_prompt: Caption this 3D model in detail.
   max_samples: null
 

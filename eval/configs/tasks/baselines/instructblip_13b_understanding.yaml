@@ -2,7 +2,9 @@ adapter: instructblip_13b
 task: understanding
 
 data:
-  data_path: eval_data/understanding.json
+  metadata_csv: eval_data/metadata.csv
+  glb_dir: eval_data
+  gen_caption_indices: "0"
   default_prompt: Describe this 3D object.
   max_samples: null
 

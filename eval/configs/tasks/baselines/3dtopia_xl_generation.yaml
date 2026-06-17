@@ -2,7 +2,9 @@ adapter: 3dtopia_xl
 task: generation
 
 data:
-  data_path: eval_data/generation.json
+  metadata_csv: eval_data/metadata.csv
+  glb_dir: eval_data
+  gen_caption_indices: "0"
   max_samples: null
 
 model:

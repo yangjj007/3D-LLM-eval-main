@@ -1,5 +1,10 @@
+from pathlib import Path
+
+import yaml
+
 from eval.adapters import ADAPTER_REGISTRY
 from eval.baselines.registry import BASELINE_SPECS, enabled_specs, skipped_specs
+from eval.utils.path_bootstrap import repo_root
 
 
 def test_enabled_baselines_have_adapters_and_configs():
@@ -45,3 +50,15 @@ def test_skipped_baselines_are_documented_and_not_registered():
 
 def test_no_unknown_status_values():
     assert {spec.status for spec in BASELINE_SPECS.values()} <= {"enabled", "bridged", "skipped"}
+
+
+def test_real_baseline_configs_use_metadata_glb_defaults():
+    for spec in enabled_specs():
+        if not spec.config_path or "mock_" in spec.config_path:
+            continue
+        cfg_path = repo_root() / spec.config_path
+        cfg = yaml.safe_load(Path(cfg_path).read_text(encoding="utf-8"))
+        data = cfg.get("data", {})
+        assert data.get("metadata_csv") == "eval_data/metadata.csv", spec.name
+        assert data.get("glb_dir") == "eval_data", spec.name
+        assert "data_path" not in data, spec.name

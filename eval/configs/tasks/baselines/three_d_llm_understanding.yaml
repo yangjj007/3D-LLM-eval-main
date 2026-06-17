@@ -2,7 +2,9 @@ adapter: three_d_llm
 task: understanding
 
 data:
-  data_path: eval_data/understanding.json
+  metadata_csv: eval_data/metadata.csv
+  glb_dir: eval_data
+  gen_caption_indices: "0"
   default_prompt: Describe the 3D scene.
   max_samples: null
 
