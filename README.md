@@ -113,6 +113,27 @@ python -m eval.runner --config eval/configs/tasks/sparse_vqvae/understanding.yam
 python -m eval.runner --config eval/configs/tasks/sparse_vqvae/generation.yaml --gpu_ids 0 --no_resume --batch_size 1
 ```
 
+常用 eval 命令（256 sparse SDF VQ-VAE 链路）：
+
+```bash
+# 轻量 BPE / mesh export contract smoke，不需要 256 VAE checkpoint
+python -m eval.analysis.smoke_sparse_vqvae_bpe
+
+# VQ-VAE reconstruction：GLB -> 256 sparse SDF -> tight-band Encode/BPE -> pruned Decode -> 256 marching cubes
+python -m eval.runner --config eval/configs/tasks/sparse_vqvae_recon.yaml --adapter sparse_sdf_qwen3 --gpu_ids 0 --max_samples 1 --no_resume
+
+# Understanding：GLB -> 256 sparse token string -> Qwen3 caption/QA
+python -m eval.runner --config eval/configs/tasks/sparse_vqvae/understanding.yaml --adapter sparse_sdf_qwen3 --gpu_ids 0 --batch_size 1 --max_samples 1 --no_resume
+
+# Text-to-3D generation：Qwen3 mesh tokens -> pruned Decode -> 256 marching cubes
+python -m eval.runner --config eval/configs/tasks/sparse_vqvae/generation.yaml --adapter sparse_sdf_qwen3 --gpu_ids 0 --batch_size 1 --max_samples 1 --no_resume
+
+# Sparse mesh mock smoke：跳过 HF LLM，用固定 mesh token 字符串验证 VAE decode/export/metrics 流水线
+python -m eval.runner --config eval/configs/tasks/sparse_vqvae/mock_smoke.yaml --adapter sparse_sdf_qwen3 --gpu_ids 0 --no_resume
+```
+
+运行真实 VAE/GPU eval 前，请确认 `model.vae_ckpt` 指向 256 checkpoint，并已重新编译包含 `compute_sharp_mask` 的 `third_party/voxelize` 扩展。
+
 - **断点续跑**：重复同一命令；加 `--no_resume` 清空逻辑上已存在记录（需手动删输出目录或 rank 分片文件以彻底重算）。
 - **输出目录**：`eval_results/<adapter>/<task>/` 下含 `per_sample.jsonl`、`aggregate.json`、`meshes/*.obj`（若启用）、以及 json/csv/tex 报告。
 
