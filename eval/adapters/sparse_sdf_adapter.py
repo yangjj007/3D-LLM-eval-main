@@ -23,6 +23,9 @@ from eval.utils import sdf_processing
 # 与 Med-3D-LLM `build_qwen3vl_sft_3d_jsonl.py` 中 DEFAULT_* 对齐
 DEFAULT_CAPTION_PROMPT = "Describe this 3D shape in one sentence:"
 DEFAULT_RECONSTRUCT_PROMPT = "Reconstruct this 3D shape in mesh token format:"
+DEFAULT_INPUT_BAND_FACTOR = 0.5
+DEFAULT_PREPROCESSING_EXTRA_BAND_FACTOR = 4.0
+DEFAULT_INFERENCE_BAND_FACTOR = 2.0
 
 
 @dataclass
@@ -237,13 +240,13 @@ def _require_non_empty_sparse_sdf(
     t = sparse.get("sparse_sdf") if sparse else None
     if t is None or t.numel() == 0 or t.shape[0] == 0:
         raise RuntimeError(
-            "稀疏 SDF 体素数为 0，程序中止。\n"
+            "Sparse SDF voxel count is 0; stopping this sample.\n"
             f"  sample_id: {sample_id!r}\n"
             f"  mesh_path: {mesh_path!r}\n"
-            f"  当前: sdf_resolution={resolution}, sdf_threshold_factor={threshold_factor}\n"
-            "说明: 过小的 sdf_threshold_factor（例如 0.1）在 512 分辨率下表面带可能为空；"
-            "与 stage2_512_0.5 等训练请使用 0.5 左右。若已写入过错误阈值的 .npz 缓存，"
-            "请删除 model.sdf_cache_dir 中该 mesh 对应缓存后重试。"
+            f"  current: sdf_resolution={resolution}, sdf_threshold_factor={threshold_factor}\n"
+            "Sparse 256 VQ-VAE expects the Med training preprocessing defaults: "
+            "sdf_resolution=256 and sdf_threshold_factor=4.0. If a stale cache "
+            "was written with older settings, delete model.sdf_cache_dir for this sample."
         )
 
 
@@ -595,6 +598,102 @@ class SparseSDFQwen3Adapter(ModelAdapter):
     def _model_cfg(self) -> Dict[str, Any]:
         return self._cfg.get("model", {})
 
+    def _sdf_resolution(self) -> int:
+        return int(self._model_cfg().get("sdf_resolution", sdf_processing.DEFAULT_SDF_RESOLUTION))
+
+    def _sdf_threshold_factor(self) -> float:
+        return float(
+            self._model_cfg().get(
+                "sdf_threshold_factor", sdf_processing.DEFAULT_SDF_THRESHOLD_FACTOR
+            )
+        )
+
+    def _encoder_input_threshold(self) -> Tuple[float, float, float]:
+        mc = self._model_cfg()
+        input_band = float(mc.get("input_band_factor", DEFAULT_INPUT_BAND_FACTOR))
+        extra_band = float(
+            mc.get("preprocessing_extra_band_factor", DEFAULT_PREPROCESSING_EXTRA_BAND_FACTOR)
+        )
+        if extra_band <= 0:
+            raise ValueError("model.preprocessing_extra_band_factor must be > 0")
+        return input_band / extra_band, input_band, extra_band
+
+    def _filter_sparse_for_encoder(
+        self,
+        sparse: Dict[str, torch.Tensor],
+        *,
+        sample_id: str,
+        mesh_path: str,
+    ) -> Tuple[Dict[str, torch.Tensor], int, int, float]:
+        thresh, input_band, extra_band = self._encoder_input_threshold()
+        sdf = sparse["sparse_sdf"]
+        if sdf.ndim == 1:
+            sdf = sdf.unsqueeze(-1)
+        mask = sdf.abs().squeeze(-1) <= float(thresh)
+        n_total = int(mask.numel())
+        n_keep = int(mask.sum().item())
+        if n_keep <= 0:
+            raise RuntimeError(
+                "Sparse SDF tight encoder band is empty.\n"
+                f"  sample_id: {sample_id!r}\n"
+                f"  mesh_path: {mesh_path!r}\n"
+                f"  threshold=abs(sdf)<={thresh:.6f} "
+                f"(input_band_factor={input_band}, preprocessing_extra_band_factor={extra_band})\n"
+                "This should match Med training: wide SDF preprocessing at 4.0 voxels "
+                "and encoder input at 0.5 voxels."
+            )
+        return (
+            {
+                "sparse_sdf": sdf[mask],
+                "sparse_index": sparse["sparse_index"][mask],
+            },
+            n_keep,
+            n_total,
+            float(thresh),
+        )
+
+    def _decode_sparse_with_pruning(self, vae: torch.nn.Module, decoded_sparse: Any) -> Any:
+        mc = self._model_cfg()
+        res = self._sdf_resolution()
+        inf_band = float(mc.get("inference_band_factor", DEFAULT_INFERENCE_BAND_FACTOR))
+        occ_res = int(mc.get("inference_occ_resolution", res))
+        block_side = int(getattr(vae, "vq_block_side", 1) or 1)
+        latent_res = int(getattr(vae, "resolution", 32)) // max(block_side, 1)
+        band_prune = {
+            "mode": "seed",
+            "seed_coords": decoded_sparse.coords,
+            "seed_resolution": latent_res,
+            "output_resolution": res,
+            "extra_band_factor": inf_band,
+        }
+        gt_prune = {
+            "mode": "geometry",
+            "extra_band_factor": inf_band,
+            "resolution": res,
+            "occ_resolution": occ_res,
+        }
+        if self._eval_debug["verbose_eval"]:
+            print(
+                "[sparse_sdf_qwen3][debug] Decode pruning "
+                f"resolution={res} band={inf_band} occ_resolution={occ_res} "
+                f"seed_resolution={latent_res}",
+                flush=True,
+            )
+        return vae.Decode(decoded_sparse, band_prune=band_prune, gt_prune=gt_prune)
+
+    def _sparse_recon_to_meshes(self, recon: Any):
+        from eval.utils.sparse_mesh_export import sparse_sdf_to_meshes
+
+        mc = self._model_cfg()
+        wmp = mc.get("white_mesh_postprocess")
+        return sparse_sdf_to_meshes(
+            recon,
+            voxel_resolution=self._sdf_resolution(),
+            mc_threshold=float(mc.get("mc_threshold", 0.0)),
+            postprocess_cfg=wmp if isinstance(wmp, dict) else None,
+            device=self._device,
+        )
+
     def _load_bpe_tokenizer(self, model_cfg: Dict[str, Any]) -> None:
         from eval.utils.bpe_3d import BPE3DTokenizer
 
@@ -685,11 +784,20 @@ class SparseSDFQwen3Adapter(ModelAdapter):
 
     def _get_sdf(self, m: MeshInput) -> Dict[str, torch.Tensor]:
         mc = self._model_cfg()
-        res = int(mc.get("sdf_resolution", 512))
-        th = float(mc.get("sdf_threshold_factor", 0.5))
+        res = self._sdf_resolution()
+        th = self._sdf_threshold_factor()
         cache = mc.get("sdf_cache_dir")
         mesh_only = bool(mc.get("sdf_from_mesh_only", True))
         watertight = bool(mc.get("sdf_watertight", False))
+        compute_edge_mask = _truthy_cfg(
+            mc.get("sdf_compute_edge_mask"), sdf_processing.DEFAULT_SDF_COMPUTE_EDGE_MASK
+        )
+        sharp_grad_dev_thresh = float(
+            mc.get(
+                "sdf_sharp_grad_dev_thresh",
+                sdf_processing.DEFAULT_SDF_SHARP_GRAD_DEV_THRESH,
+            )
+        )
         sdf_p = None if mesh_only else m.sdf_path
         return sdf_processing.get_or_build_sdf_for_sample(
             m.mesh_path,
@@ -699,6 +807,8 @@ class SparseSDFQwen3Adapter(ModelAdapter):
             th,
             sample_id=str(m.sample_id),
             watertight=watertight,
+            compute_edge_mask=compute_edge_mask,
+            sharp_grad_dev_thresh=sharp_grad_dev_thresh,
         )
 
     @staticmethod
@@ -889,8 +999,8 @@ class SparseSDFQwen3Adapter(ModelAdapter):
         from eval.utils.bpe_sparse_tokens import bpe_batches_to_mesh_strings
 
         mc = self._model_cfg()
-        res = int(mc.get("sdf_resolution", 512))
-        th = float(mc.get("sdf_threshold_factor", 0.5))
+        res = self._sdf_resolution()
+        th = self._sdf_threshold_factor()
         batch_for_collate: List[Dict[str, Any]] = []
         sdf_point_counts: List[int] = []
         for i, m in enumerate(batch):
@@ -902,9 +1012,21 @@ class SparseSDFQwen3Adapter(ModelAdapter):
                 resolution=res,
                 threshold_factor=th,
             )
-            sdf_point_counts.append(int(sparse["sparse_sdf"].shape[0]))
+            sparse_enc, n_tight, n_wide, enc_thresh = self._filter_sparse_for_encoder(
+                sparse,
+                sample_id=str(m.sample_id),
+                mesh_path=str(m.mesh_path),
+            )
+            sdf_point_counts.append(n_wide)
+            if self._eval_debug["verbose_eval"]:
+                print(
+                    f"[sparse_sdf_qwen3][debug] tight-band filter sample_id={m.sample_id} "
+                    f"wide_points={n_wide} encoder_points={n_tight} "
+                    f"threshold_abs_sdf<={enc_thresh:.6f}",
+                    flush=True,
+                )
             batch_for_collate.append(
-                {"inputs_3d": sdf_processing.sparse_dict_to_inputs_3d(sparse, i)}
+                {"inputs_3d": sdf_processing.sparse_dict_to_inputs_3d(sparse_enc, i)}
             )
         collated = sdf_processing.collate_inputs_3d(batch_for_collate)
         for k in collated:
@@ -1006,11 +1128,8 @@ class SparseSDFQwen3Adapter(ModelAdapter):
         return rows
 
     def reconstruct_mesh(self, batch: List[MeshInput], cfg: Dict[str, Any]) -> List[Dict[str, Any]]:
-        from eval.utils.sparse_mesh_export import sparse_sdf_to_meshes
-
         mc = self._model_cfg()
-        res = int(mc.get("sdf_resolution", 512))
-        mct = float(mc.get("mc_threshold", 0.0))
+        res = self._sdf_resolution()
         log_timing = bool(mc.get("log_timing", True))
         debug_dir = mc.get("encoded_debug_dir")
         out: List[Dict[str, Any]] = []
@@ -1049,7 +1168,7 @@ class SparseSDFQwen3Adapter(ModelAdapter):
             enc_sample = encoded[0]
             decoded_sparse = self._bpe_decode_ids_with_context(enc_sample.bpe_ids, enc_sample)
             with torch.no_grad(), self._suppress_stdout():
-                recon = vae_f.Decode(decoded_sparse)
+                recon = self._decode_sparse_with_pruning(vae_f, decoded_sparse)
             if debug_dir:
                 import numpy as np
 
@@ -1088,14 +1207,7 @@ class SparseSDFQwen3Adapter(ModelAdapter):
                 )
             t2 = time.time()
             with self._suppress_stdout():
-                wmp = self._model_cfg().get("white_mesh_postprocess")
-                meshes = sparse_sdf_to_meshes(
-                    recon,
-                    voxel_resolution=res,
-                    mc_threshold=mct,
-                    postprocess_cfg=wmp if isinstance(wmp, dict) else None,
-                    device=self._device,
-                )
+                meshes = self._sparse_recon_to_meshes(recon)
             if log_timing:
                 print(
                     f"[sparse_sdf] sample={m.sample_id} marching cubes 完成 "
@@ -1141,12 +1253,7 @@ class SparseSDFQwen3Adapter(ModelAdapter):
     def generate_from_text(
         self, prompts: List[str], sample_ids: List[str], cfg: Dict[str, Any]
     ) -> List[GenResult]:
-        from eval.utils.sparse_mesh_export import sparse_sdf_to_meshes
-
         inf = cfg.get("inference", {})
-        mc = self._model_cfg()
-        res = int(mc.get("sdf_resolution", 512))
-        mct = float(mc.get("mc_threshold", 0.0))
         recon_prompt = resolve_reconstruct_prompt_from_inference(inf)
         results: List[GenResult] = []
         for i, sid in enumerate(sample_ids):
@@ -1176,15 +1283,8 @@ class SparseSDFQwen3Adapter(ModelAdapter):
                 decoded_sparse, toks, dropped_pairs = self._parse_and_decode_pairs(raw)
                 vae_f = self._vae.float() if next(self._vae.parameters()).dtype != torch.float32 else self._vae
                 with torch.no_grad(), self._suppress_stdout():
-                    recon = vae_f.Decode(decoded_sparse)
-                wmp = self._model_cfg().get("white_mesh_postprocess")
-                meshes = sparse_sdf_to_meshes(
-                    recon,
-                    voxel_resolution=res,
-                    mc_threshold=mct,
-                    postprocess_cfg=wmp if isinstance(wmp, dict) else None,
-                    device=self._device,
-                )
+                    recon = self._decode_sparse_with_pruning(vae_f, decoded_sparse)
+                meshes = self._sparse_recon_to_meshes(recon)
                 pred_mesh = meshes[0] if meshes else None
                 if pred_mesh is None:
                     decode_error = "marching cubes produced no mesh"
@@ -1232,12 +1332,7 @@ class SparseSDFQwen3Adapter(ModelAdapter):
 
     def generate_from_mesh_context(self, batch: List[MeshInput], cfg: Dict[str, Any]) -> List[GenResult]:
         """Generate BPE ids with the LLM, then decode using coords saved by Encode."""
-        from eval.utils.sparse_mesh_export import sparse_sdf_to_meshes
-
         inf = cfg.get("inference", {})
-        mc = self._model_cfg()
-        res = int(mc.get("sdf_resolution", 512))
-        mct = float(mc.get("mc_threshold", 0.0))
         recon_prompt = resolve_reconstruct_prompt_from_inference(inf)
         vae_f, _enc, encoded, _sdf_counts = self._encode_mesh_batch(batch)
         results: List[GenResult] = []
@@ -1261,15 +1356,8 @@ class SparseSDFQwen3Adapter(ModelAdapter):
             try:
                 decoded_sparse, toks, dropped_pairs = self._parse_and_decode_pairs(raw)
                 with torch.no_grad(), self._suppress_stdout():
-                    recon = vae_f.Decode(decoded_sparse)
-                wmp = self._model_cfg().get("white_mesh_postprocess")
-                meshes = sparse_sdf_to_meshes(
-                    recon,
-                    voxel_resolution=res,
-                    mc_threshold=mct,
-                    postprocess_cfg=wmp if isinstance(wmp, dict) else None,
-                    device=self._device,
-                )
+                    recon = self._decode_sparse_with_pruning(vae_f, decoded_sparse)
+                meshes = self._sparse_recon_to_meshes(recon)
                 pred_mesh = meshes[0] if meshes else None
                 if pred_mesh is None:
                     decode_error = "marching cubes produced no mesh"

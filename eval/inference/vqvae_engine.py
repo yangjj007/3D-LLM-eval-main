@@ -1,6 +1,10 @@
 """
 Inference engine for VQVAE reconstruction quality evaluation.
 
+Legacy dense 64^3 voxel path. This is not the Sparse-SDF-VQVAE +
+Qwen3 path used by the `sparse_sdf_qwen3` adapter; that main path lives in
+`eval/adapters/sparse_sdf_adapter.py`.
+
 Processes each sample: mesh → voxelize → VQVAE encode → decode → binarize.
 Outputs both original and reconstructed voxel grids for metric computation.
 """

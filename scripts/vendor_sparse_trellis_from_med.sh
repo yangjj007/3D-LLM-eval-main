@@ -11,9 +11,17 @@ if [[ ! -d "$SOURCE/trellis" ]]; then
   echo "Clone it first, e.g.: git clone <your-med-repo-url> Med-3D-LLM-main" >&2
   exit 1
 fi
-mkdir -p "$ROOT/trellis/models/autoencoders" "$ROOT/trellis/utils" "$ROOT/eval/configs/vae"
+mkdir -p \
+  "$ROOT/trellis/models/autoencoders" \
+  "$ROOT/trellis/datasets" \
+  "$ROOT/trellis/utils" \
+  "$ROOT/eval/configs/vae" \
+  "$ROOT/third_party/voxelize/src"
 cp -v "$SOURCE/trellis/models/autoencoders/"*.py "$ROOT/trellis/models/autoencoders/"
+cp -v "$SOURCE/trellis/datasets/sparse_sdf.py" "$ROOT/trellis/datasets/sparse_sdf.py"
 cp -v "$SOURCE/trellis/utils/mesh_utils.py" "$ROOT/trellis/utils/mesh_utils.py"
+cp -v "$SOURCE/third_party/voxelize/src/udf_cuda.cpp" "$ROOT/third_party/voxelize/src/udf_cuda.cpp"
+cp -v "$SOURCE/third_party/voxelize/src/udf_kernel.cu" "$ROOT/third_party/voxelize/src/udf_kernel.cu"
 if [[ -f "$SOURCE/configs/vae/sdf_vqvae_stage2.json" ]]; then
   cp -v "$SOURCE/configs/vae/sdf_vqvae_stage2.json" "$ROOT/eval/configs/vae/sdf_vqvae_stage2.json"
 fi

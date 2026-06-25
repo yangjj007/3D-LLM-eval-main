@@ -387,6 +387,8 @@ def mesh2sparse_sdf(
     scale: float = 0.95,
     watertight: bool = True,
     watertight_verbose: bool = True,
+    compute_edge_mask: bool = True,
+    sharp_grad_dev_thresh: float = 0.3,
 ) -> Dict[str, np.ndarray]:
     """
     Convert mesh to sparse **signed** SDF representation.
@@ -404,21 +406,33 @@ def mesh2sparse_sdf(
     the decoder's SparseTanh output range [-1, 1] and allows Marching Cubes
     at iso-level 0.0 to extract a smooth surface.
 
+    ``threshold_factor`` controls the sparse band half-width in voxels.  A
+    larger value is required so that decoder-predicted "extra" voxels (voxels
+    beyond the input sparse set) still have a valid GT SDF to supervise against.
+    Recommended value ≥ 4 (4-voxel shell = good coverage for typical decoders).
+
     Args:
         mesh: Input trimesh object
         resolution: Grid resolution
-        threshold_factor: Shell half-width in voxels
-                          (sparse shell = voxels with UDF < threshold_factor / resolution)
+        threshold_factor: Shell half-width in voxels.  Set ≥ 4.0 so the GT SDF
+            covers decoder-predicted extra voxels.
         normalize: Whether to normalize mesh into [-scale, scale] first
         scale: Normalization scale factor (default 0.95)
         watertight: Deprecated compatibility argument; no repair is run here.
         watertight_verbose: Deprecated compatibility argument.
+        compute_edge_mask: If True (default) and udf_ext.compute_sharp_mask is
+            available, run the GPU sharp-edge kernel and return ``edge_mask``.
+            Falls back gracefully (all-False mask + warning) when unavailable.
+        sharp_grad_dev_thresh: Threshold for |1 - |∇SDF||; voxels exceeding
+            this value are marked as sharp/edge (default 0.3).
 
     Returns:
         Dictionary containing:
-            - sparse_sdf:   Signed SDF values in [-1, 1],  shape [N, 1]  (float32)
-            - sparse_index: 3-D grid coordinates,          shape [N, 3]  (int32)
-            - resolution:   Grid resolution (int)
+            - sparse_sdf:        Signed SDF values in [-1, 1],  shape [N, 1]  (float32)
+            - sparse_index:      3-D grid coordinates,          shape [N, 3]  (int32)
+            - edge_mask:         Sharp-edge boolean mask,        shape [N]     (bool)
+            - extra_band_factor: threshold_factor value stored as metadata     (float32 scalar)
+            - resolution:        Grid resolution (int)
     """
     # Normalize mesh
     if normalize:
@@ -436,16 +450,16 @@ def mesh2sparse_sdf(
     # Compute signed SDF in the CUDA voxelization pass.
     # packed = (int_distance << 1) | inside_bit
     packed = compute_valid_sdf_packed(vertices, faces, dim=resolution, threshold=threshold_factor)
-    packed = packed.reshape(resolution, resolution, resolution)
+    packed_3d = packed.reshape(resolution, resolution, resolution)
 
     # Extract sparse shell: voxels within threshold_factor / resolution of the surface.
     # Work in the packed integer domain to avoid a dense float conversion.
     udf_max = threshold_factor / resolution
     threshold_int = int(udf_max * 10000000)
-    dist_int = packed >> 1
+    dist_int = packed_3d >> 1
     sparse_mask = dist_int < threshold_int
     sparse_index = sparse_mask.nonzero(as_tuple=False)   # [N, 3]
-    packed_sparse = packed[sparse_mask].unsqueeze(-1)    # [N, 1]
+    packed_sparse = packed_3d[sparse_mask].unsqueeze(-1)    # [N, 1]
     sparse_sdf = (packed_sparse >> 1).float() / 10000000.0
     inside_t = (packed_sparse & 1).bool()
     sparse_sdf[inside_t] = -sparse_sdf[inside_t]
@@ -458,7 +472,7 @@ def mesh2sparse_sdf(
     if num_before != num_after:
         print(f"\n⚠️  [mesh2sparse_sdf] 发现重复点: {num_before} → {num_after}")
         sparse_index = unique_idx
-        packed_sparse = packed[sparse_index[:, 0], sparse_index[:, 1], sparse_index[:, 2]].unsqueeze(-1)
+        packed_sparse = packed_3d[sparse_index[:, 0], sparse_index[:, 1], sparse_index[:, 2]].unsqueeze(-1)
         sparse_sdf = (packed_sparse >> 1).float() / 10000000.0
         inside_t = (packed_sparse & 1).bool()
         sparse_sdf[inside_t] = -sparse_sdf[inside_t]
@@ -472,11 +486,53 @@ def mesh2sparse_sdf(
     print(f"✓ [mesh2sparse_sdf] 有符号SDF: interior={inside_count}, exterior={outside_count}, "
           f"range=[{sparse_sdf.min().item():.3f}, {sparse_sdf.max().item():.3f}]")
 
+    # ---- GPU sharp-edge mask ----
+    # Run compute_sharp_kernel on the same packed buffer; no extra mesh/CPU ops.
+    edge_mask_np = np.zeros(sparse_index.shape[0], dtype=np.bool_)
+    if compute_edge_mask:
+        try:
+            udf_ext = _import_udf_ext()
+            if hasattr(udf_ext, 'compute_sharp_mask'):
+                # band: normalised SDF units (same as sparse_sdf values), full band width
+                band_norm = 1.0  # cover the entire [-1, 1] sparse band
+                sharp_mask_dense = torch.zeros(
+                    resolution ** 3, device=packed.device, dtype=torch.uint8
+                )
+                udf_ext.compute_sharp_mask(
+                    packed,          # flat [DIM^3] int64
+                    sharp_mask_dense,
+                    resolution,
+                    band_norm,
+                    sharp_grad_dev_thresh,
+                )
+                sharp_mask_3d = sharp_mask_dense.reshape(resolution, resolution, resolution)
+                # Extract sparse subset aligned to sparse_index
+                edge_mask_sparse = sharp_mask_3d[
+                    sparse_index[:, 0], sparse_index[:, 1], sparse_index[:, 2]
+                ].bool()
+                sharp_count = int(edge_mask_sparse.sum().item())
+                total_n = sparse_index.shape[0]
+                print(
+                    f"✓ [mesh2sparse_sdf] edge_mask 计算完成: "
+                    f"sharp={sharp_count}/{total_n} ({100.0*sharp_count/max(total_n,1):.2f}%), "
+                    f"grad_dev_thresh={sharp_grad_dev_thresh}"
+                )
+                edge_mask_np = edge_mask_sparse.cpu().numpy().astype(np.bool_)
+            else:
+                print(
+                    "[mesh2sparse_sdf] ⚠️  udf_ext 缺少 compute_sharp_mask "
+                    "(需重新编译 third_party/voxelize); edge_mask 退化为全 False"
+                )
+        except Exception as exc:
+            print(f"[mesh2sparse_sdf] ⚠️  edge_mask 计算失败 ({exc}); 退化为全 False")
+
     # Convert to numpy
     return {
-        'sparse_sdf':   sparse_sdf.cpu().numpy().astype(np.float32),
-        'sparse_index': sparse_index.cpu().numpy().astype(np.int32),
-        'resolution':   resolution,
+        'sparse_sdf':        sparse_sdf.cpu().numpy().astype(np.float32),
+        'sparse_index':      sparse_index.cpu().numpy().astype(np.int32),
+        'edge_mask':         edge_mask_np,
+        'extra_band_factor': np.float32(threshold_factor),
+        'resolution':        resolution,
     }
 
 

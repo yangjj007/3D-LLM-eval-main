@@ -9,13 +9,19 @@ data:
 
 model:
   vae_config: eval/configs/vae/sdf_vqvae_stage2.json
-  vae_ckpt: /yangjunjie/Med-3D-LLM-main/pad_outputs/sdf_vqvae_stage2_512_0.5/ckpts/vqvae_step0000300.pt
+  vae_ckpt: ../Med-3D-LLM-main/outputs_pad_sdf/sdf_vqvae_256_0.5/ckpts/vqvae_step0041000.pt
   llm_path: LLaMA-Factory/saves/qwen3-4b/sft_bpe_3d_stage2/checkpoint-55000
   trust_remote_code: true
   llm_dtype: bfloat16
   sdf_from_mesh_only: true
-  sdf_resolution: 512
-  sdf_threshold_factor: 0.5
+  sdf_resolution: 256
+  sdf_threshold_factor: 4.0
+  input_band_factor: 0.5
+  preprocessing_extra_band_factor: 4.0
+  inference_band_factor: 2.0
+  inference_occ_resolution: 256
+  sdf_compute_edge_mask: true
+  sdf_sharp_grad_dev_thresh: 0.5
   sdf_cache_dir: eval_data/sdf_cache_eval
   bpe_merge_table: ""
   bpe_base_vocab_size: 8192

@@ -21,11 +21,16 @@ if (-not (Test-Path (Join-Path $Source "trellis"))) {
 }
 $aeSrc = Join-Path $Source "trellis\models\autoencoders"
 $aeDst = Join-Path $Root "trellis\models\autoencoders"
+$datasetDst = Join-Path $Root "trellis\datasets"
 $utilDst = Join-Path $Root "trellis\utils"
 $vaeDst = Join-Path $Root "eval\configs\vae"
-New-Item -ItemType Directory -Force -Path $aeDst, $utilDst, $vaeDst | Out-Null
+$voxelizeDst = Join-Path $Root "third_party\voxelize\src"
+New-Item -ItemType Directory -Force -Path $aeDst, $datasetDst, $utilDst, $vaeDst, $voxelizeDst | Out-Null
 Copy-Item (Join-Path $aeSrc "*.py") -Destination $aeDst -Force
+Copy-Item (Join-Path $Source "trellis\datasets\sparse_sdf.py") -Destination (Join-Path $datasetDst "sparse_sdf.py") -Force
 Copy-Item (Join-Path $Source "trellis\utils\mesh_utils.py") -Destination (Join-Path $utilDst "mesh_utils.py") -Force
+Copy-Item (Join-Path $Source "third_party\voxelize\src\udf_cuda.cpp") -Destination (Join-Path $voxelizeDst "udf_cuda.cpp") -Force
+Copy-Item (Join-Path $Source "third_party\voxelize\src\udf_kernel.cu") -Destination (Join-Path $voxelizeDst "udf_kernel.cu") -Force
 $stage2 = Join-Path $Source "configs\vae\sdf_vqvae_stage2.json"
 if (Test-Path $stage2) {
     Copy-Item $stage2 (Join-Path $vaeDst "sdf_vqvae_stage2.json") -Force

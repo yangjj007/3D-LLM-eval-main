@@ -13,7 +13,7 @@ pip install -r requirements.txt
 # 文本指标扩展（可选）
 pip install pycocoevalcap bert-score sentence-transformers
 
-# Sparse 后端：本仓库已自带 vendored ``trellis/models/autoencoders`` 与 ``trellis/utils/mesh_utils``。
+# Sparse 后端：本仓库已自带 vendored ``trellis/models/autoencoders``、``trellis/datasets/sparse_sdf.py``、``trellis/utils/mesh_utils`` 与 ``third_party/voxelize/src``。
 # 若需从上游同步，见 scripts/vendor_sparse_trellis_from_med.ps1（或 .sh）。仍需 torchsparse / spconv 等（与训练侧一致）。
 ```
 
@@ -29,6 +29,9 @@ pip install pycocoevalcap bert-score sentence-transformers
 
 - `model.sdf_from_mesh_only` 默认为 **true**：忽略数据里的 `sdf_path`，不从 `{uid}_r512.npz` 读取。
 - `model.sdf_cache_dir`（可选）：把「从 GLB 算出的」稀疏 SDF 缓存在该目录以加速重复评测，与训练用离线 SDF 数据集不是同一概念。
+- Sparse VQ-VAE 默认对齐 `Med-3D-LLM-main/configs/vae/sdf_vqvae_stage2.json`：GLB mesh -> 训练同款归一化/SDF voxelize，`sdf_resolution=256`、`sdf_threshold_factor=4.0`，Encode 前 tight-band 为 `abs(sdf) <= 0.5 / 4.0`，Decode/marching cubes 使用 256。
+- 默认 VAE checkpoint 路径为 `../Med-3D-LLM-main/outputs_pad_sdf/sdf_vqvae_256_0.5/ckpts/vqvae_step0041000.pt`；真实评测前请放置该权重或改写 `model.vae_ckpt`，路径不存在会直接报错。
+- SDF cache 文件名为 `{sample_id}_r256.npz`，并写入 `resolution`、`extra_band_factor`、`edge_mask` 等元数据；旧 512 或旧 band cache 会自动重建。
 
 任务数据使用与普通评测相同的 **`eval_data/understanding.json`**、**`generation.json`**、**`vqvae_recon.json`**（不再需要 `*_sparse.json`）。
 
@@ -86,9 +89,9 @@ python -m eval.data.objaverse_eval_setup build-eval-json \
 ### ShapeLLM-Omni
 
 ```bash
-python -m eval.runner --config eval/configs/tasks/shapellm/understanding.yaml --adapter shapellm --gpu_ids 0 --no_resume
-python -m eval.runner --config eval/configs/tasks/sparse_vqvae/understanding.yaml --adapter sparse_sdf_qwen3 --gpu_ids 0 --batch_size 1 --no_resume
-python -m eval.runner --config eval/configs/tasks/shapellm/generation.yaml --gpu_ids 1 --no_resume
+python -m eval.scripts.run_all_baselines
+# 简单测试：
+python -m eval.scripts.run_all_baselines --max_samples 10 --no_resume
 ```
 
 ### Sparse-SDF-VQVAE + Qwen3-VL（全参 HF）
@@ -121,6 +124,11 @@ repositories first; cloned code and generated work dirs are ignored by git:
 ```bash
 python -m eval.baselines.clone_official_repos
 ```
+
+Baseline YAMLs default to the Objaverse-style layout already used by this
+repo: `eval_data/metadata.csv` plus `.glb` files in `eval_data/`. You do not
+need to pre-generate `eval_data/generation.json` or
+`eval_data/understanding.json` unless you want a custom prompt list.
 
 Enabled direct text-to-3D adapters:
 
@@ -228,4 +236,3 @@ python -m eval.runner --config eval/configs/tasks/sparse_vqvae/mock_smoke.yaml -
 ```
 
 （请先将 YAML 内 `vae_ckpt`、数据路径等改为你的环境。）
-

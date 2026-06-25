@@ -252,7 +252,11 @@ __device__ void updateUDF(Triangle t, int* udf, const int DIM, const float thres
                 int idx = i * DIM * DIM + j * DIM + k;
         
         // Compute the distance from the query point to the triangle
-                Point3D queryPoint = {(float)i/(DIM-1) - 0.5, (float)j/(DIM-1) - 0.5, (float)k/(DIM-1) -0.5};
+                Point3D queryPoint = {
+                    (float)i/(DIM-1) - 0.5f,
+                    (float)j/(DIM-1) - 0.5f,
+                    (float)k/(DIM-1) - 0.5f
+                };
                 float distance = pointToTriangleDistance(queryPoint, t.v0, t.v1, t.v2);
                 float distance2 = pointToTriangleDistance(queryPoint, t.v0, t.v1, t.v2, true);
                 if (distance < threshold / DIM || distance2 < threshold / DIM) {
@@ -363,6 +367,101 @@ void compute_valid_sdf_cuda(float* vertices, int* faces, int64_t* sdf, int numTr
         numTriangles,
         DIM,
         threshold
+    );
+}
+
+// ---------------------------------------------------------------------------
+// Sharp-mask kernel
+// ---------------------------------------------------------------------------
+// For every voxel in the sparse band, estimate |∇SDF| via 6-neighbour central
+// differences on the packed signed-distance field.  Voxels where
+//   |1 - |∇SDF|| > grad_dev_thresh
+// are flagged as "sharp" (corners, creases, medial-axis artefacts).
+// Only voxels whose |SDF| < band_voxels/DIM are considered (same band used
+// when extracting the sparse representation).
+//
+// packed_sdf layout (matches compute_sdf_kernel output):
+//   bits [63:1] = integer distance * 10000000
+//   bit  [0]    = inside flag (1 = inside/negative SDF)
+//
+// DIM_long  : total number of voxels = DIM^3 (passed separately to avoid
+//             repeated 64-bit multiplication inside the kernel)
+// ---------------------------------------------------------------------------
+
+__device__ float unpack_sdf(unsigned long long packed) {
+    float dist = (float)(packed >> 1) / 10000000.0f;
+    int   sign = (int)(packed & 1ULL);   // 1 = inside → negative
+    return sign ? -dist : dist;
+}
+
+__global__ void compute_sharp_kernel(
+    const unsigned long long* __restrict__ packed_sdf,  // [DIM^3]
+    uint8_t* __restrict__                 sharp_mask,   // [DIM^3], output 0/1
+    const int   DIM,
+    const long long DIM_long,   // DIM^3
+    const float band,           // |sdf| threshold (same units as unpacked sdf, i.e. normalised)
+    const float grad_dev_thresh // |1 - |grad_sdf|| > this => mark sharp
+) {
+    long long idx = (long long)blockIdx.x * blockDim.x + threadIdx.x;
+    if (idx >= DIM_long) return;
+
+    // Decode voxel (i,j,k)
+    int k = (int)(idx % DIM);
+    int j = (int)((idx / DIM) % DIM);
+    int i = (int)(idx / ((long long)DIM * DIM));
+
+    // Decode centre SDF value
+    unsigned long long far_val = (unsigned long long)10000000 << 1; // sentinel for un-hit voxels
+    unsigned long long c_packed = packed_sdf[idx];
+    float c_sdf = (c_packed >= far_val) ? 1.0f : unpack_sdf(c_packed);
+
+    // Only compute inside the band
+    if (fabsf(c_sdf) >= band) {
+        sharp_mask[idx] = 0;
+        return;
+    }
+
+    // Helper lambda (inline with ternary) to safely fetch neighbour SDF
+    // We clamp to boundary (Neumann BC): neighbour = self when OOB
+    auto fetch = [&](int ni, int nj, int nk) -> float {
+        ni = max(0, min(DIM - 1, ni));
+        nj = max(0, min(DIM - 1, nj));
+        nk = max(0, min(DIM - 1, nk));
+        long long nidx = (long long)ni * DIM * DIM + (long long)nj * DIM + nk;
+        unsigned long long p = packed_sdf[nidx];
+        return (p >= far_val) ? 1.0f : unpack_sdf(p);
+    };
+
+    // Central differences (each step = 1/DIM in world space, cancel out when
+    // computing the normalised gradient magnitude relative to band)
+    float gx = (fetch(i+1,j,k) - fetch(i-1,j,k)) * 0.5f * (float)DIM;
+    float gy = (fetch(i,j+1,k) - fetch(i,j-1,k)) * 0.5f * (float)DIM;
+    float gz = (fetch(i,j,k+1) - fetch(i,j,k-1)) * 0.5f * (float)DIM;
+
+    // |∇SDF| in voxel-normalised coords (should be ~1 for a perfect SDF)
+    float grad_mag = sqrtf(gx*gx + gy*gy + gz*gz);
+
+    // Mark sharp if gradient magnitude deviates significantly from 1
+    sharp_mask[idx] = (fabsf(1.0f - grad_mag) > grad_dev_thresh) ? 1u : 0u;
+}
+
+void compute_sharp_mask_cuda(
+    const int64_t* packed_sdf,   // [DIM^3] same int64 buffer as compute_valid_sdf output
+    uint8_t*       sharp_mask,   // [DIM^3] output
+    const int      DIM,
+    const float    band,
+    const float    grad_dev_thresh
+) {
+    long long total = (long long)DIM * DIM * DIM;
+    int blockSize = 256;
+    int gridSize  = (int)((total + blockSize - 1) / blockSize);
+    compute_sharp_kernel<<<gridSize, blockSize>>>(
+        reinterpret_cast<const unsigned long long*>(packed_sdf),
+        sharp_mask,
+        DIM,
+        total,
+        band,
+        grad_dev_thresh
     );
 }
 
